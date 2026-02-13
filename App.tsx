@@ -1,11 +1,88 @@
 
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useRef, useEffect } from 'react';
 import Sidebar from './components/Sidebar';
+import Login from './components/Login';
 import { COURSE_CONTENT } from './courseData';
 
+const SlideCarousel: React.FC<{ slides: string[] }> = ({ slides }) => {
+  const [currentSlide, setCurrentSlide] = useState(0);
+
+  if (!slides || slides.length === 0) return null;
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % slides.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+  };
+
+  return (
+    <div className="mb-8 relative group">
+      <div className="relative aspect-video bg-slate-100 rounded-2xl overflow-hidden border border-slate-200 shadow-sm">
+        <img 
+          src={slides[currentSlide]} 
+          alt={`Slide ${currentSlide + 1}`} 
+          className="w-full h-full object-contain"
+        />
+        
+        {/* Navigation Arrows */}
+        {slides.length > 1 && (
+          <>
+            <button 
+              onClick={(e) => { e.stopPropagation(); prevSlide(); }}
+              className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/80 hover:bg-white text-slate-800 rounded-full flex items-center justify-center shadow-md backdrop-blur-sm transition-all opacity-0 group-hover:opacity-100"
+              aria-label="Previous slide"
+            >
+              <i className="fa-solid fa-chevron-left"></i>
+            </button>
+            <button 
+              onClick={(e) => { e.stopPropagation(); nextSlide(); }}
+              className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-white/80 hover:bg-white text-slate-800 rounded-full flex items-center justify-center shadow-md backdrop-blur-sm transition-all opacity-0 group-hover:opacity-100"
+              aria-label="Next slide"
+            >
+              <i className="fa-solid fa-chevron-right"></i>
+            </button>
+          </>
+        )}
+        
+        {/* Slide Counter Indicator */}
+        <div className="absolute bottom-4 right-4 bg-black/60 text-white text-xs px-3 py-1 rounded-full backdrop-blur-sm">
+          Slide {currentSlide + 1} / {slides.length}
+        </div>
+      </div>
+      
+      {/* Thumbnails helper (dots) */}
+      {slides.length > 1 && (
+        <div className="flex justify-center gap-2 mt-4">
+          {slides.map((_, idx) => (
+            <button
+              key={idx}
+              onClick={() => setCurrentSlide(idx)}
+              className={`w-2 h-2 rounded-full transition-all ${
+                idx === currentSlide ? 'bg-blue-600 w-4' : 'bg-slate-300 hover:bg-slate-400'
+              }`}
+              aria-label={`Go to slide ${idx + 1}`}
+            />
+          ))}
+        </div>
+      )}
+    </div>
+  );
+};
+
 const App: React.FC = () => {
+  const [isLoggedIn, setIsLoggedIn] = useState(() => localStorage.getItem('isLoggedIn') === 'true');
   const [activeLessonId, setActiveLessonId] = useState(COURSE_CONTENT.modules[0].lessons[0].id);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const scrollContainerRef = useRef<HTMLDivElement>(null);
+
+  // Scroll to top when lesson changes
+  useEffect(() => {
+    if (scrollContainerRef.current) {
+      scrollContainerRef.current.scrollTo(0, 0);
+    }
+  }, [activeLessonId]);
 
   const activeLesson = useMemo(() => {
     for (const module of COURSE_CONTENT.modules) {
@@ -16,36 +93,98 @@ const App: React.FC = () => {
   }, [activeLessonId]);
 
   const renderContent = (content: string) => {
-    return content.split('\n').map((line, i) => {
-      if (line.startsWith('### ')) {
-        return <h3 key={i} className="text-2xl font-bold text-slate-800 mt-10 mb-6 pb-2 border-b-2 border-slate-100">{line.replace('### ', '')}</h3>;
-      }
-      if (line.startsWith('**') && line.includes('**')) {
-        // Simple bold handling
+    const lines = content.split('\n');
+    const elements: React.ReactNode[] = [];
+    let i = 0;
+
+    // Helper to parse inline markdown (**bold** and <br>)
+    const parseInlineMarkdown = (text: string) => {
+      const lines = text.split('<br>');
+      return lines.map((line, lineIdx) => {
         const parts = line.split('**');
         return (
-          <p key={i} className="mt-4 text-slate-700">
-            {parts.map((part, idx) => (idx % 2 === 1 ? <strong key={idx} className="text-slate-900 font-bold">{part}</strong> : part))}
-          </p>
+          <React.Fragment key={lineIdx}>
+            {lineIdx > 0 && <br />}
+            {parts.map((part, partIdx) => 
+              partIdx % 2 === 1 ? <strong key={partIdx} className="font-bold text-slate-900">{part}</strong> : part
+            )}
+          </React.Fragment>
         );
+      });
+    };
+
+    while (i < lines.length) {
+      const line = lines[i];
+
+      // Detect markdown table (lines starting with |)
+      if (line.trim().startsWith('|') && line.trim().endsWith('|')) {
+        const tableLines: string[] = [];
+        while (i < lines.length && lines[i].trim().startsWith('|') && lines[i].trim().endsWith('|')) {
+          tableLines.push(lines[i].trim());
+          i++;
+        }
+        if (tableLines.length >= 2) {
+          const parseRow = (row: string) =>
+            row.split('|').slice(1, -1).map(cell => cell.trim());
+
+          const headerCells = parseRow(tableLines[0]);
+          // Skip separator row (|---|---|)
+          const startIdx = tableLines[1].replace(/[|\s\-:]/g, '') === '' ? 2 : 1;
+          const bodyRows = tableLines.slice(startIdx).map(parseRow);
+
+          elements.push(
+            <div key={`table-${i}`} className="my-6 overflow-x-auto rounded-xl border border-slate-200">
+              <table className="w-full text-sm">
+                <thead>
+                  <tr className="bg-slate-100 border-b border-slate-200">
+                    {headerCells.map((cell, ci) => (
+                      <th key={ci} className="px-4 py-3 text-left font-semibold text-slate-700">
+                        {parseInlineMarkdown(cell)}
+                      </th>
+                    ))}
+                  </tr>
+                </thead>
+                <tbody>
+                  {bodyRows.map((row, ri) => (
+                    <tr key={ri} className={ri % 2 === 0 ? 'bg-white' : 'bg-slate-50'}>
+                      {row.map((cell, ci) => (
+                        <td key={ci} className="px-4 py-3 text-slate-600 border-t border-slate-100 align-top">
+                          {parseInlineMarkdown(cell)}
+                        </td>
+                      ))}
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          );
+        }
+        continue;
       }
-      if (line.startsWith('- ') || line.startsWith('* ')) {
-        return <li key={i} className="ml-6 text-slate-600 mb-2 list-disc leading-relaxed">{line.substring(2)}</li>;
-      }
-      if (line.startsWith('> ')) {
-        return (
+
+      if (line.startsWith('### ')) {
+        elements.push(<h3 key={i} className="text-2xl font-bold text-slate-800 mt-10 mb-6 pb-2 border-b-2 border-slate-100">{line.replace('### ', '')}</h3>);
+      } else if (line.startsWith('- ') || line.startsWith('* ')) {
+        elements.push(<li key={i} className="ml-6 text-slate-600 mb-2 list-disc leading-relaxed">{parseInlineMarkdown(line.substring(2))}</li>);
+      } else if (line.startsWith('> ')) {
+        elements.push(
           <blockquote key={i} className="my-6 p-4 bg-slate-50 border-l-4 border-blue-500 italic text-slate-700 rounded-r-lg">
-            {line.substring(2)}
+            {parseInlineMarkdown(line.substring(2))}
           </blockquote>
         );
+      } else if (line.match(/^\d+\./)) {
+        // Remove the number and dot (e.g. "1. " -> "") to parse content, but keep number for display? 
+        // Actually simplest is just parse the whole line
+        elements.push(<p key={i} className="ml-2 font-medium text-slate-800 mt-6 mb-2">{parseInlineMarkdown(line)}</p>);
+      } else if (line.trim() === '') {
+        elements.push(<div key={i} className="h-4" />);
+      } else {
+        elements.push(<p key={i} className="text-slate-600 leading-relaxed mb-4">{parseInlineMarkdown(line)}</p>);
       }
-      if (line.match(/^\d+\./)) {
-        return <p key={i} className="ml-2 font-medium text-slate-800 mt-6 mb-2">{line}</p>;
-      }
-      if (line.trim() === '') return <div key={i} className="h-4" />;
-      
-      return <p key={i} className="text-slate-600 leading-relaxed mb-4">{line}</p>;
-    });
+      i++;
+    }
+
+    return elements;
   };
 
   const flattenLessons = useMemo(() => {
@@ -55,6 +194,10 @@ const App: React.FC = () => {
   const currentIndex = flattenLessons.findIndex(l => l.id === activeLessonId);
   const prevLesson = flattenLessons[currentIndex - 1];
   const nextLesson = flattenLessons[currentIndex + 1];
+
+  if (!isLoggedIn) {
+    return <Login onLogin={() => setIsLoggedIn(true)} />;
+  }
 
   return (
     <div className="flex h-screen overflow-hidden bg-white font-sans">
@@ -94,11 +237,24 @@ const App: React.FC = () => {
           
           <div className="flex items-center gap-3">
             <span className="text-xs font-bold text-slate-400 bg-slate-50 px-2 py-1 rounded">BETA 3.0</span>
+            <button 
+              onClick={() => {
+                localStorage.removeItem('isLoggedIn');
+                setIsLoggedIn(false);
+              }}
+              className="text-xs text-slate-400 hover:text-red-500 transition-colors ml-2"
+              title="Logout"
+            >
+              <i className="fa-solid fa-right-from-bracket"></i>
+            </button>
           </div>
         </header>
 
         {/* Content Area */}
-        <div className="flex-1 overflow-y-auto bg-slate-50/30">
+        <div 
+          ref={scrollContainerRef}
+          className="flex-1 overflow-y-auto bg-slate-50/30"
+        >
           <div className="max-w-7xl mx-auto px-6 py-12 md:py-20">
             {/* Lesson Header */}
             <div className="mb-12">
@@ -122,18 +278,20 @@ const App: React.FC = () => {
 
             {/* Content Body */}
             <article className="bg-white rounded-3xl shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] border border-slate-100 p-8 md:p-14 mb-12">
-              {/* Slide Image Placeholder */}
-              {activeLesson.image && (
-                <div className="mb-10 rounded-2xl overflow-hidden shadow-sm border border-slate-100 bg-slate-100">
+              {/* Slide Carousel at Top */}
+              {activeLesson.slides && activeLesson.slides.length > 0 && (
+                <SlideCarousel slides={activeLesson.slides} />
+              )}
+              
+              {/* Fallback for single image if no slides array but image exists (legacy support) */}
+              {!activeLesson.slides && activeLesson.image && (
+                 <div className="mb-10 rounded-2xl overflow-hidden shadow-sm border border-slate-100 bg-slate-100">
                   <img 
                     src={activeLesson.image} 
                     alt={`Slide for ${activeLesson.title}`} 
                     className="w-full h-auto object-cover"
                     loading="lazy"
                   />
-                  <div className="bg-slate-50 px-4 py-2 text-[10px] text-slate-400 text-center uppercase tracking-wider border-t border-slate-100">
-                    รูปภาพประกอบจาก Slide Handout
-                  </div>
                 </div>
               )}
               

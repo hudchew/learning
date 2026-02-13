@@ -43,7 +43,7 @@ const Sidebar: React.FC<SidebarProps> = ({ courseTitle, modules, activeLessonId,
                       : 'text-slate-400 hover:bg-slate-800 hover:text-slate-200'
                   }`}
                 >
-                  <i className={`fa-solid ${lesson.icon || 'fa-book-open'} w-5 text-center`}></i>
+                  <div className={`w-1.5 h-1.5 rounded-full flex-shrink-0 ${activeLessonId === lesson.id ? 'bg-blue-400' : 'bg-slate-600'}`}></div>
                   <span className="text-sm font-medium">{lesson.title}</span>
                 </button>
               ))}

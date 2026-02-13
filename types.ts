@@ -5,7 +5,8 @@ export interface Lesson {
   content: string;
   type: 'concept' | 'practical' | 'risk' | 'prompt-template';
   icon?: string;
-  image?: string; // URL to the slide image
+  image?: string; // URL to the slide image (thumbnail)
+  slides?: string[]; // Array of slide URLs for carousel
 }
 
 export interface Module {
