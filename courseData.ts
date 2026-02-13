@@ -25,88 +25,64 @@ export const COURSE_CONTENT: CourseData = {
 **ฉายา:** Good Old-Fashioned AI (GOFAI)
 
 **Core Idea:**
-ทำงานบนพื้นฐานของ **"กฎ (Rules)"** และ **"ตรรกะ (Logic)"** ที่มนุษย์เขียนขึ้นมาอย่างชัดเจน เป็นระบบแบบ Deterministic คือถ้า Input เหมือนเดิม Output จะเหมือนเดิม 100% เสมอ
-
-**การทำงาน:**
-- ใช้เงื่อนไขแบบ If-Then-Else (ถ้า...แล้ว...มิฉะนั้น...)
-- ไม่มีการ "เรียนรู้" สิ่งใหม่ด้วยตัวเอง แต่ทำตามคำสั่งที่โปรแกรมไว้เป๊ะๆ
+ทำงานบนพื้นฐานของ **"กฎ (Rules)"** และ **"ตรรกะ (Logic)"** ที่มนุษย์เขียนขึ้นมาอย่างชัดเจน เป็นระบบแบบ Deterministic (Input เหมือนเดิม Output เหมือนเดิม 100%)
 
 **ตัวอย่างงาน HR:**
-- **Payroll Calculation:** การคำนวณเงินเดือน ภาษี ประกันสังคม ที่ต้องเป๊ะตามกฎหมาย
-- **Leave Eligibility:** ตรวจสอบสิทธิ์วันลา (เช่น ถ้าอายุงาน < 1 ปี ลาพักร้อนไม่ได้)
-- **Compliance Check:** ตรวจสอบเอกสารว่าครบถ้วนตามระเบียบหรือไม่
+- **Payroll Calculation:** คำนวณเงินเดือน ภาษี ที่ต้องเป๊ะตามกฎหมาย
+- **Compliance Check:** ตรวจสอบคุณสมบัติการเลื่อนตำแหน่ง (เช่น อายุงาน < 2 ปี ห้ามโปรโมท)
+- **Policy Chatbot:** ตอบคำถามกฎระเบียบที่ชัดเจน
 
-**จุดเด่น vs จุดด้อย:**
-✅ **โปร่งใส (Explainable):** อธิบายได้ทุกขั้นตอนว่าทำไมถึงตัดสินใจแบบนี้
-✅ **ควบคุมได้ (Controllable):** ไม่มีการ "มั่ว" หรือ "หลอน" (Hallucination)
-❌ **เปราะบาง (Brittle):** ถ้าเจอกรณีแปลกๆ ที่ไม่อยู่ในกฎ ระบบจะไปต่อไม่ได้ทันที
-❌ **ดูแลยาก:** ถ้าระเบียบเปลี่ยน ต้องมารื้อแก้ Code ใหม่ทั้งหมด
+**ข้อดี/ข้อเสีย:**
+✅ **Transparent:** อธิบายเหตุผลได้ทุกขั้นตอน
+✅ **Controllable:** ควบคุมความถูกต้องได้ 100%
+❌ **Brittle:** ไม่ยืดหยุ่น เจอเคสแปลกๆ จะไปต่อไม่ได้
 
 ---
 
-### 2. Predictive AI (สายพยากรณ์ - "The Brain")
+### 2. Predictive AI (สายพยากรณ์ - " The Brain")
 **ฉายา:** Machine Learning / Statistical AI
 
 **Core Idea:**
-เรียนรู้จาก **"ข้อมูลในอดีต (Historical Data)"** เพื่อค้นหา Pattern ที่ซ่อนอยู่ และนำมา **"พยากรณ์ (Predict)"** สิ่งที่จะเกิดขึ้นในอนาคต เป็นระบบแบบ Probabilistic (ความน่าจะเป็น)
-
-**การทำงาน:**
-- ใช้สถิติและอัลกอริทึมในการวิเคราะห์ข้อมูลมหาศาล
-- ให้ผลลัพธ์เป็น "ค่าความเสี่ยง" หรือ "โอกาสความเป็นไปได้" (เช่น 78%, 90%)
+เรียนรู้จาก **"ข้อมูลในอดีต"** เพื่อค้นหา Pattern และ **"พยากรณ์"** ความน่าจะเป็น (Probabilistic)
 
 **ตัวอย่างงาน HR:**
-- **Churn Prediction:** ทำนายว่าพนักงานคนไหนมีความเสี่ยงจะลาออกใน 6 เดือนข้างหน้า
-- **Talent Acquisition:** คัดกรอง Resume โดยดูจากประวัติคนที่เคยประสบความสำเร็จในตำแหน่งนี้
-- **Performance Forecasting:** คาดการณ์แนวโน้มผลงานของทีมในไตรมาสถัดไป
+- **Attrition Risk:** ทำนายความเสี่ยงพนักงานลาออก
+- **Talent Acquisition:** Scoring ผู้สมัครจากประวัติความสำเร็จในอดีต
+- **Performance Forecasting:** คาดการณ์แนวโน้มผลงาน
 
-**จุดเด่น vs จุดด้อย:**
-✅ **เห็นสิ่งที่คนมองไม่เห็น:** จับ Pattern ความสัมพันธ์ซับซ้อนได้ดี
-✅ **เก่งขึ้นตามข้อมูล:** ยิ่งมี Data เยอะ ยิ่งแม่นยำ
-❌ **Probability ≠ Truth:** ต้องระวังเสมอว่า "ความน่าจะเป็น ไม่ใช่ความจริง" (เช่น เสี่ยงลาออก 80% ไม่ได้แปลว่าจะลาออกแน่ๆ)
-❌ **Bias:** ถ้าข้อมูลในอดีตมีความลำเอียง (เช่น เคยรับแต่ผู้ชาย) AI ก็จะเรียนรู้ความลำเอียงนั้นมาด้วย
+**ข้อควรระวัง:**
+🛑 **Probability ≠ Truth:** ค่าความเสี่ยง 80% ไม่ได้แปลว่าเป็นความจริงเสมอไป แต่เป็นแนวโน้มจากสถิติ
+🛑 **Bias:** ถ้าข้อมูลในอดีตมีความลำเอียง AI ก็จะเรียนรู้ความลำเอียงนั้นมาด้วย
 
 ---
 
 ### 3. Generative AI (สายสร้างสรรค์ - "The Voice")
-**ฉายา:** GenAI / Large Language Models (LLMs)
+**ฉายา:** GenAI / LLMs
 
 **Core Idea:**
-ไม่ได้แค่จำหรือวิเคราะห์ แต่สามารถ **"สร้าง (Generate)"** เนื้อหาใหม่ที่ไม่เคยมีมาก่อนได้ ไม่ว่าจะเป็นข้อความ รูปภาพ หรือเสียง โดยเรียนรู้จากบริบทและความหมาย
-
-**การทำงาน:**
-- เข้าใจภาษาธรรมชาติ (Natural Language) เหมือนมนุษย์คุยกัน
-- สามารถเชื่อมโยงข้อมูลกระจัดกระจายมาร้อยเรียงเป็นเรื่องราวใหม่ได้
+ไม่ได้แค่จำ แต่สามารถ **"สร้าง (Generate)"** เนื้อหาใหม่ (Text, Image, Code) จากการเข้าใจบริบท
 
 **ตัวอย่างงาน HR:**
-- **Content Creation:** ร่าง Job Description (JD), เขียนอีเมลเชิญสัมภาษณ์, ร่างประกาศนโยบายบริษัท
-- **Summarization:** สรุปผล Performance Review จากคอมเมนต์ยาวๆ ให้เหลือประเด็นสำคัญ
-- **Personalization:** สร้างแผนพัฒนา (IDP) เฉพาะบุคคล หรือ Career Path ที่เหมาะกับคนนั้นๆ
-- **HR Chatbot:** ตอบคำถามพนักงานด้วยภาษาที่เข้าใจง่ายและมีความเห็นอกเห็นใจ (Empathy)
+- **Drafting:** ร่าง JD, อีเมล, ประกาศ
+- **Summarization:** สรุป Performance Review
+- **Personalization:** สร้างแผน IDP รายบุคคล
+- **Roleplay:** ฝึกซ้อมการสัมภาษณ์หรือ Feedback
 
-**จุดเด่น vs จุดด้อย:**
-✅ **มีความคิดสร้างสรรค์:** ช่วยแก้ปัญหาทางตันในการเริ่มงานเขียน (Writer's Block)
-✅ **ยืดหยุ่นสูง:** รับมือกับคำสั่งที่คลุมเครือได้ดีกว่าแบบอื่นๆ
-❌ **Hallucination:** อาจ "มั่ว" ข้อมูลขึ้นมาเองได้อย่างมั่นใจ ต้องมีคนตรวจสอบเสมอ
-❌ **ความปลอดภัยข้อมูล:** ต้องระวังไม่ป้อนข้อมูลความลับบริษัทลงไปใน Public AI
+**จุดเด่น:**
+✨ **Creativity:** ช่วยแก้ปัญหาทางตันในการเริ่มงานเขียน
+✨ **Flexibility:** จัดการกับข้อมูลที่ไม่มีโครงสร้าง (Unstructured Data) ได้ดี
 
 ---
 
-### 🎯 Insight สำคัญ: ทำไมต้องใช้ร่วมกัน? (Slide 4)
+### 🎯 Why Use Together? (Slide 4)
 
-องค์กรที่เก่งจริง จะไม่ใช้แค่ตัวใดตัวหนึ่ง เพราะแต่ละตัวมีจุดบอดของตัวเองครับ
+องค์กรที่ Mature จะใช้ AI ทั้ง 3 แบบร่วมกัน:
+1.  **Symbolic**: ใช้กรองกฎเหล็ก (Eligibility)
+2.  **Predictive**: ใช้ระบุกลุ่มเป้าหมาย (Who to focus on?)
+3.  **Generative**: ใช้สร้าง Actions/Communication (What to do?)
 
-**1. ถ้าใช้ Predictive AI อย่างเดียว**
-คุณจะรู้ข้อมูล เช่น **"สมชายมีโอกาสลาออก 72%"**
-แต่คุณจะไปต่อไม่ถูกว่า:
-- ควรคุยกับเขาอย่างไร?
-- ควรเสนออะไรให้เขาอยู่ต่อ?
-- ควรเขียนแผน Retention Plan แบบไหนที่โดนใจเขา?
-
-**2. ถ้าใช้ Generative AI อย่างเดียว**
-คุณจะเขียนแผน Retention ได้ดีมาก ภาษาสวยหรู
-แต่คุณจะไม่รู้ว่า:
-- **ควรทำกับใครก่อน?** (ใครคือกลุ่มเสี่ยงสูงที่ต้องรีบดูแล)
-- ทรัพยากรที่มีจำกัดควรลงไปที่ใคร?
+**ตัวอย่างการใช้งานร่วมกัน:**
+*Predictive บอกว่า "สมชายเสี่ยงลาออก 80%" -> Generative ช่วยร่าง "Retention Script" เพื่อให้หัวหน้าไปคุย*
 
 ---
 
@@ -126,9 +102,7 @@ AI ที่ทรงพลังจริง ๆ ต้องทำงานส
 **บทสรุปสำหรับผู้บริหาร:**
 ในองค์กรระดับ Enterprise ปี 2026:
 > **Predictive = Brain (สมองวิเคราะห์)**
-> **Generative = Voice (เสียงสื่อสาร)**
-
-ถ้าขาดอย่างใดอย่างหนึ่ง การทำงานของ HR จะไม่ครบวงจรครับ`
+> **Generative = Voice (เสียงสื่อสาร)**`
         },
         {
           id: "ai-skills-5",
@@ -137,29 +111,29 @@ AI ที่ทรงพลังจริง ๆ ต้องทำงานส
           icon: "fa-hand-holding-heart",
           // Placeholder for Slide 19
           image: "https://placehold.co/1200x675/e2e8f0/475569?text=Slide+19:+AI+Skills+(Listen,+Speak,+Read,+Write,+Think)",
-          content: `### มอง AI เป็นเพื่อนร่วมงานที่มี 5 ทักษะ
+          content: `### มอง AI เป็นเพื่อนร่วมงานที่มี 5 ทักษะ (Slide 19)
 
-เพื่อให้เห็นภาพการนำไปใช้ หน้า 19 ได้เปรียบเทียบ AI กับทักษะมนุษย์ดังนี้ครับ:
+เพื่อให้เห็นภาพการนำไปใช้ Slide 19 เปรียบเทียบ AI กับทักษะมนุษย์ 5 ด้าน:
 
 **1. Listen (ฟัง)**
-- **AI ทำอะไร**: Voice recognition, Sentiment analysis
-- **Use Case**: วิเคราะห์อารมณ์พนักงานจาก Townhall recording หรือ Voice of Employee
+- **Capability:** Speech Recognition, Sentiment Analysis
+- **HR Use Case:** วิเคราะห์อารมณ์จาก Townhall, Meeting Recording, หรือ Voice of Employee (VoE)
 
 **2. Speak (พูด)**
-- **AI ทำอะไร**: Conversational AI, Voice synthesis
-- **Use Case**: HR Chatbot ตอบคำถาม Policy, ระบบช่วยฝึกซ้อมการสนทนา (Role-play)
+- **Capability:** Text-to-Speech, Conversational AI
+- **HR Use Case:** HR Chatbot ตอบคำถามพนักงาน 24/7, ระบบ Role-play ฝึกซ้อมการให้ Feedback
 
 **3. Read (อ่าน)**
-- **AI ทำอะไร**: Resume parsing, Semantic search
-- **Use Case**: สกัด Skill จาก Resume 5,000 ใบ, ตรวจสอบความขัดแย้งในระเบียบบริษัท
+- **Capability:** OCR, NLP, Resume Parsing
+- **HR Use Case:** สกัด Skill จาก Resume 5,000 ใบ, ตรวจสอบความขัดแย้งในระเบียบ, สรุป Theme จาก Exit Interview
 
 **4. Write (เขียน)**
-- **AI ทำอะไร**: สร้างเนื้อหา, ร่างเอกสาร
-- **Use Case**: เขียน JD, ร่าง Performance Summary ให้ Manager (ลดเวลาจาก 1 ชม. เหลือ 20 นาที)
+- **Capability:** Text Generation
+- **HR Use Case:** เขียน JD, ร่างประกาศ, ทำสรุปการประชุม, เขียน Performance Review Summary (ลดเวลา 80%)
 
 **5. Think (คิด)**
-- **AI ทำอะไร**: Predictive models, Reasoning
-- **Use Case**: วางแผน Workforce Planning, วิเคราะห์ความเสี่ยงองค์กร`
+- **Capability:** Prediction, Optimization, Reasoning
+- **HR Use Case:** วางแผน Workforce Planning, วิเคราะห์ความเสี่ยงองค์กร, จัดตารางกะงาน (Shift Scheduling)`
         }
       ]
     },
@@ -174,36 +148,40 @@ AI ที่ทรงพลังจริง ๆ ต้องทำงานส
           icon: "fa-network-wired",
           // Placeholder for Slide 7
           image: "https://placehold.co/1200x675/e2e8f0/475569?text=Slide+7:+Hybrid+Intelligence+Diagram",
-          content: `### Hybrid Intelligence คืออะไร? (Slide 7)
+          content: `### Hybrid Intelligence Architecture (Slide 7)
 
-ไม่ใช่แค่การใช้ AI หลายตัว แต่คือการออกแบบระบบให้ทำงานร่วมกับ **"มนุษย์"** และ **"ข้อมูลองค์กร"**
+ไม่ใช่แค่การใช้เครื่องมือหลายตัว แต่คือการสร้าง **"Layered System"** ที่ทำงานร่วมกัน:
 
-**องค์ประกอบสำคัญ (Layered System):**
-1.  **Data Layer**: ข้อมูลดิบ (HRIS, Performance Data)
-2.  **Model Layer**: สมองที่ใช้คิด (Predictive Model, Scoring Engine)
-3.  **Governance Layer**: กฎหมาย จริยธรรม และการตรวจสอบ (สำคัญมากสำหรับองค์กรใหญ่)
-4.  **Human Layer**: การตัดสินใจสุดท้ายโดยมนุษย์
+1.  **Data Layer (เชื้อเพลิง):** HRIS, Payroll, Survey, Performance Data
+2.  **Model Layer (สมอง):** 
+    - Predictive Models (คำนวณความเสี่ยง)
+    - Scoring Engines (ให้คะแนนความพร้อม)
+3.  **Governance Layer (กฎควบคุม):** Policy, Privacy, Bias Check
+4.  **Generative Layer (การสื่อสาร):** แปลง Insight เป็นภาษาคน
+5.  **Human Layer (การตัดสินใจ):** HRBP และ Manager ใช้ "วิจารณญาณ" ขั้นสุดท้าย
 
 ---
 
-### กรณีศึกษา: คุณสมชาย (Slide 8)
-ตัวอย่างการตัดสินใจเรื่อง **Promotion** โดยใช้ Hybrid System:
+### Case Study: คุณสมชาย (Somchai T.) - Slide 8
+ตัวอย่างการตัดสินใจเรื่อง **Promotion** แบบ Hybrid:
 
-**Step 1: Symbolic AI (ด่านแรก)**
-- ตรวจสอบกฎ: อายุงานครบ 18 เดือน? ไม่มีการลงโทษวินัย? -> **ผ่าน/ไม่ผ่าน**
+**Stage 1: Symbolic AI (Rule Check)**
+*   *Rule:* อายุงาน > 18 เดือน? ผ่าน Performance 2 รอบ?
+*   *Result:* ✅ ผ่านเกณฑ์ (Eligible)
 
-**Step 2: Predictive AI (วิเคราะห์)**
-- คำนวณ: โอกาสประสบความสำเร็จในตำแหน่งใหม่ **78%**
-- คะแนนความพร้อม (Readiness Score) **82/100**
+**Stage 2: Predictive AI (Analysis)**
+*   *Model:* คำนวณความน่าจะเป็นที่จะประสบความสำเร็จ
+*   *Result:* 📊 **Success Probability 78%**, Readiness Score 82/100
 
-**Step 3: Generative AI (นำเสนอ)**
-- ร่างเอกสารเสนอเลื่อนตำแหน่ง (Promotion Memo)
-- สร้างแผนพัฒนา (Development Plan) เตรียมไว้ให้
+**Stage 3: Generative AI (Action)**
+*   *Task:* สร้างเอกสารสนับสนุน
+*   *Result:* 📝 ร่าง **Promotion Memo** และ **Development Plan** สำหรับ Gap ที่เหลืออีก 18%
 
-**Step 4: Human (ตัดสินใจ)**
-- HR และ Manager พิจารณาข้อมูลทั้งหมด + บริบททางสังคม (Soft Side) แล้วตัดสินใจขั้นสุดท้าย
+**Stage 4: Human (Decision)**
+*   *Action:* HRBP ดูข้อมูลทั้งหมด + บริบททีม + ความเหมาะสม
+*   *Result:* 🤝 **อนุมัติ** และใช้แผนพัฒนาที่ AI ร่างให้เป็นแนวทางคุย
 
-> **สรุป**: AI ช่วย "เตรียมข้อมูลและวิเคราะห์" เพื่อให้มนุษย์ "ตัดสินใจ" ได้แม่นยำและเร็วขึ้นครับ`
+> **Summary:** AI ช่วยลดเวลาในการรวบรวมและวิเคราะห์ข้อมูล เพื่อให้มนุษย์โฟกัสที่ **"Quality of Decision"** และ **"People Conversation"**`
         },
         {
           id: "governance-risk",
@@ -211,21 +189,22 @@ AI ที่ทรงพลังจริง ๆ ต้องทำงานส
           type: "risk",
           icon: "fa-shield-alt",
           // No specific slide image, maybe a generic one or none
-          content: `### ทำไมต้องมี Governance Layer?
+          content: `### Governance Layer (Slide 7 Deep Dive)
 
-สำหรับองค์กรที่มีพนักงาน 2,000 คน ถ้าไม่มีระบบกำกับดูแล อาจเกิดความเสี่ยงมหาศาลครับ
+สำหรับองค์กร Enterprise (2,000+ คน) นี่คือสิ่งที่แยก "ของเล่น" ออกจาก "เครื่องมือจริง":
 
-**1. Guardrails (รั้วป้องกัน)**
-- ป้องกันไม่ให้ AI แนะนำสิ่งที่ผิดกฎหมาย หรือเลือกปฏิบัติ (Bias)
-- ป้องกันข้อมูลรั่วไหล (Data Leakage)
+**1. Guardrails (รั้วป้องกันความเสี่ยง)**
+- **Technical Guardrails:** ป้องกันข้อมูล PII (ส่วนบุคคล) หลุดออกไป Public LLM
+- **Ethical Guardrails:** ตรวจจับ Bias ในการคัดเลือกคน (เช่น ป้องกันการกีดกันเพศ/อายุ)
 
 **2. Human Oversight (มนุษย์ต้องกำกับดูแล)**
-- **กฎเหล็ก**: ห้ามใช้ AI ตัดสินเรื่องคอขาดบาดตาย (เช่น เลิกจ้าง, ลดเงินเดือน) โดยอัตโนมัติ
-- AI เป็นเพียง Decision Support (ผู้ช่วยตัดสินใจ) เท่านั้น
+- **High-Stakes Decisions:** ห้าม AI ตัดสินใจเองในเรื่องที่มีผลกระทบต่อชีวิตคน (ไล่ออก, ลดเงินเดือน, ให้โบนัส)
+- **Review Cycle:** ต้องมี HR Review ก่อนกดส่งเสมอ
 
-**3. Probability ≠ Truth (ความน่าจะเป็น ไม่ใช่ความจริง)**
-- ถ้า AI บอกว่า "สมชายเสี่ยงลาออก 70%" แปลว่า "คนที่มีพฤติกรรมคล้ายสมชายในอดีต เคยลาออก 70%"
-- **ไม่ได้แปลว่า** สมชายจะลาออกแน่นอน ห้ามไปลงโทษเขา แต่ควรเข้าไปดูแลพูดคุย`
+**3. Audit Trail (รอยเท้า)**
+- ทุกคำแนะนำของ AI ต้องถูกบันทึกไว้ว่า "ทำไมถึงแนะนำแบบนี้" เพื่อตรวจสอบย้อนหลังได้ (Explainability)
+
+> **กฎเหล็ก:** AI เป็นเพียง **"Decision Support"** (ผู้ช่วยตัดสินใจ) ไม่ใช่ "Decision Maker" (ผู้ตัดสินใจ)`
         }
       ]
     },
@@ -240,25 +219,28 @@ AI ที่ทรงพลังจริง ๆ ต้องทำงานส
           icon: "fa-chart-matrix",
           // Placeholder for Slide 12
           image: "https://placehold.co/1200x675/e2e8f0/475569?text=Slide+12:+Adoption+Matrix+(Automate/Augment/Agentify)",
-          content: `### Framework การตัดสินใจ (Slide 12)
+          content: `### Adoption Matrix: 4 กลยุทธ์ตามความยากงาน (Slide 12)
 
-HR ไม่ควรใช้ AI กับทุกงาน เราต้องดูกราฟ 2 แกน: **ความซ้ำซาก (Repetition)** และ **การใช้เหตุผล (Reasoning)**
+HR ไม่ควรใช้ AI กับทุกงาน เราต้องวิเคราะห์ผ่าน 2 แกน: **ความซ้ำซาก (Repetition)** และ **การใช้เหตุผล (Reasoning)**
 
 **1. AUTOMATE (ซ้ำสูง + ตรรกะง่าย)**
-- **งาน**: ตอบคำถาม FAQ, ออกหนังสือรับรอง, คัดกรองเบื้องต้น
-- **วิธี**: ใช้ระบบอัตโนมัติ (RPA) หรือ Rule-based
+*   **เป้าหมาย:** แทนคนเพื่อลดงาน Admin
+*   **งาน:** ตอบคำถามสิทธิวันลา, ออกหนังสือรับรอง, ปรับปรุงข้อมูลพนักงาน
+*   **เครื่องมือ:** RPA, Chatbot (Q&A)
 
 **2. AUGMENT (ซ้ำน้อย + ตรรกะสูง)**
-- **งาน**: การตัดสินใจเลื่อนตำแหน่ง, การวางแผน Nachfolgeregelung (Succession)
-- **วิธี**: ใช้ AI ช่วยวิเคราะห์ข้อมูล (Enhance Reasoning) แต่มนุษย์ตัดสินใจ
+*   **เป้าหมาย:** ช่วยคนคิด (Enhance Reasoning) คิดได้เร็วและกว้างขึ้น
+*   **งาน:** การตัดสินใจเลื่อนตำแหน่ง, การวางแผน Nachfolgeregelung (Succession), ปรับโครงสร้างองค์กร
+*   **เครื่องมือ:** Predictive Analytics, Dashboard
 
 **3. AGENTIFY (ซ้ำสูง + ตรรกะสูง)**
-- **งาน**: สรุปผล Survey 10,000 คอมเมนต์, คัดกรอง Resume จำนวนมาก
-- **วิธี**: ใช้ AI Agent หรือ Workflow Automation ที่ "คิดก่อนทำ"
+*   **เป้าหมาย:** สร้าง Workflow อัจฉริยะ (AI Workflow Automation)
+*   **งาน:** สรุปผล Engagement Survey 10,000 คอมเมนต์, คัดกรอง Resume จำนวนมากแบบละเอียด
+*   **เครื่องมือ:** AI Agents, Intelligent Workflows
 
 **4. IGNORE (ซ้ำน้อย + ตรรกะง่าย)**
-- **งาน**: กรณีพิเศษ (Ad-hoc), งานแม่บ้าน
-- **วิธี**: ทำมือต่อไป ไม่คุ้มลงทุน`
+*   **เป้าหมาย:** ทำมือต่อไป (ROI ไม่คุ้ม)
+*   **งาน:** กรณีพิเศษ (Ad-hoc), งานจัดการทั่วไปที่นานๆ ทำที`
         },
         {
           id: "workflow-automation",
@@ -267,22 +249,21 @@ HR ไม่ควรใช้ AI กับทุกงาน เราต้อ
           icon: "fa-cogs",
           // Placeholder for Slide 13
           image: "https://placehold.co/1200x675/e2e8f0/475569?text=Slide+13:+AI+Workflow+Automation",
-          content: `### เปลี่ยนจาก Tool เป็น System
+          content: `### จาก "Tool" สู่ "System" (Slide 13-15)
 
 **Automate the Repeatable (Slide 10)**
-- เริ่มจากงานที่ปริมาณเยอะๆ ก่อน (Volume) เพื่อให้เห็น ROI ชัดเจน
-- เช่น การตอบคำถาม Policy พนักงาน 1,200 ครั้ง/เดือน
+หลักการแรก: เริ่มจากงานที่ "Friction" สูงและทำซ้ำบ่อยๆ ก่อน เพื่อสร้าง Quick Wins
 
-**Traditional vs AI Automation (Slide 13)**
-- **Traditional**: ทำตามคำสั่งเป๊ะๆ (Executes) ถ้าเจออะไรแปลกๆ จะ Error
-- **AI Automation**: คิดก่อนทำ (Thinks before executing) อ่านบริบทได้ ปรับตัวได้
+**Traditional vs AI Automation**
+*   **Traditional (RPA):** "Executes" ทำตามคำสั่งเป๊ะๆ ถ้าเจออะไรผิดแปลกจะ Error ทันที
+*   **AI Automation:** "Thinks before executing" อ่านบริบทได้ ปรับตัวได้ ตัดสินใจเบื้องต้นได้
 
-**Levels of Intelligence (Slide 15)**
-- **Level 1 (Rule-based)**: แจ้งเตือนเมื่อวันลาหมด
-- **Level 2 (Pattern)**: เห็นแพทเทิร์นการลาออก
-- **Level 3 (Predictive)**: ทำนายว่าใครจะลาออก
-- **Level 4 (Generative/Adaptive)**: สร้างแผนรักษาพนักงาน (Retention Plan) ให้หัวหน้างาน
-- **Level 5 (Autonomous)**: ระบบบริหารจัดการ Talent แบบ Real-time (ระดับสูงสุด)`
+**Levels of Intelligence (Slide 15) - เราอยู่ตรงไหน?**
+1.  **Rule-based:** แจ้งเตือนเมื่อวันลาหมด (ขั้นพื้นฐาน)
+2.  **Pattern:** เห็นแพทเทิร์นการลาออกของพนักงาน (เริ่มมี Data)
+3.  **Predictive:** ทำนายว่า "ใคร" มีแนวโน้มจะลาออก (เริ่มฉลาด)
+4.  **Generative/Adaptive:** สร้างแผนรักษาคนอัตโนมัติรายบุคคล (เริ่ม Proactive)
+5.  **Autonomous:** ระบบบริหารจัดการ Talent แบบ Real-time (ระดับสูงสุด)`
         }
       ]
     },

@@ -52,6 +52,21 @@ const Sidebar: React.FC<SidebarProps> = ({ courseTitle, modules, activeLessonId,
         ))}
       </div>
       
+      <div className="px-6 py-4 border-t border-slate-700">
+        <h3 className="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-3">
+          Course Materials
+        </h3>
+        <a 
+          href="/Handout-AI-For-HR.pdf" 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="flex items-center gap-3 text-slate-400 hover:text-white transition-colors group"
+        >
+          <i className="fa-solid fa-file-pdf text-rose-500 group-hover:text-rose-400"></i>
+          <span className="text-sm font-medium">Download Handout</span>
+        </a>
+      </div>
+      
       <div className="p-4 bg-slate-800/50 border-t border-slate-700">
         <div className="flex items-center gap-3 text-slate-400 text-xs">
           <div className="w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center text-white">
