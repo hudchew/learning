@@ -5,6 +5,7 @@ export interface Lesson {
   content: string;
   type: 'concept' | 'practical' | 'risk' | 'prompt-template';
   icon?: string;
+  image?: string; // URL to the slide image
 }
 
 export interface Module {

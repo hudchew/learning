@@ -122,6 +122,21 @@ const App: React.FC = () => {
 
             {/* Content Body */}
             <article className="bg-white rounded-3xl shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] border border-slate-100 p-8 md:p-14 mb-12">
+              {/* Slide Image Placeholder */}
+              {activeLesson.image && (
+                <div className="mb-10 rounded-2xl overflow-hidden shadow-sm border border-slate-100 bg-slate-100">
+                  <img 
+                    src={activeLesson.image} 
+                    alt={`Slide for ${activeLesson.title}`} 
+                    className="w-full h-auto object-cover"
+                    loading="lazy"
+                  />
+                  <div className="bg-slate-50 px-4 py-2 text-[10px] text-slate-400 text-center uppercase tracking-wider border-t border-slate-100">
+                    รูปภาพประกอบจาก Slide Handout
+                  </div>
+                </div>
+              )}
+              
               <div className="prose prose-lg prose-slate max-w-none">
                 {renderContent(activeLesson.content)}
               </div>
