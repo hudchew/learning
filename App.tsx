@@ -323,7 +323,7 @@ const App: React.FC = () => {
               ) : (
                 <div className="bg-emerald-50 text-emerald-700 px-6 py-4 rounded-2xl font-bold flex items-center gap-2">
                   <i className="fa-solid fa-circle-check"></i>
-                  ยินดีด้วยครับ! พี่เรียนจบหลักสูตรนี้แล้ว
+                  You have completed this course!
                 </div>
               )}
             </div>
