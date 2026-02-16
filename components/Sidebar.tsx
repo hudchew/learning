@@ -63,7 +63,7 @@ const Sidebar: React.FC<SidebarProps> = ({ courseTitle, modules, activeLessonId,
           className="flex items-center gap-3 text-slate-400 hover:text-white transition-colors group"
         >
           <i className="fa-solid fa-file-pdf text-rose-500 group-hover:text-rose-400"></i>
-          <span className="text-sm font-medium">Download Handout</span>
+          <span className="text-sm font-medium">Full Slide</span>
         </a>
       </div>
       
