@@ -280,7 +280,7 @@ const App: React.FC = () => {
             <article className="bg-white rounded-3xl shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] border border-slate-100 p-8 md:p-14 mb-12">
               {/* Slide Carousel at Top */}
               {activeLesson.slides && activeLesson.slides.length > 0 && (
-                <SlideCarousel slides={activeLesson.slides} />
+                <SlideCarousel key={activeLesson.id} slides={activeLesson.slides} />
               )}
               
               {/* Fallback for single image if no slides array but image exists (legacy support) */}

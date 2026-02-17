@@ -1,5 +1,4 @@
-
-import { CourseData } from './types';
+import { CourseData } from "./types";
 
 export const COURSE_CONTENT: CourseData = {
   title: "AI for HR: Masterclass",
@@ -264,7 +263,7 @@ AI บอก: "มี churn risk สูง" (มีโอกาสลาออ�
 
 > ถ้าคุณเป็น HR Director ขององค์กร 2,000 คน สิ่งที่คุณควรสร้างไม่ใช่ "AI System" แต่คือ **AI Governance Framework**
 >
-> 🔧 **อธิบายให้เห็นภาพ:** เหมือนกับการสร้าง production system — ไม่ใช่แค่เขียน code ให้ทำงานได้ แต่ต้องมี monitoring, logging, access control, rollback plan, และ incident response ครบถ้วน`
+> 🔧 **อธิบายให้เห็นภาพ:** เหมือนกับการสร้าง production system — ไม่ใช่แค่เขียน code ให้ทำงานได้ แต่ต้องมี monitoring, logging, access control, rollback plan, และ incident response ครบถ้วน`,
         },
         {
           id: "ai-3-types",
@@ -274,7 +273,7 @@ AI บอก: "มี churn risk สูง" (มีโอกาสลาออ�
           image: "/Handout-AI-For-HR/Handout-AI-For-HR_5.jpg",
           slides: [
             "/Handout-AI-For-HR/Handout-AI-For-HR_5.jpg",
-            "/Handout-AI-For-HR/Handout-AI-For-HR_6.jpg"
+            "/Handout-AI-For-HR/Handout-AI-For-HR_6.jpg",
           ],
           content: `### เจาะลึก 3 ประเภทของ AI (Slide 5-6)
 
@@ -435,7 +434,7 @@ AI บอก: "มี churn risk สูง" (มีโอกาสลาออ�
 3. **Generative** ร่างเอกสารแจ้งการโปรโมท + แผนพัฒนารายบุคคล
 > 🔧 **อธิบายให้เห็นภาพ:** เหมือนสถาปัตยกรรม microservices — แต่ละ service ทำหน้าที่เฉพาะ แล้วประสานงานผ่าน orchestrator
 
-> องค์กรที่ mature จะไม่พูดว่า "ใช้ AI" แต่จะพูดว่า **"ใช้ AI ประเภทไหนกับงานอะไร"**`
+> องค์กรที่ mature จะไม่พูดว่า "ใช้ AI" แต่จะพูดว่า **"ใช้ AI ประเภทไหนกับงานอะไร"**`,
         },
         {
           id: "hybrid-intelligence",
@@ -445,7 +444,7 @@ AI บอก: "มี churn risk สูง" (มีโอกาสลาออ�
           image: "/Handout-AI-For-HR/Handout-AI-For-HR_7.jpg",
           slides: [
             "/Handout-AI-For-HR/Handout-AI-For-HR_7.jpg",
-            "/Handout-AI-For-HR/Handout-AI-For-HR_8.jpg"
+            "/Handout-AI-For-HR/Handout-AI-For-HR_8.jpg",
           ],
           content: `### Hybrid Intelligence คืออะไร? (Slide 7)
 
@@ -609,7 +608,7 @@ Hybrid ที่แท้จริงต้องมีครบทุก layer:
 
 ถ้า**ขาดข้อใดข้อหนึ่ง** Hybrid จะไม่สมบูรณ์ — เหมือนรถที่มีเครื่องยนต์แต่ไม่มีพวงมาลัย
 
-> **AI ไม่ได้มาแทน HR แต่มา "ขยายความสามารถ HR"** จาก reactive (ตั้งรับ รอปัญหาเกิดแล้วค่อยแก้) → proactive (เชิงรุก ป้องกันก่อนเกิด) / จาก intuition (ใช้สัญชาตญาณ) → augmented intelligence (ใช้ข้อมูล + AI ช่วยตัดสินใจ)`
+> **AI ไม่ได้มาแทน HR แต่มา "ขยายความสามารถ HR"** จาก reactive (ตั้งรับ รอปัญหาเกิดแล้วค่อยแก้) → proactive (เชิงรุก ป้องกันก่อนเกิด) / จาก intuition (ใช้สัญชาตญาณ) → augmented intelligence (ใช้ข้อมูล + AI ช่วยตัดสินใจ)`,
         },
         {
           id: "when-to-use-ai",
@@ -728,9 +727,9 @@ Slide 9 ให้ framework (กรอบคิด) ในการตัดส�
 
 > **สูตรสำเร็จ: เริ่มจากงาน High Volume + Low Risk + High Data = Quick Win** (ชนะเร็ว เห็นผลชัด)
 
-> 🔧 **อธิบายให้เห็นภาพ:** เหมือนเปิดร้านอาหาร — ไม่ต้องเริ่มจากเมนูซับซ้อน เริ่มจากเมนูที่ทำง่าย ขายดี กำไรดีก่อน แล้วค่อยขยาย`
+> 🔧 **อธิบายให้เห็นภาพ:** เหมือนเปิดร้านอาหาร — ไม่ต้องเริ่มจากเมนูซับซ้อน เริ่มจากเมนูที่ทำง่าย ขายดี กำไรดีก่อน แล้วค่อยขยาย`,
         },
-      ]
+      ],
     },
 
     {
@@ -831,7 +830,7 @@ Slide 9 ให้ framework (กรอบคิด) ในการตัดส�
 | **Phase 2** | **Augment HR Analysis** | Dashboard, Insight, Prediction | **ตกแต่งบ้าน** (จัดวางของให้สวยงาม น่าอยู่) |
 | **Phase 3** | **Transform Talent Strategy** | Workforce Planning, Succession | **ต่อเติมขยายบ้าน** (วางแผนอนาคตระยะยาว) |
 
-> **ข้อคิด:** ถ้ายัง automate งาน daily ops ไม่ได้... อย่าเพิ่งฝันถึง AI strategy ไกลๆ`
+> **ข้อคิด:** ถ้ายัง automate งาน daily ops ไม่ได้... อย่าเพิ่งฝันถึง AI strategy ไกลๆ`,
         },
         {
           id: "enhance-reasoning",
@@ -928,7 +927,7 @@ AI ไม่ได้มาแทนคน แต่มา **"ขยายคว
 
 - **Year 1:** Automate Ops (งาน Admin จบที่ AI)
 - **Year 2:** AI Decision Support (เริ่มใช้ Dashboard + Prediction)
-- **Year 3:** AI-enabled Talent Strategy (วางแผนกำลังคนระยะยาวด้วย AI)`
+- **Year 3:** AI-enabled Talent Strategy (วางแผนกำลังคนระยะยาวด้วย AI)`,
         },
         {
           id: "adoption-matrix",
@@ -1053,7 +1052,7 @@ AI ไม่ได้มาแทนคน แต่มา **"ขยายคว
 
 1. **List งาน HR ทั้งหมด** (ออกมากองรวมกัน)
 2. **Plot ลง Matrix** (ถามแค่ 2 คำถาม: ทำบ่อยไหม? ใช้สมองเยอะไหม?)
-3. **จัดลำดับ:** เริ่มจาก **Automate** (ง่ายสุด) → **Agentify** (คุ้มสุด) → **Augment** (ยากสุด)`
+3. **จัดลำดับ:** เริ่มจาก **Automate** (ง่ายสุด) → **Agentify** (คุ้มสุด) → **Augment** (ยากสุด)`,
         },
         {
           id: "workflow-automation",
@@ -1152,7 +1151,7 @@ AI Workflow Automation คือ: เชื่อมหลาย system, ทำ�
 2. **Hallucination at Scale:** AI เข้าใจผิดแล้วส่งข้อมูลผิดให้พนักงาน 1,000 คนพร้อมกัน
 3. **Black Box:** ไม่รู้ว่าทำไม AI ถึงตัดสินใจแบบนั้น (ต้องมี Log เสมอ!)
 
-> **กฎเหล็ก:** ทุก Workflow ต้องมี **"Emergency Stop Button"** (ปุ่มหยุดฉุกเฉิน) และ **"Human Review Step"** ในจุดสำคัญเสมอ`
+> **กฎเหล็ก:** ทุก Workflow ต้องมี **"Emergency Stop Button"** (ปุ่มหยุดฉุกเฉิน) และ **"Human Review Step"** ในจุดสำคัญเสมอ`,
         },
         {
           id: "why-ai",
@@ -1224,227 +1223,226 @@ AI ไม่ได้มาเพื่อลดคนหรือทำงา�
 | วิเคราะห์ด้วยมือ (Manual) | AI ช่วยวิเคราะห์ (AI-Augmented) |
 | ประเมินเป็นรอบๆ (Periodic) | ดูแลตลอดเวลา (Continuous) |
 | เหมาเข่ง (One-size-fits-all) | รู้ใจรายคน (Personalized) |
-| ตั้งรับ (Reactive) | เชิงรุก (Proactive) |`
-        },
-
-    {
-      "id": "levels-of-intelligence",
-      "title": "ระดับความฉลาดของ Automation",
-      "type": "concept",
-      "icon": "fa-stairs",
-      "image": "/Handout-AI-For-HR/Handout-AI-For-HR_15.jpg",
-      "slides": ["/Handout-AI-For-HR/Handout-AI-For-HR_15.jpg"],
-      "content": `### Levels of Intelligence in Automation (Slide 15)
-
-Automation ไม่ได้มีแค่ \"มีหรือไม่มี\" แต่มี **\"ระดับความฉลาด\"** แตกต่างกัน — องค์กรต้องรู้ว่าตัวเองอยู่ระดับไหน และจะไประดับไหน
-
-> 💡 **พูดง่ายๆ:** เหมือนพัฒนาการของเด็ก:
-> - **Level 1:** ทำตามคำสั่งพ่อแม่ (ห้ามดื้อ)
-> - **Level 3:** เริ่มคิดเองได้ว่า \"ถ้าทำแบบนี้จะโดนดุ\" (Predictive)
-> - **Level 5:** โตเป็นผู้ใหญ่ ดูแลตัวเองได้โดยไม่ต้องบอก (Autonomous)
-
----
-
-### 🏗 Level 1: Rule-Based (พื้นฐานที่สุด)
-
-> 🔧 **อธิบายให้เห็นภาพ:** **\"สัญญาณไฟจราจร\"** (Traffic Light)
-> - แดง=หยุด, เขียว=ไป (กฎตายตัว)
-> - ฝนตกหนักแค่ไหน รถติดแค่ไหน **ไฟก็ทำงานเหมือนเดิม** (ไม่ยืดหยุ่น)
-
-**ลักษณะ:** ทำงานตามเงื่อนไข If-This-Then-That เป๊ะๆ
-**ตัวอย่าง HR:**
-- ถ้าวันลาคงเหลือ > 0 → อนุมัติเบื้องต้น
-- ถ้ามาสายเกิน 3 ครั้ง → ส่งอีเมลเตือน
-**ข้อจำกัด:** เจอปัญหาใหม่ๆ ไปไม่เป็น
-
----
-
-### 📊 Level 2: Pattern Recognition (เริ่มจำได้)
-
-> 🔧 **อธิบายให้เห็นภาพ:** **\"กรมอุตุนิยมวิทยา\"** (Weather Forecast)
-> - เห็นเมฆครึ้มๆ ลมแรงๆ → \"น่าจะฝนตกนะ\" (จำ Pattern ได้)
-> - แต่ยังไม่บอกว่า \"จะตกกี่โมง\" หรือ \"น้ำจะท่วมไหม\"
-
-**ลักษณะ:** ใช้ Machine Learning จำแนกหมวดหมู่ข้อมูล
-**ตัวอย่าง HR:**
-- แยกแยะ Resume ว่าอันไหน Developer / อันไหน Sales (Keyword Matching)
-- จับกลุ่มพนักงานที่ Engagement ต่ำ (Clustering)
-**ข้อจำกัด:** บอกได้แค่ \"สิ่งที่เคยเกิด\" ไม่รู้อนาคต
-
----
-
-### 🔮 Level 3: Predictive (รู้อนาคต)
-
-> 🔧 **อธิบายให้เห็นภาพ:** **\"Google Maps (ETA)\"**
-> - \"ถ้าออกตอนนี้ จะถึงใน 45 นาที\" (ทำนายอนาคต)
-> - \"เส้นนี้รถติดนะ ไปทางอื่นดีกว่า\" (แนะนำทางเลือก)
-
-**ลักษณะ:** ใช้สถิติในอดีตมาทำนายสิ่งที่จะเกิดขึ้น
-**ตัวอย่าง HR:**
-- **Attrition Risk:** \"นาย A มีโอกาสลาออก 85% ในอีก 3 เดือนข้างหน้า\"
-- **Success Prob:** \"ถ้าโปรโมทนาง B ขึ้น Manager โอกาสรอด 70%\"
-**ข้อจำกัด:** แม่นยำตามคุณภาพข้อมูล (Garbage In, Garbage Out)
-
----
-
-### ✨ Level 4: Adaptive / Generative (ปรับตัวได้)
-
-> 🔧 **อธิบายให้เห็นภาพ:** **\"Netflix Recommendation\"** / **\"Spotify\"**
-> - \"คุณชอบดูหนัง Action ใช่ไหม? งั้นลองเรื่องนี้สิ\" (รู้ใจ)
-> - หน้าจอของแต่ละคนไม่เหมือนกันเลย (Personalized)
-
-**ลักษณะ:** สร้างเนื้อหาหรือคำแนะนำที่เหมาะกับ **\"แต่ละคน\"**
-**ตัวอย่าง HR:**
-- **Career Path:** สร้างเส้นทางเติบโตที่ไม่เหมือนกัน ให้พนักงานแต่ละคน
-- **Learning Plan:** แนะนำคอร์สเรียนตามที่ยังขาด
-**ข้อจำกัด:** อาจจะ hallucinate (มั่ว) ได้ ต้องมีคนคุม
-
----
-
-### 🤖 Level 5: Autonomous (อัตโนมัติสมบูรณ์)
-
-> 🔧 **อธิบายให้เห็นภาพ:** **\"รถยนต์ไร้คนขับ\"** (Self-Driving Car)
-> - ขับเอง เบรคเอง เลี้ยวเอง หาที่จอดเอง
-> - คนแค่นั่งเฉยๆ หรือบอกแค่ \"จะไปไหน\"
-
-**ลักษณะ:** ระบบตัดสินใจและลงมือทำเองได้ครบวงจร (ยังเป็นอนาคตสำหรับ HR)
-**ตัวอย่าง HR (Future):**
-- ระบบโยกย้ายคนทำงานข้ามแผนกอัตโนมัติ ตามงานที่ล้นมือ (Fluid Workforce)
-- ระบบแก้ปัญหา Burnout อัตโนมัติ (ส่งตารางวันหยุดให้ทันทีที่เห็นสัญญาณเครียด)
-**ข้อจำกัด:** เรื่องจริยธรรมและความเชื่อมั่น (Trust)
-
----
-
-### 🏢 Summary: องค์กรของคุณอยู่ตรงไหน?
-
-| Level | ชื่อระดับ | ความสามารถ | เปรียบเทียบ |
-|-------|-----------|------------|-------------|
-| **1** | Rule-Based | ทำตามสั่ง | **ไฟจราจร** |
-| **2** | Pattern | จำรูปแบบได้ | **พยากรณ์อากาศ** |
-| **3** | Predictive | ทำนายอนาคต | **Google Maps** |
-| **4** | Adaptive | รู้ใจรายบุคคล | **Netflix** |
-| **5** | Autonomous | คิดและทำเอง | **รถไร้คนขับ** |
-
-> **เป้าหมายปีนี้:** ย้ายจาก **Level 1 (Rule)** ไปสู่ **Level 3 (Predictive)** ให้ได้ในงานสำคัญ
-
----
-
-### 📊 เปรียบเทียบ Automation vs Intelligent Automation
-
-| Automation | Intelligent Automation |
-|-----------|----------------------|
-| ทำตามคำสั่ง | วิเคราะห์ก่อนทำ |
-| ไม่เรียนรู้ | เรียนรู้จาก data |
-| Static | Adaptive |
-| Reactive | Proactive |
-| One-size-fits-all | Personalized |
-
----
-
-### 🎯 Roadmap สำหรับองค์กร 2,000 คน
-
-**Year 1:** Level 1-2 (Rule-based + Pattern)
-- HR chatbot, Policy automation, Survey analysis
-
-**Year 2:** Level 3 (Predictive)
-- Attrition prediction, Performance forecasting
-
-**Year 3:** Level 4 (Adaptive)
-- Personalized development, Dynamic JD, AI-generated review
-
-**Year 4+:** Level 5 (Autonomous)
-- Proactive talent mobility, Self-optimizing workforce planning
-
-> **Key:** ไม่ต้องกระโดดไป Level 5 ทันที — ค่อยๆ build foundation`
+| ตั้งรับ (Reactive) | เชิงรุก (Proactive) |`,
         },
         {
-      "id": "ai-skills-in-hr",
-      "title": "5 ทักษะของ AI (Human Capability)",
-      "type": "concept",
-      "icon": "fa-hand-sparkles",
-      "image": "/Handout-AI-For-HR/Handout-AI-For-HR_19.jpg",
-      "slides": ["/Handout-AI-For-HR/Handout-AI-For-HR_19.jpg"],
-      "content": `### AI Skills in HR: AI ทำอะไรได้บ้าง? (Slide 19)
+          id: "levels-of-intelligence",
+          title: "ระดับความฉลาดของ Automation",
+          type: "concept",
+          icon: "fa-stairs",
+          image: "/Handout-AI-For-HR/Handout-AI-For-HR_15.jpg",
+          slides: ["/Handout-AI-For-HR/Handout-AI-For-HR_15.jpg"],
+          content: `### Levels of Intelligence in Automation (Slide 15)
 
-ถ้าถามว่า "AI ทำอะไรได้?" คำตอบอาจจะกว้างมาก
-ลองมอง AI เหมือน **"พนักงานคนใหม่"** ที่มีความสามารถ 5 ด้านเหมือนมนุษย์ (Human Capabilities):
+              Automation ไม่ได้มีแค่ \"มีหรือไม่มี\" แต่มี **\"ระดับความฉลาด\"** แตกต่างกัน — องค์กรต้องรู้ว่าตัวเองอยู่ระดับไหน และจะไประดับไหน
 
-> 💡 **พูดง่ายๆ:** อย่ามอง AI เป็นโปรแกรมคอมพิวเตอร์ ให้มองเป็น **"เพื่อนร่วมงานอัจฉริยะ"** ที่เก่งเฉพาะเรื่อง
+              > 💡 **พูดง่ายๆ:** เหมือนพัฒนาการของเด็ก:
+              > - **Level 1:** ทำตามคำสั่งพ่อแม่ (ห้ามดื้อ)
+              > - **Level 3:** เริ่มคิดเองได้ว่า \"ถ้าทำแบบนี้จะโดนดุ\" (Predictive)
+              > - **Level 5:** โตเป็นผู้ใหญ่ ดูแลตัวเองได้โดยไม่ต้องบอก (Autonomous)
 
----
+              ---
 
-### 👂 1. Listen (ฟัง)
+              ### 🏗 Level 1: Rule-Based (พื้นฐานที่สุด)
 
-> 🔧 **อธิบายให้เห็นภาพ:** **"หูทิพย์"** (Super Ear)
-> - ฟัง Townhall 2 ชั่วโมงจบ แล้วสรุปประเด็นสำคัญได้ใน 1 นาที (Voice Recognition)
-> - จับ "น้ำเสียง" (Sentiment Analysis) ได้ว่าพนักงานกำลังโกรธ หรือ ดีใจ
+              > 🔧 **อธิบายให้เห็นภาพ:** **\"สัญญาณไฟจราจร\"** (Traffic Light)
+              > - แดง=หยุด, เขียว=ไป (กฎตายตัว)
+              > - ฝนตกหนักแค่ไหน รถติดแค่ไหน **ไฟก็ทำงานเหมือนเดิม** (ไม่ยืดหยุ่น)
 
-**ตัวอย่างงาน HR:**
-- วิเคราะห์เสียงสัมภาษณ์เพื่อหาจุดแข็งจุดอ่อน (Interview Intelligence)
-- ฟังเสียงพนักงานจาก Townhall recording เพื่อวัด Engagement
+              **ลักษณะ:** ทำงานตามเงื่อนไข If-This-Then-That เป๊ะๆ
+              **ตัวอย่าง HR:**
+              - ถ้าวันลาคงเหลือ > 0 → อนุมัติเบื้องต้น
+              - ถ้ามาสายเกิน 3 ครั้ง → ส่งอีเมลเตือน
+              **ข้อจำกัด:** เจอปัญหาใหม่ๆ ไปไม่เป็น
 
----
+              ---
 
-### 🗣 2. Speak (พูด)
+              ### 📊 Level 2: Pattern Recognition (เริ่มจำได้)
 
-> 🔧 **อธิบายให้เห็นภาพ:** **"Call Center ส่วนตัว 24 ชม."** (Conversational AI)
-> - ตอบคำถามเรื่องวันลา/สวัสดิการซ้ำๆ ได้เป็นพันครั้งโดยไม่หงุดหงิด
-> - พูดคุยโต้ตอบได้เหมือนคนจริง (Natural Dialogue)
+              > 🔧 **อธิบายให้เห็นภาพ:** **\"กรมอุตุนิยมวิทยา\"** (Weather Forecast)
+              > - เห็นเมฆครึ้มๆ ลมแรงๆ → \"น่าจะฝนตกนะ\" (จำ Pattern ได้)
+              > - แต่ยังไม่บอกว่า \"จะตกกี่โมง\" หรือ \"น้ำจะท่วมไหม\"
 
-**ตัวอย่างงาน HR:**
-- **AI Chatbot** ตอบคำถาม Policy ตลอด 24 ชม.
-- **Onboarding Assistant** คุยกับพนักงานใหม่ แนะนำบริษัท
+              **ลักษณะ:** ใช้ Machine Learning จำแนกหมวดหมู่ข้อมูล
+              **ตัวอย่าง HR:**
+              - แยกแยะ Resume ว่าอันไหน Developer / อันไหน Sales (Keyword Matching)
+              - จับกลุ่มพนักงานที่ Engagement ต่ำ (Clustering)
+              **ข้อจำกัด:** บอกได้แค่ \"สิ่งที่เคยเกิด\" ไม่รู้อนาคต
 
----
+              ---
 
-### 📖 3. Read (อ่าน)
+              ### 🔮 Level 3: Predictive (รู้อนาคต)
 
-> 🔧 **อธิบายให้เห็นภาพ:** **"เครื่องสแกนเอกสารความเร็วสูง"** (Text Analysis)
-> - อ่าน Resume 5,000 ใบ แล้วดึง skill ออกมาใส่ Excel ให้ (Parsing)
-> - อ่าน Comment จาก Employee Survey 10,000 ข้อความ แล้วสรุปเทรนด์ (Clustering)
+              > 🔧 **อธิบายให้เห็นภาพ:** **\"Google Maps (ETA)\"**
+              > - \"ถ้าออกตอนนี้ จะถึงใน 45 นาที\" (ทำนายอนาคต)
+              > - \"เส้นนี้รถติดนะ ไปทางอื่นดีกว่า\" (แนะนำทางเลือก)
 
-**ตัวอย่างงาน HR:**
-- **Resume Screening:** คัดแยกผู้สมัครตามคุณสมบัติเบื้องต้น
-- **Policy Analysis:** ตรวจสอบความขัดแย้งของกฎระเบียบ
+              **ลักษณะ:** ใช้สถิติในอดีตมาทำนายสิ่งที่จะเกิดขึ้น
+              **ตัวอย่าง HR:**
+              - **Attrition Risk:** \"นาย A มีโอกาสลาออก 85% ในอีก 3 เดือนข้างหน้า\"
+              - **Success Prob:** \"ถ้าโปรโมทนาง B ขึ้น Manager โอกาสรอด 70%\"
+              **ข้อจำกัด:** แม่นยำตามคุณภาพข้อมูล (Garbage In, Garbage Out)
 
----
+              ---
 
-### ✍️ 4. Write (เขียน)
+              ### ✨ Level 4: Adaptive / Generative (ปรับตัวได้)
 
-> 🔧 **อธิบายให้เห็นภาพ:** **"เลขาฯ ร่างจดหมาย"** (Generative AI)
-> - ร่าง Job Description (JD) ที่ดึงดูดใจ
-> - ร่างอีเมลประกาศบริษัทที่อ่านง่าย
-> - ร่างแผนพัฒนาพนักงาน (IDP) ตามเป้าหมายรายบุคคล
+              > 🔧 **อธิบายให้เห็นภาพ:** **\"Netflix Recommendation\"** / **\"Spotify\"**
+              > - \"คุณชอบดูหนัง Action ใช่ไหม? งั้นลองเรื่องนี้สิ\" (รู้ใจ)
+              > - หน้าจอของแต่ละคนไม่เหมือนกันเลย (Personalized)
 
-**ตัวอย่างงาน HR:**
-- **Performance Summary Draft:** ช่วย Manager เขียนสรุปผลงานลูกน้อง
-- **Dynamic Content:** สร้างเนื้อหา Training เฉพาะกลุ่ม
+              **ลักษณะ:** สร้างเนื้อหาหรือคำแนะนำที่เหมาะกับ **\"แต่ละคน\"**
+              **ตัวอย่าง HR:**
+              - **Career Path:** สร้างเส้นทางเติบโตที่ไม่เหมือนกัน ให้พนักงานแต่ละคน
+              - **Learning Plan:** แนะนำคอร์สเรียนตามที่ยังขาด
+              **ข้อจำกัด:** อาจจะ hallucinate (มั่ว) ได้ ต้องมีคนคุม
 
----
+              ---
 
-### 🧠 5. Think (คิด)
+              ### 🤖 Level 5: Autonomous (อัตโนมัติสมบูรณ์)
 
-> 🔧 **อธิบายให้เห็นภาพ:** **"กุนซือคู่คิด"** (Strategist / Predictive)
-> - ช่วยประเมินความเสี่ยง (Risk Assessment) ที่เราอาจมองข้าม
-> - ช่วยพยากรณ์อนาคต (Predict) ว่าใครบ้างที่มีความเสี่ยงจะลาออก
+              > 🔧 **อธิบายให้เห็นภาพ:** **\"รถยนต์ไร้คนขับ\"** (Self-Driving Car)
+              > - ขับเอง เบรคเอง เลี้ยวเอง หาที่จอดเอง
+              > - คนแค่นั่งเฉยๆ หรือบอกแค่ \"จะไปไหน\"
 
-**ตัวอย่างงาน HR (Strategic Level):**
-- **Attrition Forecast:** ทำนายแนวโน้มการลาออก
-- **Talent Mobility:** แนะนำการโยกย้ายคนให้เหมาะกับงาน
+              **ลักษณะ:** ระบบตัดสินใจและลงมือทำเองได้ครบวงจร (ยังเป็นอนาคตสำหรับ HR)
+              **ตัวอย่าง HR (Future):**
+              - ระบบโยกย้ายคนทำงานข้ามแผนกอัตโนมัติ ตามงานที่ล้นมือ (Fluid Workforce)
+              - ระบบแก้ปัญหา Burnout อัตโนมัติ (ส่งตารางวันหยุดให้ทันทีที่เห็นสัญญาณเครียด)
+              **ข้อจำกัด:** เรื่องจริยธรรมและความเชื่อมั่น (Trust)
 
----
+              ---
 
-### 🏢 เริ่มต้นตรงไหนดี? (Phase Implementation)
+              ### 🏢 Summary: องค์กรของคุณอยู่ตรงไหน?
 
-การจะสร้าง AI Skill ต้องใช้ความพร้อมต่างกัน:
+              | Level | ชื่อระดับ | ความสามารถ | เปรียบเทียบ |
+              |-------|-----------|------------|-------------|
+              | **1** | Rule-Based | ทำตามสั่ง | **ไฟจราจร** |
+              | **2** | Pattern | จำรูปแบบได้ | **พยากรณ์อากาศ** |
+              | **3** | Predictive | ทำนายอนาคต | **Google Maps** |
+              | **4** | Adaptive | รู้ใจรายบุคคล | **Netflix** |
+              | **5** | Autonomous | คิดและทำเอง | **รถไร้คนขับ** |
 
-| Phase | Skill ที่ควรเริ่ม | เหตุผล |
-|-------|-------------------|--------|
-| **1** | **Read + Write** | เริ่มง่ายสุด ข้อมูลเป็น Text มีเยอะอยู่แล้ว (Resume, Policy) |
-| **2** | **Listen + Speak** | เมื่อพนักงานเริ่มชิน ค่อยทำ Chatbot / Voice |
-| **3** | **Think** | ยากที่สุด ต้องมี Data ที่สะอาดและเยอะพอ (ทำทีหลังสุด) |
+              > **เป้าหมายปีนี้:** ย้ายจาก **Level 1 (Rule)** ไปสู่ **Level 3 (Predictive)** ให้ได้ในงานสำคัญ
 
-> **ข้อควรระวัง:** "Think" (การตัดสินใจ) คือส่วนที่เสี่ยงที่สุด ต้องมีคนคอยกำกับ (Human-in-the-loop) เสมอ!`
+              ---
+
+              ### 📊 เปรียบเทียบ Automation vs Intelligent Automation
+
+              | Automation | Intelligent Automation |
+              |-----------|----------------------|
+              | ทำตามคำสั่ง | วิเคราะห์ก่อนทำ |
+              | ไม่เรียนรู้ | เรียนรู้จาก data |
+              | Static | Adaptive |
+              | Reactive | Proactive |
+              | One-size-fits-all | Personalized |
+
+              ---
+
+              ### 🎯 Roadmap สำหรับองค์กร 2,000 คน
+
+              **Year 1:** Level 1-2 (Rule-based + Pattern)
+              - HR chatbot, Policy automation, Survey analysis
+
+              **Year 2:** Level 3 (Predictive)
+              - Attrition prediction, Performance forecasting
+
+              **Year 3:** Level 4 (Adaptive)
+              - Personalized development, Dynamic JD, AI-generated review
+
+              **Year 4+:** Level 5 (Autonomous)
+              - Proactive talent mobility, Self-optimizing workforce planning
+
+              > **Key:** ไม่ต้องกระโดดไป Level 5 ทันที — ค่อยๆ build foundation`,
+        },
+        {
+          id: "ai-skills-in-hr",
+          title: "5 ทักษะของ AI (Human Capability)",
+          type: "concept",
+          icon: "fa-hand-sparkles",
+          image: "/Handout-AI-For-HR/Handout-AI-For-HR_19.jpg",
+          slides: ["/Handout-AI-For-HR/Handout-AI-For-HR_18.jpg", "/Handout-AI-For-HR/Handout-AI-For-HR_19.jpg"],
+          content: `### AI Skills in HR: AI ทำอะไรได้บ้าง? (Slide 19)
+
+          ถ้าถามว่า "AI ทำอะไรได้?" คำตอบอาจจะกว้างมาก
+          ลองมอง AI เหมือน **"พนักงานคนใหม่"** ที่มีความสามารถ 5 ด้านเหมือนมนุษย์ (Human Capabilities):
+
+          > 💡 **พูดง่ายๆ:** อย่ามอง AI เป็นโปรแกรมคอมพิวเตอร์ ให้มองเป็น **"เพื่อนร่วมงานอัจฉริยะ"** ที่เก่งเฉพาะเรื่อง
+
+          ---
+
+          ### 👂 1. Listen (ฟัง)
+
+          > 🔧 **อธิบายให้เห็นภาพ:** **"หูทิพย์"** (Super Ear)
+          > - ฟัง Townhall 2 ชั่วโมงจบ แล้วสรุปประเด็นสำคัญได้ใน 1 นาที (Voice Recognition)
+          > - จับ "น้ำเสียง" (Sentiment Analysis) ได้ว่าพนักงานกำลังโกรธ หรือ ดีใจ
+
+          **ตัวอย่างงาน HR:**
+          - วิเคราะห์เสียงสัมภาษณ์เพื่อหาจุดแข็งจุดอ่อน (Interview Intelligence)
+          - ฟังเสียงพนักงานจาก Townhall recording เพื่อวัด Engagement
+
+          ---
+
+          ### 🗣 2. Speak (พูด)
+
+          > 🔧 **อธิบายให้เห็นภาพ:** **"Call Center ส่วนตัว 24 ชม."** (Conversational AI)
+          > - ตอบคำถามเรื่องวันลา/สวัสดิการซ้ำๆ ได้เป็นพันครั้งโดยไม่หงุดหงิด
+          > - พูดคุยโต้ตอบได้เหมือนคนจริง (Natural Dialogue)
+
+          **ตัวอย่างงาน HR:**
+          - **AI Chatbot** ตอบคำถาม Policy ตลอด 24 ชม.
+          - **Onboarding Assistant** คุยกับพนักงานใหม่ แนะนำบริษัท
+
+          ---
+
+          ### 📖 3. Read (อ่าน)
+
+          > 🔧 **อธิบายให้เห็นภาพ:** **"เครื่องสแกนเอกสารความเร็วสูง"** (Text Analysis)
+          > - อ่าน Resume 5,000 ใบ แล้วดึง skill ออกมาใส่ Excel ให้ (Parsing)
+          > - อ่าน Comment จาก Employee Survey 10,000 ข้อความ แล้วสรุปเทรนด์ (Clustering)
+
+          **ตัวอย่างงาน HR:**
+          - **Resume Screening:** คัดแยกผู้สมัครตามคุณสมบัติเบื้องต้น
+          - **Policy Analysis:** ตรวจสอบความขัดแย้งของกฎระเบียบ
+
+          ---
+
+          ### ✍️ 4. Write (เขียน)
+
+          > 🔧 **อธิบายให้เห็นภาพ:** **"เลขาฯ ร่างจดหมาย"** (Generative AI)
+          > - ร่าง Job Description (JD) ที่ดึงดูดใจ
+          > - ร่างอีเมลประกาศบริษัทที่อ่านง่าย
+          > - ร่างแผนพัฒนาพนักงาน (IDP) ตามเป้าหมายรายบุคคล
+
+          **ตัวอย่างงาน HR:**
+          - **Performance Summary Draft:** ช่วย Manager เขียนสรุปผลงานลูกน้อง
+          - **Dynamic Content:** สร้างเนื้อหา Training เฉพาะกลุ่ม
+
+          ---
+
+          ### 🧠 5. Think (คิด)
+
+          > 🔧 **อธิบายให้เห็นภาพ:** **"กุนซือคู่คิด"** (Strategist / Predictive)
+          > - ช่วยประเมินความเสี่ยง (Risk Assessment) ที่เราอาจมองข้าม
+          > - ช่วยพยากรณ์อนาคต (Predict) ว่าใครบ้างที่มีความเสี่ยงจะลาออก
+
+          **ตัวอย่างงาน HR (Strategic Level):**
+          - **Attrition Forecast:** ทำนายแนวโน้มการลาออก
+          - **Talent Mobility:** แนะนำการโยกย้ายคนให้เหมาะกับงาน
+
+          ---
+
+          ### 🏢 เริ่มต้นตรงไหนดี? (Phase Implementation)
+
+          การจะสร้าง AI Skill ต้องใช้ความพร้อมต่างกัน:
+
+          | Phase | Skill ที่ควรเริ่ม | เหตุผล |
+          |-------|-------------------|--------|
+          | **1** | **Read + Write** | เริ่มง่ายสุด ข้อมูลเป็น Text มีเยอะอยู่แล้ว (Resume, Policy) |
+          | **2** | **Listen + Speak** | เมื่อพนักงานเริ่มชิน ค่อยทำ Chatbot / Voice |
+          | **3** | **Think** | ยากที่สุด ต้องมี Data ที่สะอาดและเยอะพอ (ทำทีหลังสุด) |
+
+          > **ข้อควรระวัง:** "Think" (การตัดสินใจ) คือส่วนที่เสี่ยงที่สุด ต้องมีคนคอยกำกับ (Human-in-the-loop) เสมอ!`,
         },
         {
           id: "ai-business-impact",
@@ -1533,9 +1531,9 @@ Automation ไม่ได้มีแค่ \"มีหรือไม่มี
 3.  ✅ **Bias Testing** (มีการทดสอบความลำเอียงไหม?)
 4.  ✅ **Transparency** (อธิบายได้ไหมว่าทำไม AI ถึงให้ผลลัพธ์แบบนี้?)
 
-> **Executive Summary:** AI ไม่ใช่แค่ Tool ที่เอามาเล่นสนุกๆ แต่คือ **"Capability Multiplier" (ตัวคูณความสามารถ)** — ถ้าใช้ถูกทาง องค์กรจะเคลื่อนที่ได้เร็วขึ้น แม่นยำขึ้น และเข้าใจพนักงานมากขึ้น`
-        }
-      ]
-    }
-  ]
+> **Executive Summary:** AI ไม่ใช่แค่ Tool ที่เอามาเล่นสนุกๆ แต่คือ **"Capability Multiplier" (ตัวคูณความสามารถ)** — ถ้าใช้ถูกทาง องค์กรจะเคลื่อนที่ได้เร็วขึ้น แม่นยำขึ้น และเข้าใจพนักงานมากขึ้น`,
+        },
+      ],
+    },
+  ],
 };
