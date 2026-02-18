@@ -4,7 +4,7 @@ import Sidebar from './components/Sidebar';
 import Login from './components/Login';
 import { COURSE_CONTENT } from './courseData';
 
-const SlideCarousel: React.FC<{ slides: string[] }> = ({ slides }) => {
+const SlideCarousel: React.FC<{ slides: string[]; onZoom: (src: string) => void }> = ({ slides, onZoom }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   if (!slides || slides.length === 0) return null;
@@ -23,7 +23,8 @@ const SlideCarousel: React.FC<{ slides: string[] }> = ({ slides }) => {
         <img 
           src={slides[currentSlide]} 
           alt={`Slide ${currentSlide + 1}`} 
-          className="w-full h-full object-contain"
+          className="w-full h-full object-contain cursor-zoom-in"
+          onClick={() => onZoom(slides[currentSlide])}
         />
         
         {/* Navigation Arrows */}
@@ -47,7 +48,7 @@ const SlideCarousel: React.FC<{ slides: string[] }> = ({ slides }) => {
         )}
         
         {/* Slide Counter Indicator */}
-        <div className="absolute bottom-4 right-4 bg-black/60 text-white text-xs px-3 py-1 rounded-full backdrop-blur-sm">
+        <div className="absolute bottom-4 right-4 bg-black/60 text-white text-xs px-3 py-1 rounded-full backdrop-blur-sm pointer-events-none">
           Slide {currentSlide + 1} / {slides.length}
         </div>
       </div>
@@ -71,11 +72,14 @@ const SlideCarousel: React.FC<{ slides: string[] }> = ({ slides }) => {
   );
 };
 
+
 const App: React.FC = () => {
   const [isLoggedIn, setIsLoggedIn] = useState(() => localStorage.getItem('isLoggedIn') === 'true');
   const [activeLessonId, setActiveLessonId] = useState(COURSE_CONTENT.modules[0].lessons[0].id);
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const scrollContainerRef = useRef<HTMLDivElement>(null);
+
+  const [zoomedImage, setZoomedImage] = useState<string | null>(null);
 
   // Scroll to top when lesson changes
   useEffect(() => {
@@ -178,6 +182,23 @@ const App: React.FC = () => {
         elements.push(<p key={i} className="ml-2 font-medium text-slate-800 mt-6 mb-2">{parseInlineMarkdown(line)}</p>);
       } else if (line.trim() === '') {
         elements.push(<div key={i} className="h-4" />);
+      } else if (line.match(/!\[.*?\]\(.*?\)/)) {
+        // Image support: ![alt](src)
+        const match = line.match(/!\[(.*?)\]\((.*?)\)/);
+        if (match) {
+          elements.push(
+            <div key={i} className="my-8 rounded-xl overflow-hidden shadow-sm border border-slate-100 bg-slate-50">
+              <img 
+                src={match[2]} 
+                alt={match[1]} 
+                className="w-full h-auto object-contain max-h-[500px] cursor-zoom-in"
+                loading="lazy"
+                onClick={() => setZoomedImage(match[2])}
+              />
+              {match[1] && <p className="text-center text-xs text-slate-400 mt-2 pb-2">{match[1]}</p>}
+            </div>
+          );
+        }
       } else {
         elements.push(<p key={i} className="text-slate-600 leading-relaxed mb-4">{parseInlineMarkdown(line)}</p>);
       }
@@ -207,6 +228,27 @@ const App: React.FC = () => {
           className="fixed inset-0 bg-black/60 z-20 md:hidden backdrop-blur-sm" 
           onClick={() => setIsSidebarOpen(false)}
         />
+      )}
+
+      {/* Image Zoom Modal */}
+      {zoomedImage && (
+        <div 
+          className="fixed inset-0 z-50 bg-black/90 flex items-center justify-center p-4 backdrop-blur-sm animate-fade-in"
+          onClick={() => setZoomedImage(null)}
+        >
+          <button 
+            className="absolute top-4 right-4 text-white/70 hover:text-white bg-black/50 hover:bg-black/80 rounded-full w-10 h-10 flex items-center justify-center transition-all"
+            onClick={() => setZoomedImage(null)}
+          >
+            <i className="fa-solid fa-xmark text-xl"></i>
+          </button>
+          <img 
+            src={zoomedImage} 
+            alt="Zoomed view" 
+            className="max-w-full max-h-screen object-contain rounded shadow-2xl"
+            onClick={(e) => e.stopPropagation()} 
+          />
+        </div>
       )}
 
       <Sidebar 
@@ -280,7 +322,7 @@ const App: React.FC = () => {
             <article className="bg-white rounded-3xl shadow-[0_4px_20px_-4px_rgba(0,0,0,0.05)] border border-slate-100 p-8 md:p-14 mb-12">
               {/* Slide Carousel at Top */}
               {activeLesson.slides && activeLesson.slides.length > 0 && (
-                <SlideCarousel key={activeLesson.id} slides={activeLesson.slides} />
+                <SlideCarousel key={activeLesson.id} slides={activeLesson.slides} onZoom={setZoomedImage} />
               )}
               
               {/* Fallback for single image if no slides array but image exists (legacy support) */}
@@ -289,8 +331,9 @@ const App: React.FC = () => {
                   <img 
                     src={activeLesson.image} 
                     alt={`Slide for ${activeLesson.title}`} 
-                    className="w-full h-auto object-cover"
+                    className="w-full h-auto object-cover cursor-zoom-in hover:opacity-95 transition-opacity"
                     loading="lazy"
+                    onClick={() => setZoomedImage(activeLesson.image!)}
                   />
                 </div>
               )}

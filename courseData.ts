@@ -5,7 +5,7 @@ export const COURSE_CONTENT: CourseData = {
   modules: [
     {
       id: "module-1",
-      title: "Part 1: Slide 1-9 (Theory & Strategy)",
+      title: "Module 1: Theory & Strategy (Slide 1-9)",
       lessons: [
         {
           id: "predictive-vs-generative",
@@ -734,7 +734,7 @@ Slide 9 ให้ framework (กรอบคิด) ในการตัดส�
 
     {
       id: "module-2",
-      title: "Part 2: Slide 10-20 (Implementation & Impact)",
+      title: "Module 2: Implementation & Impact (Slide 10-20)",
       lessons: [
         {
           id: "automate-repeatable",
@@ -1234,126 +1234,178 @@ AI ไม่ได้มาเพื่อลดคนหรือทำงา�
           slides: ["/Handout-AI-For-HR/Handout-AI-For-HR_15.jpg"],
           content: `### Levels of Intelligence in Automation (Slide 15)
 
-              Automation ไม่ได้มีแค่ \"มีหรือไม่มี\" แต่มี **\"ระดับความฉลาด\"** แตกต่างกัน — องค์กรต้องรู้ว่าตัวเองอยู่ระดับไหน และจะไประดับไหน
+Automation ไม่ได้มีแค่ "มีหรือไม่มี" แต่มี **"ระดับความฉลาด"** แตกต่างกัน — องค์กรต้องรู้ว่าตัวเองอยู่ระดับไหน และจะไประดับไหน
 
-              > 💡 **พูดง่ายๆ:** เหมือนพัฒนาการของเด็ก:
-              > - **Level 1:** ทำตามคำสั่งพ่อแม่ (ห้ามดื้อ)
-              > - **Level 3:** เริ่มคิดเองได้ว่า \"ถ้าทำแบบนี้จะโดนดุ\" (Predictive)
-              > - **Level 5:** โตเป็นผู้ใหญ่ ดูแลตัวเองได้โดยไม่ต้องบอก (Autonomous)
+> 💡 **พูดง่ายๆ:** เหมือนพัฒนาการของเด็ก:
+> - **Level 1:** ทำตามคำสั่งพ่อแม่ (ห้ามดื้อ)
+> - **Level 3:** เริ่มคิดเองได้ว่า "ถ้าทำแบบนี้จะโดนดุ" (Predictive)
+> - **Level 5:** โตเป็นผู้ใหญ่ ดูแลตัวเองได้โดยไม่ต้องบอก (Autonomous)
 
-              ---
+---
 
-              ### 🏗 Level 1: Rule-Based (พื้นฐานที่สุด)
+### 🏗 Level 1: Rule-Based (พื้นฐานที่สุด)
 
-              > 🔧 **อธิบายให้เห็นภาพ:** **\"สัญญาณไฟจราจร\"** (Traffic Light)
-              > - แดง=หยุด, เขียว=ไป (กฎตายตัว)
-              > - ฝนตกหนักแค่ไหน รถติดแค่ไหน **ไฟก็ทำงานเหมือนเดิม** (ไม่ยืดหยุ่น)
+> 🔧 **เปรียบเทียบ:** **"สัญญาณไฟจราจร"** — แดง=หยุด, เขียว=ไป (กฎตายตัว) ฝนตกหนักแค่ไหน รถติดแค่ไหน ไฟก็ทำงานเหมือนเดิม
 
-              **ลักษณะ:** ทำงานตามเงื่อนไข If-This-Then-That เป๊ะๆ
-              **ตัวอย่าง HR:**
-              - ถ้าวันลาคงเหลือ > 0 → อนุมัติเบื้องต้น
-              - ถ้ามาสายเกิน 3 ครั้ง → ส่งอีเมลเตือน
-              **ข้อจำกัด:** เจอปัญหาใหม่ๆ ไปไม่เป็น
+**ลักษณะ:** ทำงานตามเงื่อนไข If-This-Then-That เป๊ะๆ
+**ตัวอย่าง HR:**
+- ถ้าวันลาคงเหลือ > 0 → อนุมัติเบื้องต้น
+- ถ้ามาสายเกิน 3 ครั้ง → ส่งอีเมลเตือน
+**ข้อจำกัด:** เจอปัญหาใหม่ๆ ไปไม่เป็น
 
-              ---
+---
 
-              ### 📊 Level 2: Pattern Recognition (เริ่มจำได้)
+### 📊 Level 2: Pattern Recognition (เริ่มจำได้)
 
-              > 🔧 **อธิบายให้เห็นภาพ:** **\"กรมอุตุนิยมวิทยา\"** (Weather Forecast)
-              > - เห็นเมฆครึ้มๆ ลมแรงๆ → \"น่าจะฝนตกนะ\" (จำ Pattern ได้)
-              > - แต่ยังไม่บอกว่า \"จะตกกี่โมง\" หรือ \"น้ำจะท่วมไหม\"
+> 🔧 **เปรียบเทียบ:** **"กรมอุตุนิยมวิทยา"** — เห็นเมฆครึ้มๆ ลมแรงๆ → "น่าจะฝนตกนะ" (จำ Pattern ได้) แต่ยังไม่บอกว่า "จะตกกี่โมง"
 
-              **ลักษณะ:** ใช้ Machine Learning จำแนกหมวดหมู่ข้อมูล
-              **ตัวอย่าง HR:**
-              - แยกแยะ Resume ว่าอันไหน Developer / อันไหน Sales (Keyword Matching)
-              - จับกลุ่มพนักงานที่ Engagement ต่ำ (Clustering)
-              **ข้อจำกัด:** บอกได้แค่ \"สิ่งที่เคยเกิด\" ไม่รู้อนาคต
+**ลักษณะ:** ใช้ Machine Learning จำแนกหมวดหมู่ข้อมูล
+**ตัวอย่าง HR:**
+- แยกแยะ Resume ว่าอันไหน Developer / อันไหน Sales (Keyword Matching)
+- จับกลุ่มพนักงานที่ Engagement ต่ำ (Clustering)
+**ข้อจำกัด:** บอกได้แค่ "สิ่งที่เคยเกิด" ไม่รู้อนาคต
 
-              ---
+---
 
-              ### 🔮 Level 3: Predictive (รู้อนาคต)
+### 🔮 Level 3: Predictive (รู้อนาคต)
 
-              > 🔧 **อธิบายให้เห็นภาพ:** **\"Google Maps (ETA)\"**
-              > - \"ถ้าออกตอนนี้ จะถึงใน 45 นาที\" (ทำนายอนาคต)
-              > - \"เส้นนี้รถติดนะ ไปทางอื่นดีกว่า\" (แนะนำทางเลือก)
+> 🔧 **เปรียบเทียบ:** **"Google Maps (ETA)"** — "ถ้าออกตอนนี้ จะถึงใน 45 นาที" (ทำนายอนาคต) "เส้นนี้รถติดนะ ไปทางอื่นดีกว่า" (แนะนำทางเลือก)
 
-              **ลักษณะ:** ใช้สถิติในอดีตมาทำนายสิ่งที่จะเกิดขึ้น
-              **ตัวอย่าง HR:**
-              - **Attrition Risk:** \"นาย A มีโอกาสลาออก 85% ในอีก 3 เดือนข้างหน้า\"
-              - **Success Prob:** \"ถ้าโปรโมทนาง B ขึ้น Manager โอกาสรอด 70%\"
-              **ข้อจำกัด:** แม่นยำตามคุณภาพข้อมูล (Garbage In, Garbage Out)
+**ลักษณะ:** ใช้สถิติในอดีตมาทำนายสิ่งที่จะเกิดขึ้น
+**ตัวอย่าง HR:**
+- **Attrition Risk:** "นาย A มีโอกาสลาออก 85% ในอีก 3 เดือนข้างหน้า"
+- **Success Prob:** "ถ้าโปรโมทนาง B ขึ้น Manager โอกาสรอด 70%"
+**ข้อจำกัด:** แม่นยำตามคุณภาพข้อมูล (Garbage In, Garbage Out)
 
-              ---
+---
 
-              ### ✨ Level 4: Adaptive / Generative (ปรับตัวได้)
+### ✨ Level 4: Adaptive / Generative (ปรับตัวได้)
 
-              > 🔧 **อธิบายให้เห็นภาพ:** **\"Netflix Recommendation\"** / **\"Spotify\"**
-              > - \"คุณชอบดูหนัง Action ใช่ไหม? งั้นลองเรื่องนี้สิ\" (รู้ใจ)
-              > - หน้าจอของแต่ละคนไม่เหมือนกันเลย (Personalized)
+> 🔧 **เปรียบเทียบ:** **"Netflix / Spotify"** — "คุณชอบดูหนัง Action ใช่ไหม? งั้นลองเรื่องนี้สิ" (รู้ใจ) หน้าจอแต่ละคนไม่เหมือนกันเลย (Personalized)
 
-              **ลักษณะ:** สร้างเนื้อหาหรือคำแนะนำที่เหมาะกับ **\"แต่ละคน\"**
-              **ตัวอย่าง HR:**
-              - **Career Path:** สร้างเส้นทางเติบโตที่ไม่เหมือนกัน ให้พนักงานแต่ละคน
-              - **Learning Plan:** แนะนำคอร์สเรียนตามที่ยังขาด
-              **ข้อจำกัด:** อาจจะ hallucinate (มั่ว) ได้ ต้องมีคนคุม
+**ลักษณะ:** สร้างเนื้อหาหรือคำแนะนำที่เหมาะกับ **"แต่ละคน"**
+**ตัวอย่าง HR:**
+- **Career Path:** สร้างเส้นทางเติบโตที่ไม่เหมือนกัน ให้พนักงานแต่ละคน
+- **Learning Plan:** แนะนำคอร์สเรียนตามที่ยังขาด
+**ข้อจำกัด:** อาจจะ hallucinate (มั่ว) ได้ ต้องมีคนคุม
 
-              ---
+---
 
-              ### 🤖 Level 5: Autonomous (อัตโนมัติสมบูรณ์)
+### 🤖 Level 5: Autonomous (อัตโนมัติสมบูรณ์)
 
-              > 🔧 **อธิบายให้เห็นภาพ:** **\"รถยนต์ไร้คนขับ\"** (Self-Driving Car)
-              > - ขับเอง เบรคเอง เลี้ยวเอง หาที่จอดเอง
-              > - คนแค่นั่งเฉยๆ หรือบอกแค่ \"จะไปไหน\"
+> 🔧 **เปรียบเทียบ:** **"รถยนต์ไร้คนขับ"** — ขับเอง เบรคเอง เลี้ยวเอง หาที่จอดเอง คนแค่นั่งเฉยๆ หรือบอกแค่ "จะไปไหน"
 
-              **ลักษณะ:** ระบบตัดสินใจและลงมือทำเองได้ครบวงจร (ยังเป็นอนาคตสำหรับ HR)
-              **ตัวอย่าง HR (Future):**
-              - ระบบโยกย้ายคนทำงานข้ามแผนกอัตโนมัติ ตามงานที่ล้นมือ (Fluid Workforce)
-              - ระบบแก้ปัญหา Burnout อัตโนมัติ (ส่งตารางวันหยุดให้ทันทีที่เห็นสัญญาณเครียด)
-              **ข้อจำกัด:** เรื่องจริยธรรมและความเชื่อมั่น (Trust)
+**ลักษณะ:** ระบบตัดสินใจและลงมือทำเองได้ครบวงจร (ยังเป็นอนาคตสำหรับ HR)
+**ตัวอย่าง HR (Future):**
+- ระบบโยกย้ายคนทำงานข้ามแผนกอัตโนมัติ ตามงานที่ล้นมือ (Fluid Workforce)
+- ระบบแก้ปัญหา Burnout อัตโนมัติ (ส่งตารางวันหยุดให้ทันทีที่เห็นสัญญาณเครียด)
+**ข้อจำกัด:** เรื่องจริยธรรมและความเชื่อมั่น (Trust)
 
-              ---
+---
 
-              ### 🏢 Summary: องค์กรของคุณอยู่ตรงไหน?
+### 🏢 Summary: องค์กรของคุณอยู่ตรงไหน?
 
-              | Level | ชื่อระดับ | ความสามารถ | เปรียบเทียบ |
-              |-------|-----------|------------|-------------|
-              | **1** | Rule-Based | ทำตามสั่ง | **ไฟจราจร** |
-              | **2** | Pattern | จำรูปแบบได้ | **พยากรณ์อากาศ** |
-              | **3** | Predictive | ทำนายอนาคต | **Google Maps** |
-              | **4** | Adaptive | รู้ใจรายบุคคล | **Netflix** |
-              | **5** | Autonomous | คิดและทำเอง | **รถไร้คนขับ** |
+| Level | ชื่อระดับ | ความสามารถ | เปรียบเทียบ |
+|-------|-----------|------------|-------------|
+| **1** | Rule-Based | ทำตามสั่ง | **ไฟจราจร** |
+| **2** | Pattern | จำรูปแบบได้ | **พยากรณ์อากาศ** |
+| **3** | Predictive | ทำนายอนาคต | **Google Maps** |
+| **4** | Adaptive | รู้ใจรายบุคคล | **Netflix** |
+| **5** | Autonomous | คิดและทำเอง | **รถไร้คนขับ** |
 
-              > **เป้าหมายปีนี้:** ย้ายจาก **Level 1 (Rule)** ไปสู่ **Level 3 (Predictive)** ให้ได้ในงานสำคัญ
+> **เป้าหมายปีนี้:** ย้ายจาก **Level 1 (Rule)** ไปสู่ **Level 3 (Predictive)** ให้ได้ในงานสำคัญ
 
-              ---
+---
 
-              ### 📊 เปรียบเทียบ Automation vs Intelligent Automation
+### 📊 เปรียบเทียบ Automation vs Intelligent Automation
 
-              | Automation | Intelligent Automation |
-              |-----------|----------------------|
-              | ทำตามคำสั่ง | วิเคราะห์ก่อนทำ |
-              | ไม่เรียนรู้ | เรียนรู้จาก data |
-              | Static | Adaptive |
-              | Reactive | Proactive |
-              | One-size-fits-all | Personalized |
+| Automation | Intelligent Automation |
+|-----------|----------------------|
+| ทำตามคำสั่ง | วิเคราะห์ก่อนทำ |
+| ไม่เรียนรู้ | เรียนรู้จาก data |
+| Static | Adaptive |
+| Reactive | Proactive |
+| One-size-fits-all | Personalized |
 
-              ---
+---
 
-              ### 🎯 Roadmap สำหรับองค์กร 2,000 คน
+### 🎯 Roadmap สำหรับองค์กร 2,000 คน
 
-              **Year 1:** Level 1-2 (Rule-based + Pattern)
-              - HR chatbot, Policy automation, Survey analysis
+**Year 1:** Level 1-2 (Rule-based + Pattern)
+- HR chatbot, Policy automation, Survey analysis
 
-              **Year 2:** Level 3 (Predictive)
-              - Attrition prediction, Performance forecasting
+**Year 2:** Level 3 (Predictive)
+- Attrition prediction, Performance forecasting
 
-              **Year 3:** Level 4 (Adaptive)
-              - Personalized development, Dynamic JD, AI-generated review
+**Year 3:** Level 4 (Adaptive)
+- Personalized development, Dynamic JD, AI-generated review
 
-              **Year 4+:** Level 5 (Autonomous)
-              - Proactive talent mobility, Self-optimizing workforce planning
+**Year 4+:** Level 5 (Autonomous)
+- Proactive talent mobility, Self-optimizing workforce planning
 
-              > **Key:** ไม่ต้องกระโดดไป Level 5 ทันที — ค่อยๆ build foundation`,
+> **Key:** ไม่ต้องกระโดดไป Level 5 ทันที — ค่อยๆ build foundation`,
+        },
+        {
+          id: "gen-ai-types-actions",
+          title: "Generative AI ในภาคปฏิบัติ",
+          type: "concept",
+          icon: "fa-wand-magic-sparkles",
+          image: "/Handout-AI-For-HR/Handout-AI-For-HR_17.jpg",
+          slides: [
+            "/Handout-AI-For-HR/Handout-AI-For-HR_16.jpg",
+            "/Handout-AI-For-HR/Handout-AI-For-HR_17.jpg"
+          ],
+          content: `### Generative AI in Actions — 4 ประเภทของ Output ที่ AI สร้างได้ (Slide 16-17)
+
+Slide 16 เปิดหัวข้อใหม่ **"Generative AI in Actions"** — จากที่เราเรียนทฤษฎีมา (ประเภทของ AI, Hybrid Intelligence, Automation Levels) ตอนนี้เราจะมาดูว่า **Generative AI ทำอะไรได้จริงๆ ในทางปฏิบัติ**
+
+---
+
+### 🎨 4 ประเภทของ Generative AI (Slide 17)
+
+Slide 17 แสดง **Types of Generative AI** ออกเป็น 4 ประเภทตาม output ที่สร้างได้:
+
+| ประเภท | คืออะไร | ตัวอย่างเครื่องมือ | ตัวอย่างใน HR |
+|--------|---------|-------------------|-------------|
+| 📝 **Text Generation** | สร้างข้อความ/เอกสาร | ChatGPT, Claude, Gemini | ร่าง JD, สรุป Performance, ตอบคำถาม Policy |
+| 🎵 **Audio Generation** | สร้างเสียง/คำพูด | ElevenLabs, NotebookLM | สร้าง Podcast สรุปนโยบายให้ฟัง, Voice bot ตอบคำถาม |
+| 🖼️ **Image Generation** | สร้างรูปภาพ/กราฟิก | DALL-E, Midjourney, Canva AI | สร้าง Infographic สวัสดิการ, ภาพประกอบ Training |
+| 🎬 **Video Generation** | สร้างวิดีโอ | Sora, Synthesia, HeyGen | สร้างวิดีโอ Onboarding, สื่อสารจาก CEO avatar |
+
+---
+
+### 💡 ทำไมต้องรู้ 4 ประเภทนี้?
+
+**เพราะ HR ไม่ได้ใช้แค่ "Text" อีกต่อไป:**
+
+เดิม HR ทำอะไรกับ AI ก็แค่ให้ช่วยเขียนข้อความ — แต่ Gen AI ยุคใหม่ทำได้มากกว่านั้น:
+
+*   **Text:** ร่าง JD, เขียนอีเมล, สรุปรายงาน — **ใช้บ่อยที่สุด** เป็น use case หลัก
+*   **Audio:** สร้าง Podcast ภายใน (เช่น "สรุปนโยบายใหม่ประจำเดือน" แบบฟังได้), สร้าง Voice bot ตอบคำถามพนักงาน
+*   **Image:** สร้างสื่อสารภายใน (Infographic สวัสดิการ, Social post รับสมัครงาน), ลด dependency ต่อทีม Creative
+*   **Video:** สร้างวิดีโอ Onboarding ที่ personalized, สร้าง Training video ด้วย AI avatar ไม่ต้องจ้างถ่ายทำ
+
+---
+
+### 🏢 สำหรับองค์กร 2,000 คน — ลำดับการใช้งาน
+
+| Phase | ประเภท | เหตุผล |
+|-------|--------|--------|
+| **เริ่มเลย** | Text Generation | ใช้ง่าย, ROI สูง, ใช้ได้ทุกวัน |
+| **ปีที่ 1-2** | Image Generation | เสริมสื่อสารภายใน, ลดต้นทุนออกแบบ |
+| **ปีที่ 2-3** | Audio Generation | Podcast ภายใน, Voice bot, Accessibility |
+| **ปีที่ 3+** | Video Generation | Training content, Onboarding, CEO communication |
+
+---
+
+### ⚠️ ข้อควรระวัง
+
+*   **Text:** Hallucination — AI อาจแต่งข้อมูลที่ดูน่าเชื่อถือแต่ไม่จริง
+*   **Image:** Copyright — รูปที่ AI สร้างอาจมีปัญหาลิขสิทธิ์
+*   **Audio/Video:** Deepfake — เสียง/ภาพ AI อาจถูกนำไปใช้ในทางที่ผิด (เช่น ปลอมเสียงผู้บริหาร)
+*   **ทุกประเภท:** ต้องมี **Disclosure** — บอกชัดว่า "เนื้อหานี้สร้างด้วย AI"
+
+> 💡 **หลักการ:** ยิ่ง output มีผลกระทบต่อคน (เช่น วิดีโอจาก CEO) ยิ่งต้องมี Human Review ก่อนเผยแพร่`,
         },
         {
           id: "ai-skills-in-hr",
@@ -1362,87 +1414,109 @@ AI ไม่ได้มาเพื่อลดคนหรือทำงา�
           icon: "fa-hand-sparkles",
           image: "/Handout-AI-For-HR/Handout-AI-For-HR_19.jpg",
           slides: ["/Handout-AI-For-HR/Handout-AI-For-HR_18.jpg", "/Handout-AI-For-HR/Handout-AI-For-HR_19.jpg"],
-          content: `### AI Skills in HR: AI ทำอะไรได้บ้าง? (Slide 19)
+          content: `### AI Human-like Function & Skills in HR (Slide 18-19)
 
-          ถ้าถามว่า "AI ทำอะไรได้?" คำตอบอาจจะกว้างมาก
-          ลองมอง AI เหมือน **"พนักงานคนใหม่"** ที่มีความสามารถ 5 ด้านเหมือนมนุษย์ (Human Capabilities):
+ถ้าถามว่า "AI ทำอะไรได้?" คำตอบอาจจะกว้างมาก — Slide 18-19 ช่วยจัดระบบให้เข้าใจง่ายโดยมอง AI เหมือน **"พนักงานคนใหม่"** ที่มีความสามารถ 5 ด้านเหมือนมนุษย์ (Human Capabilities)
 
-          > 💡 **พูดง่ายๆ:** อย่ามอง AI เป็นโปรแกรมคอมพิวเตอร์ ให้มองเป็น **"เพื่อนร่วมงานอัจฉริยะ"** ที่เก่งเฉพาะเรื่อง
+---
 
-          ---
+### 🧠 AI Human-like Function (Slide 18)
 
-          ### 👂 1. Listen (ฟัง)
+Slide 18 แสดงภาพ AI เป็น **"สมอง" ที่มี 5 function เหมือนมนุษย์** — Listening, Speaking, Reading, Writing, Thinking โดยแต่ละ function มีเทคโนโลยีเบื้องหลังชัดเจน:
 
-          > 🔧 **อธิบายให้เห็นภาพ:** **"หูทิพย์"** (Super Ear)
-          > - ฟัง Townhall 2 ชั่วโมงจบ แล้วสรุปประเด็นสำคัญได้ใน 1 นาที (Voice Recognition)
-          > - จับ "น้ำเสียง" (Sentiment Analysis) ได้ว่าพนักงานกำลังโกรธ หรือ ดีใจ
+| Function | เทคโนโลยีเบื้องหลัง |
+|----------|---------------------|
+| **Listening** 👂 | Voice Recognition, Speech Recognition |
+| **Speaking** 🗣 | Voice Generation, Speech Generation |
+| **Reading** 📖 | Natural Language Understanding (NLU), Computer Vision |
+| **Writing** ✍️ | Natural Language Generation (NLG), Image Generation |
+| **Thinking** 🧠 | อยู่ตรงกลาง — เชื่อมทุก function เข้าด้วยกัน |
 
-          **ตัวอย่างงาน HR:**
-          - วิเคราะห์เสียงสัมภาษณ์เพื่อหาจุดแข็งจุดอ่อน (Interview Intelligence)
-          - ฟังเสียงพนักงานจาก Townhall recording เพื่อวัด Engagement
+> 💡 **Insight:** AI ไม่ใช่เครื่องมือเดียว แต่เป็น **"ชุดทักษะ"** — แต่ละทักษะเหมาะกับงาน HR คนละแบบ
 
-          ---
+---
 
-          ### 🗣 2. Speak (พูด)
+### 👂 1. Listen (ฟัง) — Voice/Speech Recognition
 
-          > 🔧 **อธิบายให้เห็นภาพ:** **"Call Center ส่วนตัว 24 ชม."** (Conversational AI)
-          > - ตอบคำถามเรื่องวันลา/สวัสดิการซ้ำๆ ได้เป็นพันครั้งโดยไม่หงุดหงิด
-          > - พูดคุยโต้ตอบได้เหมือนคนจริง (Natural Dialogue)
+> 🔧 **เปรียบเทียบ:** **"หูทิพย์"** — ฟัง Townhall 2 ชั่วโมงจบ สรุปประเด็นสำคัญได้ใน 1 นาที + จับ "น้ำเสียง" (Sentiment) ได้ว่าพนักงานกำลังโกรธหรือดีใจ
 
-          **ตัวอย่างงาน HR:**
-          - **AI Chatbot** ตอบคำถาม Policy ตลอด 24 ชม.
-          - **Onboarding Assistant** คุยกับพนักงานใหม่ แนะนำบริษัท
+**ตัวอย่างงาน HR:**
+- วิเคราะห์เสียงสัมภาษณ์เพื่อหาจุดแข็ง/จุดอ่อน (Interview Intelligence)
+- ฟังเสียงพนักงานจาก Townhall recording เพื่อวัด Engagement
+- ถอดเสียง Meeting แล้วสรุปเป็น Action items อัตโนมัติ
 
-          ---
+---
 
-          ### 📖 3. Read (อ่าน)
+### 🗣 2. Speak (พูด) — Voice/Speech Generation
 
-          > 🔧 **อธิบายให้เห็นภาพ:** **"เครื่องสแกนเอกสารความเร็วสูง"** (Text Analysis)
-          > - อ่าน Resume 5,000 ใบ แล้วดึง skill ออกมาใส่ Excel ให้ (Parsing)
-          > - อ่าน Comment จาก Employee Survey 10,000 ข้อความ แล้วสรุปเทรนด์ (Clustering)
+> 🔧 **เปรียบเทียบ:** **"Call Center ส่วนตัว 24 ชม."** — ตอบคำถามซ้ำๆ ได้เป็นพันครั้งโดยไม่หงุดหงิด พูดคุยโต้ตอบได้เหมือนคนจริง
 
-          **ตัวอย่างงาน HR:**
-          - **Resume Screening:** คัดแยกผู้สมัครตามคุณสมบัติเบื้องต้น
-          - **Policy Analysis:** ตรวจสอบความขัดแย้งของกฎระเบียบ
+**ตัวอย่างงาน HR:**
+- **AI Voice Bot** ตอบคำถาม Policy ตลอด 24 ชม. ทั้งภาษาไทยและอังกฤษ
+- **Onboarding Assistant** คุยกับพนักงานใหม่ แนะนำบริษัท
+- สร้าง Podcast สรุปนโยบายใหม่ให้พนักงานฟังระหว่างเดินทาง
 
-          ---
+---
 
-          ### ✍️ 4. Write (เขียน)
+### 📖 3. Read (อ่าน) — NLU + Computer Vision
 
-          > 🔧 **อธิบายให้เห็นภาพ:** **"เลขาฯ ร่างจดหมาย"** (Generative AI)
-          > - ร่าง Job Description (JD) ที่ดึงดูดใจ
-          > - ร่างอีเมลประกาศบริษัทที่อ่านง่าย
-          > - ร่างแผนพัฒนาพนักงาน (IDP) ตามเป้าหมายรายบุคคล
+> 🔧 **เปรียบเทียบ:** **"เครื่องสแกนเอกสารความเร็วสูง"** — อ่าน Resume 5,000 ใบ ดึง skill ออกมาใส่ตาราง + อ่าน Comment จาก Survey 10,000 ข้อความ สรุปเทรนด์ให้
 
-          **ตัวอย่างงาน HR:**
-          - **Performance Summary Draft:** ช่วย Manager เขียนสรุปผลงานลูกน้อง
-          - **Dynamic Content:** สร้างเนื้อหา Training เฉพาะกลุ่ม
+**ตัวอย่างงาน HR:**
+- **Resume Screening:** คัดแยกผู้สมัครตามคุณสมบัติเบื้องต้น
+- **Policy Analysis:** ตรวจสอบความขัดแย้งของกฎระเบียบ
+- **Document Intelligence:** OCR ใบสมัคร, ใบรับรองแพทย์, แบบประเมินผลงาน → เปลี่ยนเป็น data
 
-          ---
+---
 
-          ### 🧠 5. Think (คิด)
+### ✍️ 4. Write (เขียน) — NLG + Image Generation
 
-          > 🔧 **อธิบายให้เห็นภาพ:** **"กุนซือคู่คิด"** (Strategist / Predictive)
-          > - ช่วยประเมินความเสี่ยง (Risk Assessment) ที่เราอาจมองข้าม
-          > - ช่วยพยากรณ์อนาคต (Predict) ว่าใครบ้างที่มีความเสี่ยงจะลาออก
+> 🔧 **เปรียบเทียบ:** **"เลขาฯ ร่างจดหมาย"** — ร่าง JD ที่ดึงดูดใจ, อีเมลประกาศที่อ่านง่าย, แผนพัฒนาพนักงานตามเป้าหมายรายบุคคล
 
-          **ตัวอย่างงาน HR (Strategic Level):**
-          - **Attrition Forecast:** ทำนายแนวโน้มการลาออก
-          - **Talent Mobility:** แนะนำการโยกย้ายคนให้เหมาะกับงาน
+**ตัวอย่างงาน HR:**
+- **Performance Summary Draft:** ช่วย Manager เขียนสรุปผลงานลูกน้อง
+- **Dynamic Content:** สร้างเนื้อหา Training เฉพาะกลุ่ม
+- **Communication:** ร่างประกาศบริษัท, สื่อสาร Org Change, Recognition message
 
-          ---
+---
 
-          ### 🏢 เริ่มต้นตรงไหนดี? (Phase Implementation)
+### 🧠 5. Think (คิด) — Predictive + Reasoning
 
-          การจะสร้าง AI Skill ต้องใช้ความพร้อมต่างกัน:
+> 🔧 **เปรียบเทียบ:** **"กุนซือคู่คิด"** — ช่วยประเมินความเสี่ยงที่เราอาจมองข้าม + พยากรณ์อนาคตว่าใครเสี่ยงจะลาออก
 
-          | Phase | Skill ที่ควรเริ่ม | เหตุผล |
-          |-------|-------------------|--------|
-          | **1** | **Read + Write** | เริ่มง่ายสุด ข้อมูลเป็น Text มีเยอะอยู่แล้ว (Resume, Policy) |
-          | **2** | **Listen + Speak** | เมื่อพนักงานเริ่มชิน ค่อยทำ Chatbot / Voice |
-          | **3** | **Think** | ยากที่สุด ต้องมี Data ที่สะอาดและเยอะพอ (ทำทีหลังสุด) |
+**ตัวอย่างงาน HR (Strategic Level):**
+- **Attrition Forecast:** ทำนายแนวโน้มการลาออก
+- **Talent Mobility:** แนะนำการโยกย้ายคนให้เหมาะกับงาน
+- **Workforce Planning:** คาดการณ์ว่าต้องจ้างเพิ่มกี่คนใน Q4
+- **Succession Planning:** วิเคราะห์ว่าใครพร้อมขึ้นมาแทนตำแหน่งสำคัญ
 
-          > **ข้อควรระวัง:** "Think" (การตัดสินใจ) คือส่วนที่เสี่ยงที่สุด ต้องมีคนคอยกำกับ (Human-in-the-loop) เสมอ!`,
+---
+
+### 🏢 เริ่มต้นตรงไหนดี? (Phase Implementation)
+
+การสร้าง AI Skill ต้องใช้ความพร้อมต่างกัน:
+
+| Phase | Skill ที่ควรเริ่ม | เหตุผล | ความยากในการ implement |
+|-------|-------------------|--------|----------------------|
+| **1** | **Read + Write** | เริ่มง่ายสุด ข้อมูลเป็น Text มีเยอะอยู่แล้ว (Resume, Policy) | ต่ำ — ใช้ LLM + Prompt ได้เลย |
+| **2** | **Listen + Speak** | เมื่อพนักงานเริ่มชิน ค่อยทำ Chatbot / Voice | ปานกลาง — ต้องมี Voice infrastructure |
+| **3** | **Think** | ยากที่สุด ต้องมี Data ที่สะอาดและเยอะพอ | สูง — ต้อง train model + governance |
+
+---
+
+### 🎯 Insight สำคัญ
+
+> **AI ใน HR ไม่ได้มีแค่ "ChatGPT"** — มันคือ **ชุดทักษะ** 5 ด้านที่ต้องเลือกใช้ให้ตรงกับงาน
+
+| ถ้าต้องการ... | ใช้ Skill... | ตัวอย่าง |
+|-------------|------------|---------|
+| เข้าใจเสียงพนักงาน | Listen | วิเคราะห์ Townhall, Sentiment analysis |
+| ตอบคำถามอัตโนมัติ | Speak | HR Chatbot, Voice bot |
+| ดึงข้อมูลจากเอกสาร | Read | Resume parsing, OCR, Survey analysis |
+| สร้างเนื้อหา | Write | JD, Performance summary, IDP |
+| ตัดสินใจเชิงกลยุทธ์ | Think | Attrition prediction, Workforce planning |
+
+> **ข้อควรระวัง:** "Think" (การตัดสินใจ) คือส่วนที่เสี่ยงที่สุด ต้องมีคนคอยกำกับ (Human-in-the-loop) เสมอ!`,
         },
         {
           id: "ai-business-impact",
@@ -1490,31 +1564,31 @@ AI ไม่ได้มาเพื่อลดคนหรือทำงา�
 
 เพื่อให้เห็นภาพชัดเจน มาดูตัวอย่างการใช้งานจริงใน 5 มิติ:
 
-#### 1. Resume Screening Automation (การคัดกรองใบสมัครอัตโนมัติ)
+### 1. Resume Screening Automation (การคัดกรองใบสมัครอัตโนมัติ)
 - **โจทย์:** มีใบสมัคร 5,000 ใบ HR อ่านไม่ทัน
 - **ใช้ AI:** **Predictive AI + NLP** เพื่ออ่าน Skill และให้คะแนน (Scoring)
 - **ผลลัพธ์:** ลดเวลา screening 80%, ได้ Candidate ที่ตรงสเปคมากขึ้น
 - **⚠️ ความเสี่ยง:** Bias จากข้อมูลเก่า (AI อาจเผลอคัดคนตามเพศ/สถาบัน ถ้าข้อมูลเก่าเป็นแบบนั้น)
 
-#### 2. Attrition Prediction (การทำนายการลาออก)
+### 2. Attrition Prediction (การทำนายการลาออก)
 - **โจทย์:** คนเก่งลาออกโดยไม่รู้ตัว
 - **ใช้ AI:** **Predictive AI** วิเคราะห์ข้อมูลย้อนหลัง (เงินเดือน, การมาสาย, ผลประเมิน) เพื่อหา "สัญญาณเตือน"
 - **ผลลัพธ์:** รู้ล่วงหน้า 3 เดือน, HR เข้าไปคุย (Retain) ได้ทัน
 - **⚠️ ความเสี่ยง:** **Probability ≠ Truth** (AI บอกว่าเสี่ยง ไม่ได้แปลว่าจะออกแน่ๆ ห้ามไปลงโทษเขา)
 
-#### 3. HR Chatbot (ผู้ช่วยตอบคำถาม 24 ชม.)
+### 3. HR Chatbot (ผู้ช่วยตอบคำถาม 24 ชม.)
 - **โจทย์:** HR ตอบคำถามเดิมๆ วันละ 50 รอบ จนไม่มีเวลาทำงานอื่น
 - **ใช้ AI:** **Generative AI** เชื่อมต่อกับฐานข้อมูล Policy ตอบคำถามพนักงานอัตโนมัติ
 - **ผลลัพธ์:** ลดงานตอบคำถาม 70%, พนักงานพอใจเพราะได้คำตอบทันที
 - **⚠️ ความเสี่ยง:** **Hallucination** (AI มั่วข้อมูล) — ต้องมี Guardrails ห้ามตอบสิ่งที่ไม่อยู่ใน Policy
 
-#### 4. Personalized Learning Path (แผนเรียนรู้รายบุคคล)
+### 4. Personalized Learning Path (แผนเรียนรู้รายบุคคล)
 - **โจทย์:** จัด training เหมาเข่ง คนไม่อยากเรียน
 - **ใช้ AI:** **Predictive + Generative** วิเคราะห์ Skill Gap ของแต่ละคน แล้ว "จัดคอร์ส" ที่เหมาะกับเขาโดยเฉพาะ
 - **ผลลัพธ์:** คนเรียนจบมากขึ้น, เอาไปใช้จริงได้มากขึ้น
 - **⚠️ ความเสี่ยง:** แนะนำคอร์สที่ไม่ตรงกับ Career Path จริง
 
-#### 5. Promotion Readiness (ความพร้อมในการเลื่อนตำแหน่ง)
+### 5. Promotion Readiness (ความพร้อมในการเลื่อนตำแหน่ง)
 - **โจทย์:** เลือกคนโปรโมทจากความรู้สึก (Gut feeling)
 - **ใช้ AI:** **Hybrid Intelligence** (Rule เช็คคุณสมบัติ + Model ประเมินความสำเร็จ + Generative สรุปผลงาน)
 - **ผลลัพธ์:** การตัดสินใจโปร่งใสขึ้น, อธิบายได้ด้วยข้อมูล
@@ -1532,6 +1606,2001 @@ AI ไม่ได้มาเพื่อลดคนหรือทำงา�
 4.  ✅ **Transparency** (อธิบายได้ไหมว่าทำไม AI ถึงให้ผลลัพธ์แบบนี้?)
 
 > **Executive Summary:** AI ไม่ใช่แค่ Tool ที่เอามาเล่นสนุกๆ แต่คือ **"Capability Multiplier" (ตัวคูณความสามารถ)** — ถ้าใช้ถูกทาง องค์กรจะเคลื่อนที่ได้เร็วขึ้น แม่นยำขึ้น และเข้าใจพนักงานมากขึ้น`,
+        },
+      ],
+    },
+    {
+      id: "module-3",
+      title: "Module 3: The Age of Agents (Slide 21-27)",
+      lessons: [
+        {
+          id: "agentic-ai-concept",
+          title: "Agentic AI: Beyond Chatbots",
+          type: "concept",
+          icon: "fa-robot",
+          image: "/Handout-AI-For-HR/Handout-AI-For-HR_21.jpg",
+          slides: ["/Handout-AI-For-HR/Handout-AI-For-HR_21.jpg"],
+          content: `### Agentic AI: เมื่อ AI ไม่ใช่แค่ "ผู้ตอบคำถาม" แต่เป็น "ผู้กระทำ" (Slide 21)
+
+> "Traditional AI answers questions. Agentic AI gets things done."
+
+ตอนนี้เราเดินมาถึงจุดเปลี่ยนสำคัญ — จาก **"เข้าใจ AI"** ไปสู่ **"ออกแบบ AI ให้ทำงานแทนระบบเดิม"** เรากำลังเข้าสู่ยุคที่ AI ไม่ได้มีหน้าที่แค่ "คุย" (Chat) แต่มีหน้าที่ "ทำ" (Act) — นี่คือสิ่งที่เรียกว่า **Agentic AI**
+
+---
+
+### 🤖 Agentic AI คืออะไร?
+
+ลองจินตนาการความต่างระหว่าง **"หนังสือคู่มือ"** กับ **"พนักงานฝึกหัด"**:
+*   **Gen AI (ChatGPT ทั่วไป):** เหมือน "หนังสือคู่มืออัจฉริยะ" — ถามอะไรตอบได้หมด แต่คุณต้องเป็นคนลงมือทำเอง
+*   **Agentic AI:** เหมือน "พนักงานฝึกหัด" — สั่งงานได้ ("ช่วยทำรายงานสรุปยอดให้หน่อย") มันจะไปวางแผน ค้นข้อมูล คำนวณ และส่งผลลัพธ์ให้คุณ
+
+Agentic AI คือ AI ที่:
+*   **เข้าใจบริบท** — รู้ว่าใครถาม สถานการณ์คืออะไร
+*   **วางแผนขั้นตอน** — คิดเองว่าต้องทำอะไรก่อน-หลัง
+*   **ตัดสินใจในกรอบ** — มี boundary ที่กำหนดให้
+*   **เชื่อมหลายระบบ** — ดึงข้อมูลจาก HRIS, ส่งเมล, สร้าง PDF ได้
+*   **ทำงานเป็น workflow ต่อเนื่อง** — ไม่หยุดแค่ตอบคำถามเดียว
+
+### ตารางเปรียบเทียบ: Gen AI vs Agentic AI
+
+| คุณสมบัติ | Traditional Gen AI | Agentic AI |
+|-----------|--------------------|------------|
+| **เป้าหมาย** | ให้ข้อมูล (Information) | ให้ผลลัพธ์ (Outcome) |
+| **การทำงาน** | ทีละคำสั่ง (Single-turn) | ทำต่อเนื่องจนจบ (Multi-step Reasoning) |
+| **ความจำ** | จำได้แค่ในแชท (Stateless) | จำบริบทผู้ใช้ระยะยาว (Memory) |
+| **การเชื่อมต่อ** | พิมพ์ตอบเป็นข้อความ | ไปกดปุ่มในระบบอื่นได้ (API Action) |
+| **พฤติกรรม** | ตั้งรับ (Reactive) | เชิงรุก (Proactive) |
+
+### ตัวอย่างให้เห็นภาพ
+
+*   **Generative AI:** "เขียน JD ตำแหน่ง Data Analyst ให้ฉัน" → ได้ JD 1 ชิ้น จบ
+*   **Agentic AI:** วิเคราะห์ skill gap ในทีม → เทียบกับ workforce plan → สร้าง JD ที่ตรงกับ gap → ส่งเข้า workflow approval → Track KPI hiring → รายงานผล
+
+**นี่คือ Multi-step Orchestration** — AI ที่ทำงานเป็น "กระบวนการ" ไม่ใช่ "คำตอบ"
+
+---
+
+### 🧠 5 รูปแบบของ Agentic Intelligence ใน HR (Slide 21)
+
+สไลด์ 21 แสดง **Mind AI Agentic Apps** — AI agents เฉพาะทางที่ออกแบบมาเพื่อจัดการกับ business functions แต่ละตัวเน้นความฉลาดคนละด้าน:
+
+### 1. Decision Intelligence (ตัดสินใจ)
+*   **คืออะไร:** Chat กับ data warehouse / dashboard / reports โดยตรง — ไม่ใช่แค่ดึง dashboard แต่ **ตีความ insight ให้ด้วย**
+*   **HR Use Case:**
+    *   "ทีมไหน attrition risk สูงสุดใน Q3?" → AI ดึง data, วิเคราะห์, สรุป + แนะนำ action
+    *   "Promotion success rate แยกตาม BU เป็นอย่างไร?" → AI วิเคราะห์แนวโน้ม 3 ปี
+    *   "Exit interview sentiment trend ช่วง 2 ปีที่ผ่านมา" → AI สรุปหัวข้อหลักและเสนอ intervention
+
+### 2. Task Intelligence (ทำงานตามกฎ)
+*   **คืออะไร:** Chat กับ rules / policy / SOP — เข้าใจคำถาม, ค้นเอกสาร, ดึง rule, สรุป, ตอบพร้อม reference
+*   **HR Use Case:**
+    *   "Expat policy สำหรับส่งคนไปทำงานต่างประเทศมีเงื่อนไขอะไรบ้าง?" → AI ค้น Policy → ดึงเงื่อนไข → สรุปให้อ่านง่าย
+    *   "ทำหนังสือรับรองเงินเดือนให้หน่อย" → AI ดึงข้อมูล → สร้าง PDF → ส่งเมล
+*   **เบื้องหลัง:** นี่คือ **workflow automation + RAG (Retrieval-Augmented Generation)**
+
+### 3. Document Intelligence (อ่านเอกสารเก่ง)
+*   **คืออะไร:** เปลี่ยน document → structured data ด้วย **OCR + Intelligent Extraction**
+*   **HR Use Case:**
+    *   อ่าน Resume 1,000 ใบ แล้วดึง skill, ประสบการณ์, GPA ใส่ตาราง
+    *   สแกนใบรับรองแพทย์ / ใบสมัคร / Performance form แล้วแปลงเป็น database
+    *   แปลงเอกสารอนุมัติกระดาษ → digital record
+
+> ⚠️ **สำคัญ:** นี่คือ **Foundation ของ Predictive AI** — ถ้าองค์กร 2,000 คนยังไม่มี structured data จะไม่มี predictive layer ได้เลย
+
+### 4. Creative Intelligence (ความคิดสร้างสรรค์)
+*   **คืออะไร:** Generate ideas, content, designs ในระดับ scale — ช่วยทีมสร้าง marketing copy, presentations, visuals
+*   **HR Use Case:**
+    *   เขียน JD ให้น่าสนใจและดึงดูด Gen Z
+    *   ร่าง Performance summary จาก data
+    *   ออกแบบ Learning path, Recognition message, CEO townhall script
+    *   ออกแบบข้อความสื่อสาร Internal Org Change ให้ดูนุ่มนวล
+
+> 💡 **จำไว้:** Creative AI = **Output Layer** ไม่ใช่ Decision Layer — มันช่วย "เขียน" แต่ไม่ควร "ตัดสินใจ"
+
+### 5. Persona Intelligence (สวมบทบาท)
+*   **คืออะไร:** AI-powered **personality & leadership profiling** — วิเคราะห์ decision-making styles, conflict management, risk tolerance, leadership traits
+*   **HR Use Case:**
+    *   **Leadership assessment** — ประเมินศักยภาพผู้นำ
+    *   **Conflict style analysis** — วิเคราะห์รูปแบบการจัดการความขัดแย้ง
+    *   **Coaching simulation** — AI สวมบทเป็น Executive Coach คุยกับ Manager
+    *   **AI avatar role-play** — ฝึกบทสนทนายากๆ เช่น การให้ feedback เชิงลบ
+
+> ⚠️ **ระวัง:** Persona Intelligence เป็น advanced stage ที่ต้องมี **governance สูงมาก** เพราะเกี่ยวข้องกับการตัดสินบุคลิกภาพคน
+
+---
+
+### 🚦 ลำดับ Maturity — จะเริ่มตัวไหนก่อน?
+
+5 Intelligence นี้ **ไม่ได้เท่ากัน** — ถ้าองค์กร 2,000 คนจะเริ่ม ลำดับที่แนะนำคือ:
+
+| ลำดับ | Intelligence | เหตุผล |
+|:-----:|-------------|--------|
+| 1️⃣ | **Task Intelligence** | เริ่มง่าย, ROI ชัด, ลด repetitive work ทันที |
+| 2️⃣ | **Document Intelligence** | สร้าง Data Foundation ที่จำเป็นสำหรับทุกตัว |
+| 3️⃣ | **Decision Intelligence** | ต้องมี data ก่อน ถึงจะวิเคราะห์ได้ |
+| 4️⃣ | **Creative Intelligence** | เสริม productivity แต่ไม่ใช่ critical path |
+| 5️⃣ | **Persona Intelligence** | Advanced stage, ต้องมี governance พร้อม |
+
+---
+
+### 🏗️ HR Agent Stack — ถ้าเอามาใช้จริง
+
+เมื่อเข้าใจ 5 Intelligence แล้ว สิ่งที่ต้องคิดต่อคือ "จะจัดทัพ Agent ยังไง?" ลองดูโครงสร้าง 4 ชั้น:
+
+| Layer | Agent | หน้าที่ |
+|-------|-------|---------|
+| **Layer 1** | Knowledge Agent | Policy bot, HR FAQ bot — ตอบคำถามตามกฎ |
+| **Layer 2** | Data Agent | Attrition predictor, Promotion readiness scorer — วิเคราะห์ข้อมูล |
+| **Layer 3** | Workflow Agent | Promotion cycle automation, Recruitment pipeline — ขับเคลื่อนกระบวนการ |
+| **Layer 4** | Coaching Agent | Leadership simulator, Difficult conversation trainer — พัฒนาคน |
+
+> 💡 **Layer 1-2** คือจุดเริ่มต้นที่ปลอดภัยและวัดผลได้ชัด / **Layer 3-4** ต้องมี governance และ human oversight แน่นกว่า
+
+---
+
+### 🔷 เชื่อมกับสิ่งที่เรียนมา (Slide 4-20)
+
+| สิ่งที่เรียนมา (Slide 4-20) | Slide 21 ต่อยอดเป็น |
+|------------------------------|----------------------|
+| AI Types (Generative, Predictive, Hybrid) | **Agent Application** — ใช้ AI หลายตัวทำงานร่วมกัน |
+| Hybrid Intelligence | **Multi-agent Orchestration** — จัด Agent หลายตัวให้ทำงานเป็นระบบ |
+| Automation Matrix | **Agentify Quadrant** — เลือกงานที่ควร Agent-ify |
+| Layer Architecture | **AI Agent Stack** — จัดลำดับ Layer ของ Agent |
+| Governance | **Agent Guardrails** — กำหนดขอบเขตให้ Agent |
+
+---
+
+### ❓ 4 คำถามเชิงกลยุทธ์ สำหรับผู้บริหาร
+
+ก่อนจะเริ่มสร้าง Agent ใดๆ ต้องตอบ 4 คำถามนี้ให้ได้:
+
+1.  **ระดับการตัดสินใจ:** เราจะให้ Agent ตัดสินใจระดับไหน? (แค่แนะนำ? หรือ approve ได้เลย?)
+2.  **Human Override:** ถ้า AI ตัดสินใจผิด คนจะเข้าแทรกตรงไหน?
+3.  **Data Lineage:** ย้อนรอยได้ไหมว่า AI ใช้ข้อมูลอะไรในการตัดสินใจ?
+4.  **Accountability:** ถ้า AI ผิดพลาด ใครเป็นคนรับผิดชอบ?
+
+---
+
+### 🎯 Key Insight ระดับ Executive
+
+> 🔥 **Agentic AI ไม่ใช่ Chatbot** — มันคือ AI ที่มี **role**, มี **memory**, มี **task**, มี **boundary**, มี **governance**, และมี **KPI**
+
+การมาของ Agentic AI หมายความว่า HR ไม่ได้แค่ซื้อ "Tools" (เครื่องมือทุ่นแรง) อีกต่อไป แต่กำลังสร้าง **"Digital Workforce" (แรงงานดิจิทัล)** ที่ทำงานร่วมกับคนจริงๆ
+
+*   ถ้าออกแบบดี → **HR กลายเป็น Intelligent System**
+*   ถ้าออกแบบผิด → **Legal Risk + Ethical Risk**
+
+> **คำถามชวนคิด:** ถ้าคุณมี "พนักงาน AI" 1 คน คุณจะมอบหมายงานอะไรให้เขาทำเป็นอย่างแรก?`
+        },
+        {
+          id: "hr-agent-use-cases",
+          title: "Real-world HR Agent Scenarios",
+          type: "practical",
+          icon: "fa-briefcase",
+          image: "/Handout-AI-For-HR/Handout-AI-For-HR_22.jpg",
+          slides: [
+            "/Handout-AI-For-HR/Handout-AI-For-HR_22.jpg",
+            "/Handout-AI-For-HR/Handout-AI-For-HR_23.jpg",
+            "/Handout-AI-For-HR/Handout-AI-For-HR_24.jpg"
+          ],
+          content: `### ถอดบทเรียนจาก Commercial Case สู่ HR Agent Architecture (Slide 22-24)
+
+สไลด์ 22-24 ยกตัวอย่าง Agent ในอุตสาหกรรมอื่น (โภชนาการ, การแพทย์, อสังหาฯ) แต่จุดสำคัญไม่ใช่ตัว case — แต่คือ **"สถาปัตยกรรม" ที่ซ่อนอยู่ข้างหลัง** ที่เราจะ "ถอดแบบ" มาใช้กับ HR องค์กร 2,000 คนได้เลย
+
+> 🔥 **Slide 22-24 ไม่ได้สอนเรื่อง Chatbot** — มันสอนเรื่อง **"AI as a Business System"** ไม่ใช่ "AI as a Feature"
+
+---
+
+### 🥗 Case 1: Nutritionist AI → Workforce Optimization Engine (Slide 22)
+
+**เดิมคืออะไร:** ระบบ AI นักโภชนาการที่วางแผนเมนูอาหารให้ **400 โรงอาหาร** โดยพิจารณา:
+*   ความชอบของกลุ่มเป้าหมาย, ความต้องการพลังงาน, สุขภาพ, วัตถุดิบที่มี, งบประมาณ
+
+**สถาปัตยกรรมในสไลด์:**
+1.  **Data Collection** → Data Preprocessing → Data Conversion
+2.  **Ingredient Optimization** — สร้าง Standardized Groups → Priority Criteria → Recommend → Update Recipes
+3.  **AI Menu Design** — Nutrition Settings + Cost + Restrictions → **Meal Planning**
+
+**Key Benefits:** เพิ่ม satisfaction ขณะที่ตอบ nutrition requirements / ออกแบบเมนูอัตโนมัติจากหลายตัวแปร / ลดต้นทุน food waste
+
+### 🔥 ถอดเป็น HR: Workforce Optimization Engine
+
+| Nutritionist AI | HR Version |
+|-----------------|------------|
+| วัตถุดิบ (Ingredients) | **Skill inventory, Performance score, Tenure** |
+| ข้อจำกัดด้านสุขภาพ (Health constraints) | **Business demand, Budget, Headcount limit** |
+| เมนูอาหาร (Meal output) | **Workforce deployment plan** |
+| Optimize เมนู | **Optimize Talent Placement** |
+
+**AI ทำหน้าที่:**
+*   ใครควร **promote** / ใครควร **rotate** / ใครควร **upskill** / ใครต้อง **retain priority**
+*   "โปรเจกต์ A ขาดคนทำ Frontend — AI หาคนในบริษัทที่ว่างและมี skill นี้"
+*   "ทีม B มีแต่ Junior — AI เตือนว่ามีความเสี่ยง ส่ง Senior เข้าไปประกบ"
+
+**Output:** Workforce deployment plan / Promotion recommendation / Succession shortlist
+
+> 💡 **Impact:** ใช้คนถูกงาน (Right Placement) ลดการจ้างคนนอกโดยไม่จำเป็น — **นี่คือ Agentic HR Planning System**
+
+---
+
+### 🏥 Case 2: Dr. Samit Chon → Employee Career Companion Agent (Slide 23)
+
+**เดิมคืออะไร:** Conversational AI ของ **โรงพยาบาลสมิติเวช ชลบุรี** (ใช้จริงตั้งแต่ ธ.ค. 2023) ทำหน้าที่:
+*   **Package Recommendation** — แนะนำแพ็คเกจสุขภาพเฉพาะบุคคล
+*   **Insightful Information** — ให้ข้อมูลเพื่อตัดสินใจอย่างมั่นใจ
+*   **Package Search Flexibility** — ค้นหาอัจฉริยะตามเงื่อนไขที่หลากหลาย
+
+### 🔥 ถอดเป็น HR: Employee Career Companion Agent
+
+| Healthcare AI | HR Version |
+|---------------|------------|
+| แพ็คเกจสุขภาพ | **Career path / Learning path** |
+| อาการคนไข้ | **Skill gap ของพนักงาน** |
+| แนะนำแพทย์เฉพาะทาง | **แนะนำ Mentor / Internal job match** |
+
+**ตัวอย่างจริงในองค์กร 2,000 คน:**
+
+พนักงานถาม: *"ฉันอยากเป็น Senior Manager ภายใน 2 ปี"*
+
+Agent ทำ:
+1.  ดึง current skill profile
+2.  เทียบ target role skill requirements
+3.  วิเคราะห์ gap
+4.  สร้าง learning roadmap
+5.  ประเมิน readiness probability
+6.  เสนอ mentor ที่เหมาะสม
+
+> 💡 **Impact:** รักษา Talent ไว้ในองค์กร (Internal Mobility) — นี่คือ **Decision + Creative + Predictive Agent** รวมกัน
+
+---
+
+### 🏘️ Case 3: Nong Sai-Jai → HR Service Agent Platform (Slide 24)
+
+**เดิมคืออะไร:** Conversational AI ของ **บริษัท พฤกษา** (ใช้จริงตั้งแต่ เม.ย. 2023) สำหรับ sales, marketing, customer service ในอสังหาริมทรัพย์:
+*   **Recommendation engine** — แนะนำโครงการที่เหมาะ
+*   **Multi-channel support** — Website, Facebook Messenger, LINE OA
+*   **Complaint handling** — รับเรื่องร้องเรียนและจัดการ
+*   **ผลลัพธ์:** AI Success Rate **95%**, Recommendation Rate **60%**
+
+### 🔥 ถอดเป็น HR: HR Service Agent Platform
+
+| Real Estate AI | HR Version |
+|----------------|------------|
+| แนะนำโครงการบ้าน | **แนะนำสิทธิ์สวัสดิการ / Policy** |
+| หลายช่องทาง (Web/Line/FB) | **Teams / LINE OA / Intranet / HR Portal** |
+| รับเรื่องร้องเรียน | **Complaint triage + Escalation routing** |
+
+**AI ทำหน้าที่:**
+*   **ตอบ:** "เบิกค่าทำฟันได้เท่าไหร่?" → "2,000 บาทครับ ยื่นใบเสร็จผ่านไลน์นี้ได้เลย"
+*   **แจ้งเตือน:** "พรุ่งนี้วันหยุดบริษัทนะครับ อย่าลืมเคลียร์งาน"
+*   **จัดการ:** Leave request guidance, Benefits explanation, Policy interpretation
+*   **รับเรื่องร้องเรียน:** "แอร์เสีย" → AI เปิด Ticket ส่งช่างทันที
+
+> 💡 **Impact:** HR ไม่ต้องตอบคำถามเดิมๆ เอาเวลาไปทำ Strategy หรือดูแลจิตใจพนักงานดีกว่า
+
+---
+
+### 🔑 สิ่งที่เหมือนกันของทั้ง 3 เคส — Agent Architecture Template
+
+Commercial Case ทั้ง 3 ตัว มีสิ่งที่เหมือนกัน:
+
+| องค์ประกอบ | Nutritionist AI | Healthcare AI | Real Estate AI |
+|-----------|----------------|---------------|----------------|
+| **Structured Data** | วัตถุดิบ, โภชนาการ | แพ็คเกจ, อาการ | โครงการ, ราคา |
+| **Business Rule** | ข้อจำกัดสุขภาพ, งบ | เงื่อนไขแพ็คเกจ | Budget, พื้นที่ |
+| **Optimization Engine** | Ingredient matching | Package matching | Project matching |
+| **Conversational Layer** | - | Chat interface | Multi-channel |
+| **KPI Tracking** | Cost, waste | - | 95% success rate |
+
+> **นี่คือ Blueprint สำหรับ HR Agent** — ไม่ว่าจะสร้าง Agent อะไร ต้องมี 5 องค์ประกอบนี้ครบ
+
+---
+
+### 🏗️ HR Agent Stack ที่ถอดมาจาก Slide 22-24
+
+| Layer | ชื่อ | องค์ประกอบ |
+|-------|------|-----------|
+| **Layer 1** | Data Foundation | HRIS, Performance data, Survey, Skill inventory, Policy documents |
+| **Layer 2** | Intelligence Engine | Predictive models, Rule engine, Optimization algorithm, LLM layer |
+| **Layer 3** | Agent Layer | Career Agent, Promotion Agent, HR Service Agent, Workforce Planning Agent |
+| **Layer 4** | Workflow Layer | Approval routing, Escalation, Reporting, Monitoring |
+| **Layer 5** | Governance Layer | Audit trail, Bias check, Human override, Access control |
+
+---
+
+### 🚀 ถ้าจะเริ่มจริง — เลือก Use Case แรกอย่างไร?
+
+ควรเริ่มที่ Use Case ที่ตอบเกณฑ์เหล่านี้:
+
+| เกณฑ์ | อธิบาย |
+|-------|--------|
+| **High Repetition** | งานที่ทำซ้ำบ่อย (ตอบคำถาม policy, ออกเอกสาร) |
+| **High Impact** | ผลกระทบชัดเจนถ้าทำได้เร็วขึ้น/ดีขึ้น |
+| **Clear Data Structure** | มีข้อมูลพร้อมใช้ (ไม่ต้อง digitize จากศูนย์) |
+| **Measurable ROI** | วัดผลลัพธ์ได้ (ลดเวลา, ลดคน, เพิ่ม satisfaction) |
+
+**Agent แรกที่แนะนำ:**
+*   ✅ **HR Service Agent** — ตอบคำถาม policy, สวัสดิการ, ใบรับรอง (ROI ชัด, data พร้อม)
+*   ✅ **Resume Screening Agent** — กรอง Resume เบื้องต้น (ลดเวลา recruiter)
+*   ✅ **Attrition Early Warning Agent** — เตือนล่วงหน้าว่าใครเสี่ยงลาออก
+*   ✅ **Promotion Readiness Agent** — ประเมินความพร้อมในการเลื่อนตำแหน่ง`
+        },
+        {
+          id: "doc-persona-intelligence",
+          title: "Document & Persona Intelligence",
+          type: "concept",
+          icon: "fa-file-contract",
+          image: "/Handout-AI-For-HR/Handout-AI-For-HR_25.jpg",
+          slides: [
+            "/Handout-AI-For-HR/Handout-AI-For-HR_25.jpg",
+            "/Handout-AI-For-HR/Handout-AI-For-HR_26.jpg",
+            "/Handout-AI-For-HR/Handout-AI-For-HR_27.jpg"
+          ],
+          content: `### Document & Persona Intelligence: รากฐานสำคัญก่อนสร้าง Agent (Slide 25-27)
+
+ก่อนที่ AI จะเก่ง (เป็น Agent) ได้ มันต้องมี 2 สิ่ง:
+1.  **"ความรู้" (Knowledge)** — ข้อมูลที่สะอาดและใช้งานได้
+2.  **"ตัวตน" (Persona)** — บุคลิกที่เหมาะกับผู้ใช้
+
+Slide 25-27 คือรากฐานของทั้ง 2 เรื่องนี้ครับ
+
+---
+
+### 📄 1. Document Intelligence: เปลี่ยน "กระดาษ" ให้เป็น "สมอง" (Slide 25-26)
+
+ปัญหาคลาสสิกของ HR คือ **"ข้อมูลตาย" (Dead Data)** — ข้อมูลจำนวนมากติดอยู่ในรูปแบบที่ AI ใช้ไม่ได้:
+*   Resume เป็น PDF
+*   ใบประเมินผลงานเป็นกระดาษสแกน
+*   SOP กองอยู่ในตู้เอกสาร
+*   แบบฟอร์มเซ็นอนุมัติเป็นกระดาษ
+*   Email / ข้อความเก่าๆ ที่ไม่เคยจัดระเบียบ
+
+**Document Intelligence คือกุญแจที่ไขเอาข้อมูลพวกนี้ออกมาให้ใช้งานได้**
+
+---
+
+### 🔍 สิ่งที่ Slide 25-26 แสดงให้เห็น: OCR Handwriting Recognition
+
+สไลด์แสดงตัวอย่างจริงของการแปลงลายมือเขียนเป็นข้อความดิจิทัล **2 กรณี:**
+
+**กรณีที่ 1: ลายมือแบบไม่มีหัว (Slide 25)**
+*   **ต้นฉบับ (PDF):** เอกสารเขียนด้วยลายมือที่ไม่มีหัวข้อชัดเจน
+*   **ผลลัพธ์ (TXT):** AI อ่านลายมือได้แม้จะมีรอยลบ, ตัวหนังสือไม่ชัด, ภาษาปนกัน (ไทย+อังกฤษ)
+*   **ข้อจำกัด:** อาจมีคำที่อ่านผิดบ้าง (เช่น ลายมือที่เขียนเร็วหรือตัวหนังสือเล็กมาก)
+
+**กรณีที่ 2: ลายมือแบบมีหัว (Slide 26)**
+*   **ต้นฉบับ (PDF):** เอกสารที่มีหัวข้อ/โครงสร้างชัดเจน (เช่น "ส่วนที่ 2: รายละเอียดเกี่ยวกับสิ่งที่คุณชอบ")
+*   **ผลลัพธ์ (TXT):** AI อ่านได้แม่นยำกว่า — สามารถจับโครงสร้างเอกสาร, แยกหัวข้อ, และจัดเรียงข้อมูลเป็นระเบียบได้
+*   **ข้อสังเกต:** เอกสารที่มี structure ชัด → AI อ่านได้ดีกว่า / ถูกต้องกว่ามาก
+
+> 💡 **บทเรียนสำหรับ HR:** ถ้าจะใช้ Document Intelligence กับเอกสารในองค์กร **ยิ่งเอกสารมีโครงสร้างชัดเจน → ผลลัพธ์ยิ่งดี** ดังนั้นการออกแบบแบบฟอร์มให้มี field ชัดเจน จะช่วยให้ AI ทำงานได้ดีขึ้นมาก
+
+---
+
+### 🧩 Document Intelligence ทำอะไรได้บ้าง?
+
+| ความสามารถ | อธิบาย | ตัวอย่าง HR |
+|-----------|--------|------------|
+| **OCR** | อ่านตัวหนังสือจากรูป/สแกน/ลายมือ | อ่านใบสมัครงาน, ใบรับรองแพทย์ |
+| **Extraction** | ดึงเฉพาะข้อมูลที่ต้องการ | ดึง GPA, ประสบการณ์ทำงาน จาก Resume |
+| **Classification** | จัดหมวดหมู่เอกสาร | แยก "ใบลา" / "ใบเบิก" / "ใบสมัคร" อัตโนมัติ |
+| **Understanding** | เข้าใจความหมาย ไม่ใช่แค่อ่านคำ | รู้ว่า "ลาบวช" = "กิจธุระ" ตามกฎบริษัท |
+| **Structuring** | แปลงเป็น structured data | สร้างตารางเปรียบเทียบ Resume 1,000 ใบ |
+
+### ความหมายเชิงงาน HR
+
+นี่คือ **"จุดเริ่มของ Data Foundation"** — เพราะ HR data จำนวนมากมักติดอยู่ใน PDF, Form, Scan, Email
+
+Document Intelligence ทำให้เกิด:
+*   **Search ได้** — ค้นหาข้อมูลในเอกสารเก่าๆ ได้ทันที
+*   **Tag/จัดหมวดได้** — จัดเอกสารอัตโนมัติ
+*   **Extract field เป็น structured data** — เช่น ชื่อ, วันที่, เหตุผล, ผลประเมิน
+*   **ป้อนเข้า workflow / model layer ต่อได้** — เป็น input ให้ Agent ตัวอื่นใช้
+
+> ⚠️ **สำคัญมาก:** ถ้าองค์กร 2,000 คน ยังไม่มี structured data → จะสร้าง Predictive AI / Decision Intelligence ไม่ได้เลย — Document Intelligence คือ **Layer 0** ที่ต้องทำก่อน
+
+---
+
+### 🎭 2. Persona Intelligence: ใส่ "ตัวตน" ให้ AI (Slide 27 — PersonaX)
+
+สไลด์ 27 แนะนำ **"PersonaX"** — เป็นตัวอย่างของ **AI ที่มี persona / โปรไฟล์** ให้ประสบการณ์การคุย "เหมือนมีผู้ช่วยเฉพาะคน"
+
+**PersonaX คืออะไร?**
+*   เป็น **Custom GPT บน ChatGPT** (มี QR Code ให้ลองใช้จริง)
+*   ออกแบบมาสำหรับ **case-based interview for profiling leaders** — ใช้สัมภาษณ์เพื่อวิเคราะห์บุคลิกผู้นำ
+*   เป็นรูปธรรมของ **Persona Intelligence** จาก Slide 21
+
+### ทำไมต้องมี "ตัวตน" ให้ AI?
+
+เพราะเราไม่อยากคุยกับหุ่นยนต์ที่แข็งทื่อ — Persona ที่เหมาะสมทำให้ผู้ใช้ **ไว้ใจ** และ **เปิดใจ** คุยกับ AI มากขึ้น
+
+*   AI ที่ใช้ภาษาทางการเกินไป → พนักงานไม่อยากคุยด้วย
+*   AI ที่ใช้ภาษาเป็นกันเองเกินไป → ดูไม่น่าเชื่อถือเวลาตอบเรื่องกฎหมาย
+*   **Persona ที่ถูกต้อง = สร้าง Trust ที่ถูกต้อง**
+
+---
+
+### 👥 ตัวอย่าง Persona สำหรับ HR Agent
+
+| Persona | บุคลิก | หน้าที่ | ตัวอย่าง Tone |
+|---------|--------|---------|--------------|
+| 👮 **Compliance Officer** | แม่นยำ, ตรงไปตรงมา, เป็นทางการ | ตอบกฎหมายแรงงาน, คำนวณภาษี, ตรวจสอบทุจริต | "ตามระเบียบข้อที่ 5.2 ระบุว่า..." |
+| 🌻 **Engagement Buddy** | เป็นกันเอง, เข้าอกเข้าใจ, ใช้ Emoji | รับฟังปัญหา, แนะนำ Career Path, Onboarding | "เหนื่อยไหมวันนี้? ถ้าเครียดลองพักดื่มน้ำหน่อยนะ 😊" |
+| 📊 **Data Analyst** | ขับเคลื่อนด้วยข้อมูล, มีเหตุผล | วิเคราะห์ Turnover, Workforce Planning | "จากสถิติย้อนหลัง 3 ปี พบแนวโน้มว่า..." |
+| 🎓 **Manager Coach** | กระตุ้นความคิด, ถามนำ, ท้าทาย | Leadership development, Coaching simulation | "คุณคิดว่าอะไรจะเกิดขึ้นถ้าลองเปลี่ยนวิธีให้ feedback?" |
+| 🤝 **New Joiner Buddy** | สดใส, ร่าเริง, ให้กำลังใจ | ดูแลพนักงานใหม่, ตอบคำถามช่วง Onboarding | "ยินดีต้อนรับเข้าทีม! วันนี้เรามาทำความรู้จักระบบลากันนะ" |
+| 🎯 **HRBP Advisor** | มองภาพรวม, เข้าใจธุรกิจ, แนะนำเชิงกลยุทธ์ | ให้คำปรึกษาผู้จัดการเรื่อง people strategy | "จากข้อมูล engagement survey ทีมคุณ ผมแนะนำว่า..." |
+
+> 💡 **Persona ≠ แค่เปลี่ยนภาษา** — มันคือการออกแบบ "ประสบการณ์ทั้งหมด" ตั้งแต่น้ำเสียง, ข้อมูลที่ให้, ระดับความละเอียด, ไปจนถึงวิธีปฏิเสธ
+
+---
+
+### 🔗 Document + Persona = Agent ที่สมบูรณ์
+
+ทั้ง 2 เรื่องนี้เชื่อมกันเป็นรากฐานของ Agent:
+
+| Component | ทำไมสำคัญ | ถ้าขาด |
+|-----------|----------|--------|
+| **Document Intelligence** | ทำให้ Agent มี **"ความรู้"** — เข้าถึงข้อมูลที่เคยเป็น dead data | Agent ตอบไม่ได้ / ตอบเดา / hallucinate |
+| **Persona Intelligence** | ทำให้ Agent มี **"ตัวตน"** — สื่อสารให้ตรงกับบริบทผู้ใช้ | ผู้ใช้ไม่ไว้ใจ / ไม่อยากคุยด้วย / adoption ต่ำ |
+
+---
+
+### 🎯 สรุป Module 3
+
+เราได้เรียนรู้ว่า:
+
+1.  **Agentic AI ≠ Chatbot** — มันคือ "Digital Workforce" ที่มี role, memory, task, boundary, governance, KPI
+2.  **5 Intelligence** (Decision, Task, Document, Creative, Persona) คือ building blocks — ต้องเรียงลำดับ maturity ให้ถูก
+3.  **Commercial Case (Nutritionist / Healthcare / Real Estate)** สอนเรื่อง "AI as a Business System" ไม่ใช่แค่ chatbot feature
+4.  **Document Intelligence** คือ Layer 0 ที่ต้องทำก่อน — ถ้าไม่มี data foundation จะสร้างอะไรไม่ได้
+5.  **Persona Intelligence** ทำให้ Agent "เข้าถึงคน" — trust คือกุญแจของ adoption
+
+ใน Module ถัดไป เราจะไปดูกันว่า **"เครื่องมือ" (Tools)** ตัวไหนบ้างที่มีให้เราใช้จริงในตลาดตอนนี้ — และ AI ทำอะไรได้/ไม่ได้ครับ`
+        },
+      ],
+    },
+    {
+      id: "module-4",
+      title: "Module 4: Tools & Technology (Slide 28-42)",
+      lessons: [
+        {
+          id: "ai-can-cannot-do",
+          title: "AI ทำอะไรได้ (และไม่ได้)?",
+          type: "concept",
+          icon: "fa-scale-balanced",
+          image: "/Handout-AI-For-HR/Handout-AI-For-HR_28.jpg",
+          slides: ["/Handout-AI-For-HR/Handout-AI-For-HR_28.jpg"],
+          content: `### 🎭 What Generative AI Can Do and Cannot Do (Slide 28)
+
+สไลด์นี้สำคัญมาก เพราะเป็น **"เส้นแบ่งความคาดหวัง"** ก่อนที่เราจะเอา AI ไปใช้ในองค์กรจริงๆ ถ้าไม่เข้าใจขอบเขตนี้ดีพอ เราจะคาดหวังสูงเกินไป หรือกลัวเกินจำเป็น
+
+> 💡 **พูดง่ายๆ:** AI เหมือน **"เด็กฝึกงานอัจฉริยะ"** — ทำงานเร็วมาก สร้างสรรค์ได้ดี แต่ยังไม่รู้กฎบริษัท ไม่เข้าใจการเมืองในออฟฟิศ และอาจตอบมั่นใจแม้ข้อมูลผิด เราจึงต้องรู้ว่าจะมอบหมายอะไรให้ และจะตรวจงานอะไร
+
+---
+
+### ✅ สิ่งที่ Generative AI "ทำได้ดี" (The Creator)
+
+คิดซะว่า AI คือ **"Creative Partner"** ที่ทำงานเร็วมากและไม่เคยเหนื่อย:
+
+| ความสามารถ | อธิบาย | ตัวอย่างงาน HR |
+|-----------|--------|---------------|
+| **Text Generation** (สร้างข้อความ) | เขียนอีเมล, ร่างประกาศ, สร้างเนื้อหา | เขียน JD, Performance summary, ร่างนโยบาย |
+| **Summarization** (สรุปความ) | ย่อเอกสารยาวๆ ให้กระชับ | สรุปประชุม Talent Review, สรุป Exit Interview |
+| **Translation** (แปลภาษา) | แปลข้อความได้หลายภาษา | แปล Policy เป็นหลายภาษาสำหรับพนักงานต่างชาติ |
+| **Personalization** (ปรับให้เฉพาะบุคคล) | ปรับแต่งเนื้อหาตามบริบทผู้รับ | สร้าง Learning Path เฉพาะตัว, Recognition message |
+| **Data Synthesis** (สังเคราะห์ข้อมูล) | รวมข้อมูลหลายแหล่งสร้างสรุป | สรุป Engagement Survey results จาก comment นับพัน |
+| **Image & Presentation** (สร้างภาพ/สไลด์) | ออกแบบสื่อ, สร้าง presentation | ทำ Employer Branding poster, สร้าง Training slides |
+
+> 🔧 **อธิบายให้เห็นภาพ:** เหมือนมี "เลขาฯ ส่วนตัว + นักเขียน + นักแปล + นักออกแบบ" รวมเป็นคนเดียว ทำงาน 24 ชม. ไม่มีวันหยุด
+
+**แก่นสำคัญ:** Generative AI เก่งเรื่อง **"สร้าง" (Create)** และ **"สื่อสาร" (Communicate)** — มันเป็น **Output Layer** ไม่ใช่ **Decision Layer**
+
+---
+
+### ❌ สิ่งที่ Generative AI "ทำไม่ได้" (The Risk)
+
+นี่คือส่วนที่สำคัญกว่า! เพราะ AI **"ไม่ใช่ผู้เชี่ยวชาญ"** และ **"ไม่มีจิตสำนึก"**:
+
+| ข้อจำกัด | อธิบาย | ความเสี่ยงใน HR |
+|---------|--------|---------------|
+| **ไม่รับประกันความถูกต้อง** (Hallucination) | AI มั่วได้ ตอบอย่างมั่นใจแม้ข้อมูลผิด | ตอบ Policy ผิด → พนักงานเข้าใจสิทธิ์ผิด |
+| **ไม่เข้าใจบริบทลึก** (No Deep Context) | ไม่รู้จักวัฒนธรรมองค์กร ไม่รู้ "เรื่องภายใน" | Feedback ไม่เหมาะสม เพราะไม่รู้ว่าทีมกำลังมีปัญหา |
+| **ไม่มีจริยธรรมในตัวเอง** (No Ethics) | ไม่มี moral compass ต้องอาศัย guardrails | อาจ generate เนื้อหาที่ bias หรือเลือกปฏิบัติ |
+| **ไม่มี Self-awareness** | ไม่รู้ว่าตัวเองผิด ไม่รู้ว่าไม่รู้ | ให้คำแนะนำ Promotion ที่ผิดบริบทโดยไม่เตือน |
+| **ไม่ใช่ Expert จริง** | "รู้กว้าง" แต่ "ไม่ลึก" ในแต่ละสาขา | วิเคราะห์ Workforce Strategy ผิดบริบท |
+| **ไม่สร้างนวัตกรรมแท้จริง** | เรียงคำจาก pattern เก่า ไม่ได้คิดใหม่จริงๆ | ไม่เหมาะสร้าง HR Strategy ที่เป็น first-of-its-kind |
+
+> 🔧 **อธิบายให้เห็นภาพ:** AI เหมือน **"นักเรียนเกรด A ที่ท่องจำเก่ง"** — ตอบข้อสอบได้คะแนนดี แต่เจอสถานการณ์จริงในออฟฟิศที่ต้องใช้ EQ, การอ่านสถานการณ์, หรือความเห็นอกเห็นใจ... ทำไม่ได้
+
+---
+
+### 🎯 ถ้าใช้ผิดจะเกิดอะไร? (HR Risk Table)
+
+| สิ่งที่ AI ทำไม่ได้ | ถ้าใช้ผิดจะเกิดอะไร | ความรุนแรง |
+|---------------------|---------------------|-----------|
+| รับประกัน Factual Accuracy | Promotion Decision ผิด / Policy ตอบผิด | 🔴 สูงมาก |
+| เข้าใจ Emotion จริง | Feedback ไม่เหมาะสม / พนักงานรู้สึกไม่ได้รับความเคารพ | 🟡 ปานกลาง |
+| มี Ethical Judgment | สร้าง Bias ใน Promotion / ใช้ภาษาเลือกปฏิบัติ | 🔴 สูงมาก |
+| Deep Expertise | วิเคราะห์ Workforce Strategy ผิดบริบท | 🟡 ปานกลาง |
+| รับผิดชอบ | ถ้า AI แนะนำผิด ไม่มีใครรับผิดชอบ | 🔴 สูงมาก |
+
+---
+
+### 🔥 3 ข้อที่ต้องจำให้ขึ้นใจ (สำหรับ HR ทุกคน)
+
+**1️⃣ AI Output = Draft, Not Verdict (ร่าง ไม่ใช่คำตัดสิน)**
+โดยเฉพาะเรื่อง: Performance summary, Promotion recommendation, Attrition risk explanation — ต้องมี **Human Validation** เสมอ
+
+> 🔧 **เปรียบเทียบ:** เหมือนลูกน้องเขียนรายงานเสร็จ แต่หัวหน้าต้องอ่านตรวจก่อนส่งผู้บริหาร — AI ก็เป็นแค่ "คนร่าง" ไม่ใช่ "คนอนุมัติ"
+
+**2️⃣ AI ไม่รู้กฎหมายองค์กร**
+ถ้าไม่มี Governance Layer → AI อาจ: ตอบผิด Policy, เผยข้อมูลที่ไม่ควรเปิดเผย, แนะนำแนวทางที่ขัดกฎหมายแรงงาน
+
+**3️⃣ AI ไม่มี Moral Compass (เข็มทิศด้านจริยธรรม)**
+ถ้าไม่มี Guardrail → AI อาจ Generate: ภาษาที่ bias, เนื้อหาที่เลือกปฏิบัติ, คำแนะนำที่มั่นใจเกินจริง (Overconfident)
+
+---
+
+### 🏢 สำหรับองค์กร 2,000 คน
+
+เมื่อใช้ AI กับคนจำนวนมาก **ความผิดพลาดจะถูกขยาย (Scale)**:
+- AI ตอบ Policy ผิด → อาจกระทบพนักงานหลักร้อยคนพร้อมกัน
+- AI สร้าง Performance Summary ที่ bias → อาจกระทบการประเมินทั้งรอบ
+- AI แนะนำ Promotion List ที่ลำเอียง → อาจถูกฟ้องร้อง
+
+> **Insight สำคัญ:** Slide 28 คือ **Expectation Management Framework** — ก่อนองค์กรจะ Scale AI ต้องเข้าใจว่า AI คือ **Accelerator + Multiplier + Co-pilot** ไม่ใช่ **Replacement + Judge + Authority**
+
+---
+
+### 🧠 สรุปสำหรับผู้เรียน
+
+> **ใช้ AI ช่วย "ร่าง" (Draft) ได้ แต่อย่าให้ "ตัดสิน" (Decide) เรื่องสำคัญ**
+>
+> Generative AI = Creative Layer ไม่ใช่ Decision Authority
+>
+> ยิ่งองค์กรใหญ่ ยิ่งต้องระวังมาก เพราะความผิดพลาดจะถูก "ขยาย" ไปยังคนนับพัน`,
+        },
+        {
+          id: "personal-vs-enterprise",
+          title: "Personal vs Enterprise AI",
+          type: "risk",
+          icon: "fa-shield-halved",
+          image: "/Handout-AI-For-HR/Handout-AI-For-HR_29.jpg",
+          slides: [
+            "/Handout-AI-For-HR/Handout-AI-For-HR_29.jpg",
+            "/Handout-AI-For-HR/Handout-AI-For-HR_30.jpg"
+          ],
+          content: `### 🔓 Personal Use vs 🔒 Enterprise Use (Slide 29-30)
+
+ก่อนจะเลือกเครื่องมือ AI มาใช้ เราต้องเข้าใจก่อนว่า AI มี **"2 เกรด"** ที่แตกต่างกันอย่างมากในเรื่อง **ความปลอดภัย, ความสามารถ, และขอบเขตการใช้งาน**
+
+> 💡 **พูดง่ายๆ:** เหมือนเปรียบ **"มอเตอร์ไซค์ส่วนตัว"** กับ **"รถบริษัทที่มีระบบ GPS + กล้อง + ประกัน"** — ทั้งคู่พาไปถึงจุดหมายได้ แต่ระดับความปลอดภัยและความรับผิดชอบต่างกันลิบ
+
+---
+
+![Personal vs Enterprise AI](/Handout-AI-For-HR/Handout-AI-For-HR_30.jpg)
+
+### 🛵 1. Personal AI Tools (ของใช้ส่วนตัว)
+
+เครื่องมือที่ **ใครก็สมัครใช้ได้** โดยไม่ต้องผ่านองค์กร
+
+**ตัวอย่าง:** ChatGPT (Free/Plus), Google Gemini (Free), Claude (Free), Canva AI
+
+**ข้อดี:**
+- ✅ **คล่องตัว:** สมัครปุ๊บใช้ปั๊บ ไม่ต้องรอ IT ติดตั้ง
+- ✅ **เรียนรู้ง่าย:** เหมาะสำหรับเริ่มต้นฝึกใช้ AI
+- ✅ **ฟรี/ราคาถูก:** เริ่มใช้ได้โดยไม่ต้องใช้งบบริษัท
+
+**ข้อจำกัด:**
+- ❌ **ข้อมูลอาจรั่วไหล:** สิ่งที่คุณพิมพ์ลงไป **อาจถูกนำไปใช้เทรน AI ต่อ** (ขึ้นอยู่กับ policy ของแต่ละ provider)
+- ❌ **ไม่มี Access Control:** ไม่สามารถควบคุมว่าใครเห็นข้อมูลอะไร
+- ❌ **ไม่เชื่อมระบบองค์กร:** ไม่ดึงข้อมูลจาก HRIS / SharePoint ได้โดยตรง
+
+**เหมาะกับงาน HR แบบไหน:**
+| งาน | ทำได้ ✅ | ห้ามทำ ❌ |
+|------|---------|----------|
+| สรุปบทความ / หนังสือ | ✅ | |
+| ร่าง JD (ไม่มีข้อมูลลับ) | ✅ | |
+| Brainstorm ไอเดีย | ✅ | |
+| วิเคราะห์ข้อมูลพนักงานจริง | | ❌ มีข้อมูลอ่อนไหว |
+| สรุป Performance รายบุคคล | | ❌ มีชื่อ + คะแนน |
+| ถามเรื่องเงินเดือน / โบนัส | | ❌ ข้อมูลลับ |
+
+> 🔧 **เปรียบเทียบ:** เหมือนใช้ **"Google Docs ส่วนตัว"** — ทำงานได้ดี แต่อย่าเอาเอกสารลับบริษัทไปเก็บ!
+
+---
+
+### 🚌 2. Enterprise AI Tools (ของใช้องค์กร)
+
+เครื่องมือที่ **องค์กรจัดหาให้** มีระบบรักษาความปลอดภัยระดับ Enterprise
+
+**ตัวอย่าง:** ChatGPT Enterprise/Team, Microsoft Copilot 365, Google Workspace with Gemini Enterprise, Copilot Studio
+
+**ข้อดี:**
+- ✅ **ข้อมูลปลอดภัย:** ข้อมูลไม่ถูกนำไปเทรน AI ต่อ (Data Isolation)
+- ✅ **มี Access Control:** กำหนดสิทธิ์ได้ว่าใครเห็นข้อมูลอะไร (RBAC)
+- ✅ **เชื่อมระบบองค์กร:** ดึงข้อมูลจาก HRIS, ERP, SharePoint, Data Warehouse ได้
+- ✅ **มี Audit Log:** บันทึกว่าใครถามอะไร AI ตอบอะไร ตรวจสอบย้อนหลังได้
+- ✅ **มี Admin Console:** IT กำหนด Policy ควบคุมการใช้งานได้
+
+**ข้อจำกัด:**
+- ❌ **ราคาสูงกว่า:** ค่าบริการระดับ Enterprise ต่อ user ต่อเดือน
+- ❌ **ต้อง Setup:** ต้องมีทีม IT ตั้งค่า เชื่อมต่อระบบ
+- ❌ **ใช้เวลา Deploy:** ไม่ได้สมัครแล้วใช้ได้ทันที
+
+**เหมาะกับงาน HR แบบไหน:**
+| งาน | Enterprise ทำได้ ✅ |
+|------|-------------------|
+| วิเคราะห์ข้อมูลพนักงานจริง (เงินเดือน, Performance) | ✅ ปลอดภัย |
+| สร้าง HR Chatbot ตอบ Policy ภายใน | ✅ เชื่อมฐานข้อมูล Policy ได้ |
+| Promotion Scoring + Readiness Analysis | ✅ ดึง HRIS + Performance ได้ |
+| Workforce Planning Dashboard | ✅ เชื่อม Data Warehouse |
+| สรุปประชุม Talent Review | ✅ ไม่รั่วไหล |
+
+---
+
+### 📊 เปรียบเทียบแบบจับวางคู่กัน
+
+| คุณสมบัติ | Personal AI 🛵 | Enterprise AI 🚌 |
+|-----------|---------------|-----------------|
+| **ราคา** | ฟรี / ถูก | แพงกว่า (จ่ายรายเดือน) |
+| **ความปลอดภัย** | ต่ำ (อาจเทรนต่อ) | สูง (Data Isolation) |
+| **Access Control** | ไม่มี | มี RBAC |
+| **เชื่อมระบบองค์กร** | ไม่ได้ | เชื่อม HRIS/ERP ได้ |
+| **Audit Log** | ไม่มี | มี (ตรวจสอบได้) |
+| **เหมาะกับ** | Productivity ส่วนตัว | System Integration ระดับองค์กร |
+
+---
+
+### 🔥 สรุป Strategic Level
+
+> **Personal AI = Productivity** (เพิ่มความเร็วของ HR แต่ละคน)
+> **Enterprise AI = System Integration** (เชื่อมระบบ สร้าง Workflow ที่ปลอดภัย)
+
+องค์กร 2,000 คนควรเริ่มจาก **Personal AI ให้ HR คุ้นเคยก่อน** แล้วค่อย **Scale ไป Enterprise AI** เมื่อพร้อม
+
+---
+
+### 🚨 กฎเหล็ก HR ที่ต้องจำ
+
+> **ข้อมูลพนักงาน, เงินเดือน, ผลประเมิน, ประวัติวินัย, กลยุทธ์ลับ — "ห้ามใส่ใน Personal AI เด็ดขาด!"**
+
+> 🔧 **เปรียบเทียบ:** เหมือน **"ห้ามเอาบัตรเครดิตไปให้คนแปลกหน้าถือ"** — ต่อให้เขาดูน่าเชื่อถือ แต่คุณไม่สามารถควบคุมได้ว่าเขาจะเอาไปทำอะไร
+
+ถ้าจะใช้ AI กับข้อมูลอ่อนไหว ต้องใช้ **Enterprise AI ที่มี Data Isolation + Access Control + Audit Trail** เท่านั้นครับ`,
+        },
+        {
+          id: "ai-tools-landscape",
+          title: "รู้จักเครื่องมือ AI ในตลาด",
+          type: "practical",
+          icon: "fa-toolbox",
+          image: "/Handout-AI-For-HR/Handout-AI-For-HR_31.jpg",
+          slides: [
+            "/Handout-AI-For-HR/Handout-AI-For-HR_32.jpg",
+            "/Handout-AI-For-HR/Handout-AI-For-HR_33.jpg",
+            "/Handout-AI-For-HR/Handout-AI-For-HR_34.jpg",
+            "/Handout-AI-For-HR/Handout-AI-For-HR_35.jpg",
+            "/Handout-AI-For-HR/Handout-AI-For-HR_36.jpg",
+            "/Handout-AI-For-HR/Handout-AI-For-HR_37.jpg",
+            "/Handout-AI-For-HR/Handout-AI-For-HR_38.jpg",
+            "/Handout-AI-For-HR/Handout-AI-For-HR_39.jpg",
+            "/Handout-AI-For-HR/Handout-AI-For-HR_40.jpg",
+            "/Handout-AI-For-HR/Handout-AI-For-HR_41.jpg",
+            "/Handout-AI-For-HR/Handout-AI-For-HR_42.jpg"
+          ],
+          content: `### 🛠️ AI Tools Landscape: เลือกอาวุธให้เหมาะกับมือ (Slide 32-42)
+
+ตลาด AI มีเครื่องมือเยอะมากจนตาลาย สไลด์ชุดนี้ช่วย **"จัดหมวดหมู่"** ให้เข้าใจง่ายว่า เครื่องมือแต่ละตัวเหมาะกับงานแบบไหน
+
+> 💡 **พูดง่ายๆ:** เหมือนไปร้านขายเครื่องมือช่าง — มีทั้ง ค้อน สว่าน ประแจ เลื่อย... ไม่ต้องซื้อทุกอัน แต่ต้อง **"รู้จัก"** ทุกตัว แล้ว **"เลือกใช้"** ตัวที่ตรงกับงาน
+
+เฉียบแบ่งเครื่องมือออกเป็น **3 ระดับ** ตามระดับการใช้งาน:
+
+---
+
+## 🟢 Level 1 — Individual Productivity (เพิ่มความเร็วรายบุคคล)
+
+เครื่องมือกลุ่มนี้ **ใช้ง่าย เริ่มได้ทันที** เหมาะกับ HR ที่เพิ่งเริ่มต้นใช้ AI
+
+---
+
+### 🧠 ChatGPT (OpenAI) — Slide 32
+
+> 🔧 **เปรียบเทียบ:** เหมือน **"เป็ดที่ทำได้ทุกอย่าง"** — ว่ายน้ำก็ได้ บินก็ได้ เดินบกก็ได้ ไม่ถึงกับเทพทุกด้าน แต่ "ครบเครื่อง"
+
+**ลักษณะ:** LLM แบบ General-purpose ถนัด Text generation, Reasoning, Creative tasks
+**จุดเด่น:** ใช้งานง่ายที่สุด, Ecosystem ใหญ่ที่สุด (มี GPTs / Custom GPT / API), รองรับทั้ง text + image + voice + code
+**จุดอ่อน:** อาจ Hallucinate ในข้อมูลเฉพาะทาง, ฟรีมี rate limit
+
+**HR ใช้ทำอะไร:**
+- เขียน Job Description ที่ดึงดูดใจ
+- สรุป Performance Feedback จากหลายแหล่ง
+- สร้าง Interview Questions ตาม Competency
+- ร่าง Learning Roadmap / IDP (Individual Development Plan)
+- Brainstorm ไอเดียโปรเจกต์ HR
+
+---
+
+### 🌐 Gemini (Google) — Slide 33
+
+> 🔧 **เปรียบเทียบ:** เหมือน **"เลขาฯ ที่เก่ง Google"** — ค้นหาข้อมูลปัจจุบันเก่ง จัดการเอกสารใน Google Drive ได้คล่อง
+
+**ลักษณะ:** ผสานกับ Google Ecosystem อย่างลึก (Docs, Sheets, Slides, Drive, Gmail)
+**จุดเด่น:** ค้นข้อมูลปัจจุบันได้ดี (Real-time search), ทำงานร่วมกับ Google Workspace ได้ไร้รอยต่อ
+**จุดอ่อน:** ภาษาไทยยังไม่เก่งเท่า ChatGPT/Claude ในบาง task
+
+**HR ใช้ทำอะไร:**
+- สรุปไฟล์ Google Docs ยาวๆ ด้วยคำสั่งเดียว
+- วิเคราะห์ข้อมูลใน Google Sheets (เช่น Headcount report)
+- ช่วยทำ Presentation สำหรับ HR Report ใน Google Slides
+- ค้นหา Best Practice / Benchmark ล่าสุดจากอินเทอร์เน็ต
+
+---
+
+### 📖 Claude (Anthropic) — Slide 36
+
+> 🔧 **เปรียบเทียบ:** เหมือน **"นักวิชาการที่อ่านหนังสือเร็ว"** — โยนเอกสารหนาเป็นร้อยหน้าให้อ่าน ก็สรุปได้แม่นยำ
+
+**ลักษณะ:** เด่นเรื่อง Long-context (อ่านเอกสารยาวๆ ได้ดีมาก) และความระมัดระวัง (Safety-focused)
+**จุดเด่น:** อ่านเอกสาร 200+ หน้าได้ในครั้งเดียว, ภาษาไทยดีมาก, ตอบอย่างรอบคอบ ระวัง Hallucination
+**จุดอ่อน:** ไม่ค้นหาอินเทอร์เน็ตแบบ Real-time (บาง version)
+
+**HR ใช้ทำอะไร:**
+- วิเคราะห์ Employee Handbook ทั้งเล่มแล้วสรุปประเด็นสำคัญ
+- ตรวจสอบความสอดคล้อง (Consistency) ของ Policy หลายฉบับ
+- สรุป Exit Interview Transcript ยาวๆ หา Pattern
+- เปรียบเทียบ Policy เก่า vs ใหม่ หาจุดที่เปลี่ยนแปลง
+
+---
+
+### 🎨 Gamma — Slide 38
+
+> 🔧 **เปรียบเทียบ:** เหมือน **"นักออกแบบ Slide มือโปร"** — พิมพ์หัวข้อไป มันจัดสไลด์สวยๆ ให้เสร็จเลย
+
+**ลักษณะ:** AI สร้าง Presentation อัตโนมัติ
+**จุดเด่น:** ทำ Slide เร็วมาก, จัดโครงสร้าง + Layout + Design ให้อัตโนมัติ
+**จุดอ่อน:** อาจต้องปรับแต่งเนื้อหาให้เหมาะกับบริบทองค์กร
+
+**HR ใช้ทำอะไร:**
+- สร้าง HR Transformation Deck สำหรับนำเสนอผู้บริหาร
+- ทำ Training Slide สำหรับ Workshop
+- สร้าง Workforce Report Presentation
+
+---
+
+### 🖼️ Canva AI — Slide 39
+
+> 🔧 **เปรียบเทียบ:** เหมือน **"กราฟิกดีไซน์เนอร์ 24 ชม."** — พิมพ์บอกว่าอยากได้อะไร มันจะสร้างให้ทันที
+
+**ลักษณะ:** AI สำหรับออกแบบภาพ / สื่อ / Infographic
+**จุดเด่น:** ใช้ง่ายมาก, มี Template สำเร็จรูป, ลบพื้นหลัง / สร้างรูป / ออกแบบโปสเตอร์ได้
+**จุดอ่อน:** ภาพ AI Generate อาจดูไม่เนียนเท่า Midjourney
+
+**HR ใช้ทำอะไร:**
+- สร้าง Employer Branding Poster (รับสมัครงาน)
+- ทำ Internal Communication Visual (ประกาศบริษัท)
+- ออกแบบ Engagement Campaign Material
+- ทำ Infographic สรุปข้อมูล HR (เช่น สถิติพนักงาน)
+
+---
+
+### 🎨 Midjourney — Slide 40
+
+> 🔧 **เปรียบเทียบ:** เหมือน **"ศิลปินระดับเทพ"** — สร้างภาพเสมือนจริงสวยงามมาก แต่ต้องสั่งงานเป็นภาษาเฉพาะ
+
+**ลักษณะ:** Image Generation ขั้นสูง สร้างภาพ Photorealistic / Conceptual Art
+**จุดเด่น:** คุณภาพภาพสูงมาก, เหมาะงาน Creative ระดับ Campaign
+**จุดอ่อน:** ใช้ยากกว่าตัวอื่น (ต้องสั่งผ่าน Discord), ต้องเขียน Prompt เป็น
+
+**HR ใช้ทำอะไร:**
+- สร้าง Visual สำหรับ Recruitment Campaign
+- ออกแบบ Internal Culture Branding Material
+- สร้างภาพประกอบ Training / Onboarding Content
+
+---
+
+## 🟡 Level 2 — Ecosystem Productivity (เพิ่มผลผลิตระดับทีม)
+
+เครื่องมือกลุ่มนี้ **ฝังอยู่ในระบบที่องค์กรใช้อยู่แล้ว** เหมาะกับการยกระดับ Productivity ทั้งทีม
+
+---
+
+### 💼 Microsoft 365 Copilot — Slide 34
+
+> 🔧 **เปรียบเทียบ:** เหมือน **"ผู้ช่วยที่อยู่ในทุกแอป Office"** — เปิด Word มันก็อยู่, เปิด Excel มันก็อยู่, เปิด Teams มันก็อยู่
+
+**ลักษณะ:** AI ฝังอยู่ใน Word, Excel, PowerPoint, Outlook, Teams
+**จุดเด่น:** ทำงานกับข้อมูลใน Microsoft Ecosystem ได้ลึก, สรุปประชุม Teams อัตโนมัติ, วิเคราะห์ Excel ด้วยภาษาธรรมชาติ
+**จุดอ่อน:** ต้องมี License Microsoft 365 + Copilot add-on (ราคาสูง)
+
+**HR ใช้ทำอะไร:**
+- **Teams:** สรุป Minutes การประชุม Talent Review อัตโนมัติ
+- **Excel:** วิเคราะห์ Headcount / Turnover data ด้วยคำสั่งภาษาไทย
+- **PowerPoint:** สร้าง HR Strategy Presentation จาก Word document
+- **Outlook:** ร่างอีเมลภายในองค์กร / ตอบกลับอัตโนมัติ
+- **Word:** สรุป Policy ยาวๆ / ร่างเอกสาร HR
+
+---
+
+### 📚 NotebookLM (Google) — Slide 37
+
+> 🔧 **เปรียบเทียบ:** เหมือน **"ผู้ช่วยวิจัยที่อ่านเอกสารหลายชิ้นพร้อมกัน"** — โยนไฟล์ 10 ไฟล์ให้ แล้วถามคำถามข้ามไฟล์ได้
+
+**ลักษณะ:** AI อ่านไฟล์หลายไฟล์พร้อมกัน สร้าง Knowledge Base จากเอกสารที่ Upload
+**จุดเด่น:** ทำ RAG (Retrieval-Augmented Generation) แบบง่ายๆ, อ้างอิงจากไฟล์ที่กำหนดเท่านั้น (ลด Hallucination), สร้าง Audio Overview (สรุปเป็นเสียง) ได้
+**จุดอ่อน:** ต้อง Upload ไฟล์เอง ไม่เชื่อมระบบอัตโนมัติ
+
+**HR ใช้ทำอะไร:**
+- รวม Policy หลายฉบับแล้วถาม AI: "ลาบวชได้กี่วัน?"
+- วิเคราะห์ SOP / Guideline หลายชิ้นหาความขัดแย้ง
+- สร้าง Internal Knowledge Assistant สำหรับ HR Team
+- สร้าง Audio Brief ของนโยบายให้พนักงานฟัง
+
+---
+
+## 🔵 Level 3 — Agent & Workflow Builder (สร้าง HR Agent ขององค์กร)
+
+เครื่องมือกลุ่มนี้ **สำหรับสร้าง AI ที่ทำงานเป็นระบบ** ไม่ใช่แค่ Chat แต่เชื่อม Workflow ได้
+
+---
+
+### 🤖 Copilot Studio (Microsoft) — Slide 35
+
+> 🔧 **เปรียบเทียบ:** เหมือน **"โรงงานสร้างหุ่นยนต์"** — ไม่ใช่แค่ใช้ AI แต่สร้าง AI Agent ที่ทำงานแทนเราได้
+
+**ลักษณะ:** เครื่องมือสร้าง AI Agent แบบองค์กร, เชื่อม Workflow / Power Automate / Dataverse
+**จุดเด่น:** สร้าง Chatbot ภายในองค์กรโดยไม่ต้องเขียน Code, เชื่อม HR System ได้, มี Governance + Admin Console
+**จุดอ่อน:** ต้องมีความรู้เรื่อง Workflow Design, ต้องมี Microsoft Ecosystem
+
+**HR ใช้ทำอะไร:**
+- สร้าง **HR FAQ Bot** ที่เชื่อมกับ Policy database ตอบพนักงาน 24 ชม.
+- สร้าง **Leave Request Assistant** ที่เช็คยอดวันลาแล้วส่ง Approval ได้
+- สร้าง **Policy Interpretation Bot** ที่ค้น Policy + สรุป + อ้างอิงข้อกำหนด
+
+---
+
+### 🧪 Google AI Studio — Slide 41
+
+> 🔧 **เปรียบเทียบ:** เหมือน **"ห้องทดลอง AI"** — ไว้ทดลอง Prompt, ทดสอบ Model ก่อน Deploy จริง
+
+**ลักษณะ:** พื้นที่ทดลอง Model / Prompt สำหรับนักพัฒนาและ Power User
+**จุดเด่น:** ทดลอง Prompt ได้ฟรี, เปรียบเทียบ Model ต่างๆ, Export ไป API ได้
+**จุดอ่อน:** เหมาะกับนักพัฒนามากกว่า End user
+
+**HR ใช้ทำอะไร:**
+- ทดลองสร้าง Prototype Chatbot ก่อน Deploy จริง
+- ทดสอบ Prompt Template สำหรับงาน HR ต่างๆ
+- เปรียบเทียบ Output จาก Prompt แบบต่างๆ
+
+---
+
+### ⚙️ Opal (Google) — Slide 42
+
+> 🔧 **เปรียบเทียบ:** เหมือน **"ชุดเครื่องมือสร้าง App AI"** — ไว้สร้าง Workflow อัจฉริยะที่เชื่อม Model + Logic + Action
+
+**ลักษณะ:** Tool สร้าง AI Workflow / App ที่เชื่อม Model กับ Business Logic
+**จุดเด่น:** สร้าง End-to-end AI Workflow ได้, เชื่อม API ภายนอก
+**จุดอ่อน:** ต้องมีความรู้ทางเทคนิค
+
+**HR ใช้ทำอะไร:**
+- สร้าง HR Agent แบบ Lightweight (เช่น Onboarding Assistant)
+- ทดลอง Automation Use Case ก่อนลงทุนระบบใหญ่
+- สร้าง Prototype Workflow เช่น "Resume Screen → Score → Shortlist → Notify"
+
+---
+
+## 📊 สรุปภาพรวม: เลือกตัวไหนดี?
+
+| ระดับ | เครื่องมือ | เหมาะกับ | เป้าหมาย |
+|------|-----------|---------|---------|
+| 🟢 **Level 1** | ChatGPT, Gemini, Claude, Gamma, Canva, Midjourney | HR รายบุคคล | เพิ่ม Speed ของแต่ละคน |
+| 🟡 **Level 2** | M365 Copilot, NotebookLM | ทีม HR / แผนก | เพิ่ม Productivity ของทีม |
+| 🔵 **Level 3** | Copilot Studio, AI Studio, Opal | ทีมพัฒนา / IT + HR | สร้าง HR Agent ระดับองค์กร |
+
+---
+
+### 🎯 คำแนะนำสำหรับ HR องค์กร 2,000 คน
+
+**ขั้นตอนที่ถูกต้อง:**
+
+| Phase | ทำอะไร | ใช้เครื่องมือกลุ่มไหน |
+|-------|--------|---------------------|
+| **Phase 1** (เดือน 1-3) | สร้าง AI Literacy — ให้ HR ใช้ AI ช่วยงานส่วนตัวให้คล่อง | 🟢 Level 1 |
+| **Phase 2** (เดือน 4-6) | เชื่อม Ecosystem — ใช้ AI กับเอกสาร/ประชุม/ข้อมูลจริง | 🟡 Level 2 |
+| **Phase 3** (เดือน 7-12) | สร้าง Agent — ทำ HR Chatbot / Workflow Automation | 🔵 Level 3 |
+
+> 🔧 **เปรียบเทียบ:** เหมือนเรียนขับรถ — **Phase 1** คือหัดขับในลาน, **Phase 2** คือขับบนถนนจริง, **Phase 3** คือขับส่งของเชิงพาณิชย์
+
+---
+
+### 🚨 ข้อผิดพลาดที่พบบ่อย
+
+| ❌ ผิดพลาด | ✅ ควรทำแทน |
+|-----------|------------|
+| กระโดดไปซื้อ Enterprise AI ทันที | เริ่มจาก Free tools ให้คนใช้เป็นก่อน |
+| ซื้อทุกตัว "เผื่อใช้" | เลือก 2-3 ตัวที่ตรงกับงานจริง |
+| ให้ IT เลือกเครื่องมือ โดย HR ไม่มีส่วนร่วม | HR ต้องเป็นคนบอกว่า "งานไหนอยากให้ AI ช่วย" |
+| ไม่มี Guideline การใช้งาน | ต้องมี Do & Don't ชัดเจน (โดยเฉพาะเรื่องข้อมูลอ่อนไหว) |
+
+> **สรุป:** ไม่ต้องใช้ทุกตัวครับ เริ่มจาก **ChatGPT หรือ Claude** ให้คล่องก่อน แล้วค่อยขยายไปตัวอื่นตามความจำเป็นของงานจริงๆ`,
+        },
+      ],
+    },
+    {
+      id: "module-5",
+      title: "Module 5: Strategies for Success (Slide 43-55)",
+      lessons: [
+        {
+          id: "ai-value-journey",
+          title: "เส้นทางการสร้างมูลค่า AI",
+          type: "concept",
+          icon: "fa-arrow-trend-up",
+          image: "/Handout-AI-For-HR/Handout-AI-For-HR_43.jpg",
+          slides: [
+            "/Handout-AI-For-HR/Handout-AI-For-HR_43.jpg",
+            "/Handout-AI-For-HR/Handout-AI-For-HR_44.jpg"
+          ],
+          content: `### 📈 AI Value Journey & Transformation Leadership (Slide 43-44)
+
+สไลด์คู่นี้คือ **"ภาพใหญ่เชิงกลยุทธ์"** ของการทำ AI ในองค์กร — ไม่ใช่เรื่องเครื่องมือ แต่เป็นเรื่อง **เส้นทางการสร้างมูลค่า**
+
+> 💡 **แก่นสำคัญ:** "Grow value from a base of solid usage and individual productivity, then extend through agents to impact organizational KPIs."
+
+---
+
+### 🔷 Slide 43 — AI Value Journey (Pyramid 3 ระดับ)
+
+การเอา AI มาใช้ในองค์กร ไม่ใช่การซื้อระบบใหญ่ตูมเดียวจบ แต่คือการ **"สะสมความสำเร็จ"** ทีละขั้น เหมือนปิรามิด ต้องสร้างฐานให้แข็งก่อน:
+
+### 🟢 ขั้น 1: Individual Value (เริ่มที่ตัวคน) — Universal Prompts
+*   **โฟกัส:** ช่วยงานส่วนตัวให้ไวขึ้น
+*   **ตัวอย่างงาน HR:** ใช้ AI สรุปเอกสาร, เขียน JD, วิเคราะห์ Excel, สรุปประชุม
+*   **ผลลัพธ์:** ประหยัดเวลา, ลด cognitive load, เพิ่ม productivity รายบุคคล
+*   **Key Success:** พนักงานใช้ AI เป็นนิสัย (แต่ยังไม่กระทบ KPI องค์กร)
+
+### 🟡 ขั้น 2: Functional Value (ขยายสู่ทีม/ฝ่าย) — Pre-built AI Agents
+*   **โฟกัส:** ปรับกระบวนการทำงานของแผนกด้วย Role-based AI agents
+*   **ตัวอย่างงาน HR:** HR Chatbot ภายใน, Resume Screening Automation, Pre-built AI Workflows
+*   **ผลลัพธ์:** ลด cycle time, ลด error, Process consistency ดีขึ้น
+*   **Key Success:** ทีมเริ่มเห็น KPI ฝ่าย HR ดีขึ้นจริง
+
+### 🔵 ขั้น 3: Organizational Value (เปลี่ยนองค์กร) — Role-based AI Agents
+*   **โฟกัส:** AI เชื่อมหลายระบบ + มี Workflow Intelligence + Predictive Layer + Governance ชัดเจน
+*   **ตัวอย่างงาน HR:** Attrition Prediction, Promotion Quality Analysis, Workforce Planning, Strategic HR Decision
+*   **ผลลัพธ์:** ผลประกอบการดีขึ้น, ตัดสินใจแม่นยำขึ้น
+*   **Key Success:** AI กระทบ KPI องค์กรจริง
+
+| ระดับ | โฟกัส | ตัวชี้วัด |
+|-------|-------|----------|
+| Individual | Productivity | เวลาที่ประหยัดได้ต่อคน |
+| Functional | Process | Cycle time, Error rate |
+| Organizational | Strategy | Turnover cost, Leadership pipeline |
+
+> ⚠️ **ข้อผิดพลาดที่พบบ่อย:** องค์กรส่วนใหญ่ "กระโดดไปอยากได้ Organizational AI" แต่ไม่มี foundation ของ Individual & Functional → ผลคือ ใช้ไม่เป็น, Resistance สูง, ROI ไม่ชัด
+
+---
+
+### 🔷 Slide 44 — Top 10 to "Try First" (Entry Point ของ AI Adoption)
+
+![Top 10 to "Try First"](/Handout-AI-For-HR/Handout-AI-For-HR_44.jpg)
+
+สไลด์นี้ยก 10 สิ่งแรกที่ควรลองใช้กับ Microsoft 365 Copilot เพื่อสร้าง "นิสัยการใช้ AI" ระดับบุคคล:
+
+| # | Use Case | ตัวอย่าง Prompt | ประโยชน์สำหรับ HR |
+|---|----------|----------------|------------------|
+| 1 | **Recap a meeting** | "สรุป key topics และ action items จากประชุม" | ไม่ต้องจดประชุม ฟังได้เต็มที่ |
+| 2 | **Summarize email thread** | "สรุปอีเมล thread ยาวๆ ให้สั้น" | ตามงานทันแม้ห่างไป 1 สัปดาห์ |
+| 3 | **Draft email** | "ร่างอีเมลแจ้งเลื่อน Project X 2 สัปดาห์ โทนสั้นสบายๆ" | ร่างอีเมลได้ภายในวินาที |
+| 4 | **Summarize document** | "สรุป key points จากไฟล์นี้" | ไม่ต้องอ่านเอกสารยาว 50 หน้า |
+| 5 | **Tell me about a topic** | "สรุปเรื่อง [topic] จาก emails, chats, files" | รวบรวมข้อมูลจากหลายแหล่ง |
+| 6 | **Give me ideas** | "แนะนำ 10 taglines สำหรับ Employer Branding" | กระตุ้นความคิดสร้างสรรค์ |
+| 7 | **Help me write** | "ช่วยเขียนร่างแรกให้หน่อย" | ได้ first draft ภายในวินาที |
+| 8 | **What did they say** | "สรุปว่า [คนนี้] พูดอะไรเกี่ยวกับ [topic]" | ค้นหาบทสนทนาย้อนหลัง |
+| 9 | **How do I...** | "สูตร Excel สำหรับหาค่ามากกว่า 0" | ได้คำตอบเทคนิคทันที |
+| 10 | **Translate message** | "แปลข้อความนี้เป็นภาษาอังกฤษ" | สื่อสารกับต่างประเทศง่ายขึ้น |
+
+> 🎯 **แก่นของ Slide 44:** Transformation ไม่ได้เริ่มจาก AI Strategy แต่เริ่มจาก **"Everyday Use"** — ถ้าพนักงานใช้ AI ช่วยงานประจำวันไม่ได้ ก็ยากที่จะขยายไประดับองค์กร
+
+---
+
+### 🗺️ Transformation Roadmap สำหรับองค์กร 2,000 คน
+
+| Phase | ระยะเวลา | โฟกัส | วัดผล |
+|-------|----------|-------|-------|
+| **Phase 1** AI Literacy Rollout | 6-12 เดือนแรก | Build usage habit: สรุปประชุม, วิเคราะห์ feedback, Draft communication | เวลาเขียนรายงานลดลงกี่%, HR engagement ดีขึ้นไหม |
+| **Phase 2** Role-Based Agent | ปีที่ 2 | Scale to workflow: HRBP Agent, Recruitment Agent, Performance Review Agent | Time-to-hire, Promotion cycle time, HR case resolution time |
+| **Phase 3** AI-Driven HR | ปีที่ 3 | Strategic integration: Attrition early warning, Workforce optimization, Succession simulation | Turnover cost, Leadership pipeline health, Workforce readiness index |
+
+> ⚠️ **ความเข้าใจผิดที่พบบ่อย:** "ซื้อ AI tool = ทำ transformation" ❌ ความจริงคือ **Transformation = Behavior Change + Governance + Workflow Redesign** — ผู้นำต้องสร้าง trust, สร้าง guardrail, วัด impact, และปรับ role ใหม่`,
+        },
+        {
+          id: "art-of-prompting",
+          title: "สั่งงาน AI ให้ได้ดั่งใจ (Prompting)",
+          type: "prompt-template",
+          icon: "fa-terminal",
+          image: "/Handout-AI-For-HR/Handout-AI-For-HR_45.jpg",
+          slides: [
+            "/Handout-AI-For-HR/Handout-AI-For-HR_45.jpg",
+            "/Handout-AI-For-HR/Handout-AI-For-HR_46.jpg",
+            "/Handout-AI-For-HR/Handout-AI-For-HR_47.jpg",
+            "/Handout-AI-For-HR/Handout-AI-For-HR_48.jpg",
+            "/Handout-AI-For-HR/Handout-AI-For-HR_49.jpg",
+            "/Handout-AI-For-HR/Handout-AI-For-HR_50.jpg"
+          ],
+          content: `### 🗣️ How to Write Effective Prompts for Generative AI Tools? (Slide 45-50)
+
+นี่คือ **"Control Layer"** ของ AI — ถ้าไม่มีส่วนนี้ AI จะกลายเป็นความเสี่ยง ไม่ใช่โอกาส
+
+> 💡 **หัวใจสำคัญ:** AI Quality = **Prompt Quality** + **Governance Quality** — ไม่ใช่ Model Quality อย่างเดียว
+
+---
+
+### 📝 Slide 46 — The 6 Prompt Components
+
+![6 Prompt Components](/Handout-AI-For-HR/Handout-AI-For-HR_46.jpg)
+
+สไลด์แสดงองค์ประกอบ 6 อย่างที่ทำให้ prompt มีคุณภาพ เรียงจากสำคัญมากไปน้อย:
+
+| ลำดับ | Component | ระดับความสำคัญ | อธิบาย | ตัวอย่าง HR |
+|-------|-----------|---------------|--------|------------|
+| 1 | **TASK** | 🔴 Mandatory | สั่งให้ชัดว่าจะให้ทำอะไร | "เขียน Job Description สำหรับ Senior Product Manager" |
+| 2 | **CONTEXT** | 🟠 Important | บอกบริบทให้ AI เข้าใจสถานการณ์ | "ในบริษัท Tech ขนาด 2,000 คน โฟกัส product strategy" |
+| 3 | **EXAMPLES** | 🟠 Important | ยกตัวอย่างให้ AI ดูเป็นแนวทาง | "แนบ JD เก่าที่เคยใช้ให้ดูเป็น reference" |
+| 4 | **PERSONA** | 🟡 Nice-to-have | สั่งให้ AI สวมบทบาท | "คุณคือ HR Business Partner มืออาชีพ" |
+| 5 | **FORMAT** | 🟡 Nice-to-have | ระบุรูปแบบผลลัพธ์ที่ต้องการ | "ขอเป็น bullet point ไม่เกิน 10 ข้อ" |
+| 6 | **TONE** | 🟢 Optional | ระบุน้ำเสียง/โทนภาษา | "โทนมืออาชีพ, ทางการแต่เป็นมิตร" |
+
+### 🔥 เปรียบเทียบให้เห็นชัด:
+
+**❌ Prompt แบบทั่วไป (ผลลัพธ์จะ generic มาก):**
+> "เขียน JD ให้หน่อย"
+
+**✅ Prompt แบบดี (ผลลัพธ์แม่นยำ ตรงจุด):**
+> "คุณคือ HR Business Partner (Persona) ช่วยเขียน JD สำหรับ Senior Product Manager (Task) ในบริษัท Tech ขนาด 2,000 คน (Context) โฟกัส skill ด้าน product strategy และ stakeholder management ใช้ format bullet point ไม่เกิน 10 ข้อ (Format) โทนมืออาชีพ (Tone)"
+
+---
+
+### 🔄 Slide 47 — Prompt Guidelines (Flow Diagram)
+
+![Prompt Guidelines](/Handout-AI-For-HR/Handout-AI-For-HR_47.jpg)
+
+สไลด์แสดง Flow ของการคิด prompt อย่างเป็นระบบ:
+
+**Input** → **Process** → **Output** → **Goal**
+
+โดยมี **Context** เชื่อมอยู่กับทุกขั้นตอน (เป็นตัวกำกับทิศทาง)
+
+| ขั้นตอน | คำถามที่ต้องตอบ | ตัวอย่าง HR |
+|---------|----------------|------------|
+| **Input** | จะป้อนข้อมูลอะไรให้ AI? | ข้อมูล candidate, performance data, survey results |
+| **Process** | ต้องการให้ AI ทำอะไรกับข้อมูล? | วิเคราะห์ step-by-step, เปรียบเทียบ, จัดลำดับ |
+| **Output** | ต้องการผลลัพธ์รูปแบบไหน? | ตาราง, bullet points, executive summary |
+| **Goal** | เป้าหมายสุดท้ายคืออะไร? | ช่วย HR ตัดสินใจ ไม่ใช่ตัดสินแทน |
+| **Context** | มีข้อจำกัด/เงื่อนไขอะไร? | scope เฉพาะ department, ช่วงเวลา, กฎหมายแรงงาน |
+
+---
+
+### 🛡️ Slide 48 — AI Guardrails
+
+![AI Guardrails](/Handout-AI-For-HR/Handout-AI-For-HR_48.jpg)
+
+**Guardrails** คือ built-in constraints และ safeguards ที่ทำให้ AI อยู่ในกรอบจริยธรรม กฎหมาย และขอบเขตงาน
+
+Guardrails ช่วยให้ AI:
+*   ❌ ไม่ตัดสินใจแบบลำเอียง (harmful or biased decisions)
+*   🔒 เคารพข้อมูลส่วนบุคคล (privacy and consent)
+*   📏 ทำงานในขอบเขตที่กำหนด (no unauthorized actions)
+*   ✅ ให้ผลลัพธ์ที่ปลอดภัยและอธิบายได้ (safe, explainable outputs)
+*   🚨 หยุดหรือแจ้งเตือนเมื่อมีความเสี่ยง (stops or alerts when risks emerge)
+
+### 🔥 Guardrails ที่ต้องมีใน HR System:
+
+| Guardrail | เหตุผล |
+|-----------|--------|
+| ห้ามให้คำแนะนำเลิกจ้างอัตโนมัติ | ต้องมี human judgment เสมอ |
+| ห้ามเปิดเผยเงินเดือนรายบุคคล | ข้อมูลอ่อนไหว PDPA |
+| ห้าม generate discriminatory language | ป้องกัน bias ด้านเพศ/อายุ/เชื้อชาติ |
+| ต้อง log ทุก promotion recommendation | audit trail สำหรับตรวจสอบย้อนหลัง |
+| ต้องมี human approval ก่อน execute | AI แนะนำ คนตัดสินใจ |
+
+---
+
+### 📊 Slide 49 — Effective Prompting Table (ตัวอย่างจริง)
+
+![Effective Prompting Table](/Handout-AI-For-HR/Handout-AI-For-HR_49.jpg)
+
+สไลด์แสดงตัวอย่างการใช้ 5 Components + Guardrails ร่วมกัน ดัดแปลงเป็นงาน HR:
+
+| Component | Prompt (สิ่งที่สั่ง) | Guardrail (สิ่งที่ห้าม) |
+|-----------|---------------------|------------------------|
+| **Input** | "วิเคราะห์ readiness ของ Candidate A สำหรับ promotion" | ❌ ห้ามใช้ข้อมูลอ่อนไหว (age, gender, race) |
+| **Process** | "วิเคราะห์ทีละ step: skill → performance → tenure → leadership" | ❌ ห้ามข้ามขั้นตอน ห้ามเดา |
+| **Output** | "แสดง readiness score + 5 bullet insight สรุปสั้นๆ" | ❌ ห้ามใช้ภาษาตัดสินเด็ดขาด เช่น "ไม่เหมาะ" |
+| **Goal** | "ช่วย HR ตัดสินใจ ไม่ใช่ตัดสินแทน" | ❌ ห้ามรวมข้อมูลที่ไม่เกี่ยวข้อง |
+| **Context** | "ใช้ข้อมูล performance 3 ปีล่าสุด เฉพาะ department เดียวกัน" | ❌ ห้ามเทียบข้าม cohort ที่ไม่เกี่ยว |
+
+> 🎯 **Insight:** ทุก prompt ที่ดี ต้องมี **guardrail คู่กันเสมอ** — เหมือนรถที่มีทั้งคันเร่งและเบรค
+
+---
+
+### 📌 Slide 50 — Quick "Test You" Checklist
+
+![Quick "Test You" Checklist](/Handout-AI-For-HR/Handout-AI-For-HR_50.jpg)
+
+สไลด์สอนวิธี **"challenge AI"** ด้วย 5 คำถามที่ต้องถาม AI เสมอ:
+
+1.  **"Where's the evidence?"** — หลักฐานอยู่ไหน? ข้อมูลมาจากไหน?
+2.  **"What did you miss?"** — คุณพลาดอะไรไปบ้าง? มีมุมอื่นไหม?
+3.  **"Are you contradicting yourself? How confident are you?"** — คำตอบขัดแย้งกันไหม? มั่นใจกี่ %?
+4.  **"Would the answer change if I rephrased the question?"** — ถ้าถามอีกแบบ คำตอบจะเปลี่ยนไหม?
+5.  **"What if I feed you a false claim?"** — ถ้าฉันป้อนข้อมูลเท็จ คุณจะรู้ไหม?
+
+> ⚠️ **Automation Bias:** ปัญหาใหญ่ที่สุดคือ "คนจะเชื่อ AI มากกว่าสัญชาตญาณตนเอง" แม้ AI อาจผิด — ใน HR เรื่องนี้อันตรายมาก โดยเฉพาะ Promotion, Performance Rating, Attrition Prediction
+
+> 🔥 **จำไว้:** การสั่งงาน AI ที่ดีไม่ใช่แค่ "ถามให้ดี" แต่ต้อง **"ตั้งคำถามกับคำตอบ"** ด้วยเสมอ — AI ใน HR จะปลอดภัยก็ต่อเมื่อ Prompt ถูกออกแบบดี, Guardrail ชัด, และมี culture ที่ challenge AI`,
+        },
+        {
+          id: "guardrails-risk",
+          title: "เกราะป้องกันความเสี่ยง (Guardrails)",
+          type: "risk",
+          icon: "fa-shield-virus",
+          image: "/Handout-AI-For-HR/Handout-AI-For-HR_51.jpg",
+          slides: [
+            "/Handout-AI-For-HR/Handout-AI-For-HR_51.jpg",
+            "/Handout-AI-For-HR/Handout-AI-For-HR_52.jpg",
+            "/Handout-AI-For-HR/Handout-AI-For-HR_53.jpg",
+            "/Handout-AI-For-HR/Handout-AI-For-HR_54.jpg",
+            "/Handout-AI-For-HR/Handout-AI-For-HR_55.jpg"
+          ],
+          content: `### 🛡️ AI Critical Thinking Framework สำหรับ HR (Slide 51-55)
+
+นี่คือช่วงที่ **"HR มืออาชีพ"** ต้องเก่งกว่าคนทั่วไป — ไม่ใช่แค่ใช้ AI เป็น แต่ต้อง **"ตั้งคำถามกับ AI"** เป็นด้วย
+
+> 💡 **AI Literacy ระดับสูง ไม่ใช่ "ใช้ AI เก่ง" แต่คือ "รู้ทันว่า AI ผิดตรงไหนได้"**
+
+---
+
+### 🔴 2 หลุมพรางที่ต้องเข้าใจก่อน
+
+### 1. Hallucination (AI มโน) 👻
+AI สร้างข้อมูลที่ **ดูน่าเชื่อถือ** แต่ **ไม่มีหลักฐานจริง**:
+*   อ้างงานวิจัยที่ไม่มีอยู่
+*   บอกว่า attrition เพราะเงินเดือน ทั้งที่ไม่มีข้อมูลรองรับ
+*   สรุป engagement สูง ทั้งที่ไม่ได้ดู raw data
+
+### 2. Bias (ความลำเอียง) ⚖️
+AI ให้คำตอบที่ลำเอียง เพราะ **data เดิมมี pattern ลำเอียง**:
+*   Promote คนจากบาง department มากกว่า
+*   ประเมิน leadership สูงใน profile แบบเดียวกันซ้ำๆ
+*   ใช้ภาษาที่มี subtle discrimination
+
+---
+
+### 🔷 Framework 5 คำถาม จาก Slide 51-55
+
+ทุกครั้งที่ AI ให้คำตอบเรื่องสำคัญ HR ต้องถาม 5 คำถามนี้เสมอ:
+
+---
+
+### 1️⃣ "Where's the evidence?" — หลักฐานอยู่ไหน? (Slide 51)
+
+**ใช้เมื่อ:** AI ให้ insight หรือ conclusion ที่ดูมั่นใจ
+
+**สถานการณ์จริง HR:**
+> AI บอก: *"สาเหตุหลักที่พนักงานลาออกคือเงินเดือนไม่พอ"*
+
+**คำถามที่ต้องถามต่อ:**
+*   "คุณใช้ข้อมูลอะไรในการสรุป?"
+*   "มาจาก survey, research, หรือสรุปจาก pattern?"
+*   "มีตัวแปรอื่นที่สัมพันธ์มากกว่าไหม?"
+
+> 🔎 **สัญญาณอันตราย:** ถ้า AI ตอบ vague หรือกว้างๆ ไม่ชี้ชัดแหล่งข้อมูล → มีความเสี่ยง hallucination สูง
+
+---
+
+### 2️⃣ "What did you miss?" — คุณพลาดอะไรไป? (Slide 52)
+
+**ใช้เมื่อ:** AI วิเคราะห์แล้วดูครบเกินไป ราบรื่นเกินไป
+
+**สถานการณ์จริง HR:**
+> AI แนะนำ: *"แก้ปัญหา attrition ด้วย training program"*
+
+**คำถามที่ต้องถามต่อ:**
+*   "ยังมีปัจจัยอื่นไหม เช่น workload, leadership style, career path?"
+*   "มีความเสี่ยงหรือข้อจำกัดที่ยังไม่ได้อธิบายไหม?"
+
+> 🔎 **ทำไมสำคัญ:** คำถามนี้ช่วยเปิด **blind spot** — AI อาจแนะนำแค่ training แต่จริงๆ ต้องดู mentoring, rotation, KPI alignment, rewards ด้วย
+
+---
+
+### 3️⃣ "Are you contradicting yourself? How confident are you?" — คำตอบขัดแย้งไหม? มั่นใจกี่ %? (Slide 53)
+
+**ใช้เมื่อ:** มีข้อมูลหลายด้านที่อาจขัดกัน
+
+**สถานการณ์จริง HR:**
+> AI สรุป: *"พนักงานมี engagement สูง"* แต่พูดต่อว่า *"exit rate สูงขึ้น"*
+
+**คำถามที่ต้องถามต่อ:**
+*   "สองข้อนี้ขัดแย้งกันไหม?"
+*   "ระดับความมั่นใจของคุณกี่เปอร์เซ็นต์?"
+
+> 🔎 **AI ที่ดีจะ:** ชี้ inconsistency ออกมา และบอก confidence level — ถ้า AI ไม่ยอมรับความขัดแย้ง แสดงว่ามี logical gap
+
+---
+
+### 4️⃣ "Would the answer change if I rephrased the question?" — ถ้าถามอีกแบบ คำตอบจะเปลี่ยนไหม? (Slide 54)
+
+**ใช้ตรวจ:** Framing Bias / Keyword Bias
+
+**สถานการณ์จริง HR:**
+> ถาม AI: *"ทำอย่างไรให้ลด OPEX?"*
+> AI ตอบ: *"ลดจำนวนพนักงาน (cost-cutting)"*
+
+> ถามใหม่: *"ทำอย่างไรให้เพิ่ม productivity?"*
+> AI อาจตอบต่างไป: *"Automation, Reskill, Workflow optimization"*
+
+> 🔎 **ทำไมสำคัญ:** นี่ช่วยดูว่า AI ติด **keyword bias** หรือไม่ — คำตอบที่ดีไม่ควรเปลี่ยนแก่นแค่เพราะเปลี่ยนคำถาม
+
+---
+
+### 5️⃣ "What if I feed you a false claim?" — ถ้าฉันป้อนข้อมูลเท็จ คุณจะรู้ไหม? (Slide 55)
+
+**ใช้ทดสอบ:** ความสามารถในการ detect misinformation
+
+**สถานการณ์จริง HR:**
+> คุณบอก AI: *"Attrition ไตรมาสนี้ 80%"* (ทั้งที่ความจริงคือ 8%)
+
+**AI ที่ดีควรตอบ:**
+> *"ข้อมูลที่มีแสดงว่าลดลง 8% ไม่ใช่ 80%"*
+
+> 🔎 **ถ้า AI เชื่อทันที → เสี่ยงมาก** — เป็นการทดสอบความสามารถในการตรวจจับ misinformation
+
+---
+
+### 🔷 AI Validation Protocol สำหรับ HR
+
+ทุกครั้งที่ใช้ AI ในเรื่องสำคัญ (Promotion, Performance, Attrition) ต้องเช็ค:
+
+| หมวด | คำถามตรวจสอบ |
+|------|-------------|
+| **Insight** | มี evidence จริงหรือไม่? ใช้ dataset อะไร? |
+| **Consistency** | มี logical contradiction ไหม? |
+| **Bias** | มี sensitive variable แอบใช้ไหม? (อายุ, เพศ, เชื้อชาติ, มหาวิทยาลัย) |
+| **Confidence** | AI ให้ probability หรือ absolute claim? |
+
+### 🔴 ตัวอย่างจริงที่อันตรายมากใน HR:
+
+**กรณี Promotion Readiness:**
+> AI บอก *"Candidate A มี readiness 85%"* — HR ต้องถาม: เทียบ cohort เดียวกันหรือไม่? ใช้ performance 1 ปีหรือ 3 ปี? Model validation accuracy เท่าไร?
+
+**กรณี Attrition Prediction:**
+> AI บอก *"Risk 72%"* — HR ต้องถาม: False positive rate เท่าไร? ปัจจัยใดมี weight สูงสุด? Model bias ต่อ department ไหม?
+
+---
+
+### 🧠 วิธีลด Automation Bias ในองค์กร
+
+ปัญหาใหญ่คือ **"คนจะเชื่อ score มากกว่า judgment"** เช่น ถ้า AI ให้ 82/100 HR อาจ override human intuition → นี่คือ psychological risk
+
+**4 มาตรการป้องกัน:**
+1.  แสดง **confidence interval** (ไม่ใช่แค่ตัวเลขเดียว)
+2.  แสดง **top contributing factors** (ให้รู้ว่าทำไมได้ score นี้)
+3.  บังคับ **human comment** ก่อน approve (เขียนเหตุผลประกอบ)
+4.  บังคับ **second reviewer** สำหรับ high-impact decision (ไม่ใช่ approve คนเดียว)
+
+---
+
+### 🏢 ถ้าองค์กร 2,000 คนจะ Implement จริง ต้องมี 3 Layer:
+
+| Layer | รายละเอียด |
+|-------|-----------|
+| **1. Prompt Governance** | มี template prompt มาตรฐาน + guideline ว่าอะไรห้ามถาม AI |
+| **2. Output Validation** | HR ต้อง review ก่อนใช้ + มี confidence level แสดงเสมอ |
+| **3. AI Risk Policy** | ระบุว่า AI เป็น advisory only + ระบุ human accountability ชัดเจน |
+
+> 🔥 **Golden Rule:** AI ไม่ควรถูกใช้แบบ "รับคำตอบ" แต่ต้องใช้แบบ **"ตั้งคำถามกับคำตอบ"** — องค์กรที่ mature จะ Train HR ให้ challenge AI, ไม่ใช้ AI เป็น authority, และสร้าง culture of verification`,
+        },
+      ],
+    },
+    {
+      id: "module-6",
+      title: "Module 6: AI for Employee Experience (Slide 56-71)",
+      lessons: [
+        {
+          id: "employee-journey-ai",
+          title: "ดูแลพนักงานด้วย AI (Employee Journey)",
+          type: "practical",
+          icon: "fa-heart-circle-check",
+          image: "/Handout-AI-For-HR/Handout-AI-For-HR_56.jpg",
+          slides: [
+            "/Handout-AI-For-HR/Handout-AI-For-HR_56.jpg",
+            "/Handout-AI-For-HR/Handout-AI-For-HR_57.jpg",
+            "/Handout-AI-For-HR/Handout-AI-For-HR_58.jpg",
+            "/Handout-AI-For-HR/Handout-AI-For-HR_59.jpg",
+            "/Handout-AI-For-HR/Handout-AI-For-HR_60.jpg",
+            "/Handout-AI-For-HR/Handout-AI-For-HR_61.jpg",
+            "/Handout-AI-For-HR/Handout-AI-For-HR_62.jpg"
+          ],
+          content: `### 💖 AI Support to Employees Journey (Slide 56-62)
+
+สไลด์ชุดนี้กำลังบอกว่า: **AI ไม่ควรถูกใช้เป็น use case แยกๆ แต่ควรถูกฝังตลอด Employee Lifecycle**
+
+> 💡 **Insight สำคัญ:** องค์กร 2,000 คนไม่สามารถ personalize ด้วยคนล้วนๆ ได้ AI ทำให้ **"Scale Personalization"** เป็นไปได้ — ดูแลพนักงานพันคน เหมือนมีเลขาส่วนตัวทุกคน
+
+---
+
+### 🔷 Slide 57 — 11 Stages of the Employee Life Cycle
+
+![11 Stages of the Employee Life Cycle](/Handout-AI-For-HR/Handout-AI-For-HR_57.jpg)
+
+ก่อนจะเริ่มฝัง AI เราต้องเข้าใจภาพรวมของ **Employee Journey** ทั้ง 11 Stage:
+
+| Stage | ช่วงชีวิต | AI สามารถช่วยได้อย่างไร |
+|-------|----------|------------------------|
+| 1. **Attraction** | ดึงดูดคนเก่ง | สร้าง Employer Branding content, วิเคราะห์ talent market |
+| 2. **Recruiting** | สรรหา | Screen resume, จับคู่ skill กับ JD |
+| 3. **Onboarding** | เริ่มงาน | Welcome package, AI Buddy, Interactive guide |
+| 4. **Engagement** | สร้างความผูกพัน | วิเคราะห์ engagement pattern, Pulse survey insights |
+| 5. **Development** | พัฒนาทักษะ | Personalized learning path, Skill gap analysis |
+| 6. **Performance** | ประเมินผล | Performance summary, Feedback analysis |
+| 7. **Retention** | รักษาคนเก่ง | Attrition prediction, Early warning system |
+| 8. **Promotion** | เลื่อนตำแหน่ง | Readiness scoring, Career development plan |
+| 9. **Separation** | แยกจาก | Exit interview analysis, Knowledge transfer |
+| 10. **Alumni** | ศิษย์เก่า | Alumni engagement, Re-hire recommendation |
+| 11. **Retirement** | เกษียณ | Succession planning, Knowledge preservation |
+
+---
+
+### 1️⃣ Interview Process (Slide 58)
+
+![Interview Process](/Handout-AI-For-HR/Handout-AI-For-HR_58.jpg)
+
+AI สามารถ craft **คำถามสัมภาษณ์ที่ปรับตาม profile ของผู้สมัคร** และ job requirements ทำให้การประเมินครอบคลุม ยุติธรรม และ consistent ข้ามผู้สัมภาษณ์ทุกคน
+
+**3 ระดับการใช้ AI ในงานสัมภาษณ์:**
+
+| Level | ระดับ | ตัวอย่าง |
+|-------|-------|---------|
+| **Level 1** Creative AI | Generate คำถามสัมภาษณ์, Draft evaluation summary | "สร้างคำถาม behavioral interview สำหรับ Senior PM" |
+| **Level 2** Predictive | Skill match scoring, Candidate ranking | "จัดอันดับ candidates 50 คนตาม competency fit" |
+| **Level 3** Agentic | วิเคราะห์ competency gap, แนะนำ panel composition, บันทึก bias flag | "ตรวจสอบว่าคำถามสัมภาษณ์มี gender bias ไหม" |
+
+**AI ยังสร้าง post-interview summary** ช่วย hiring manager ตัดสินใจได้ดีขึ้น
+
+> 🎯 **ผลลัพธ์:** ลด interviewer bias, ลด cycle time, เพิ่ม consistency
+
+---
+
+### 2️⃣ First Day Experience (Slide 59)
+
+![First Day Experience](/Handout-AI-For-HR/Handout-AI-For-HR_59.jpg)
+
+AI สร้าง **customized welcome package** และ **first-day schedule** ที่ปรับตาม role และ background ของพนักงานใหม่:
+
+*   **Personalized welcome messages** จากทีม
+*   **AI-generated guides** สำหรับระบบและกระบวนการบริษัท
+*   **Custom-crafted icebreaker activities** ช่วยให้คนใหม่เข้ากับทีมได้เร็ว
+
+**แทน onboarding แบบ checklist ธรรมดา AI ทำเป็น:**
+*   Interactive Onboarding Assistant (ถามได้ 24 ชม.)
+*   Role-specific Learning Pack (ไม่ใช่ generic PDF)
+*   AI Buddy (ตอบคำถาม: "Wi-Fi อะไร?", "เบิกค่ารักษาที่ไหน?", "โรงอาหารไปทางไหน?")
+
+> 🎯 **ผลลัพธ์:** ลด first-month confusion, ลด early attrition
+
+---
+
+### 3️⃣ Learning & Development Milestones (Slide 60)
+
+![Learning & Development Milestones](/Handout-AI-For-HR/Handout-AI-For-HR_60.jpg)
+
+เมื่อพนักงานถึง milestone สำคัญ AI วิเคราะห์ **skills, performance data, career aspirations** แล้วสร้าง:
+
+*   **Personalized learning pathway** — ไม่ใช่ส่งทุกคนเรียนคอร์สเดียวกัน
+*   **Custom learning content** — แนะนำเนื้อหาที่ตรงกับ skill gap ของแต่ละคน
+*   **Milestone reminders** — แจ้งเตือนเมื่อถึงจุด checkpoint
+
+**ถ้าออกแบบลึกขึ้นสำหรับองค์กร 2,000 คน AI ทำได้:**
+*   Skill adjacency analysis (ทักษะที่เกี่ยวข้องที่ควรพัฒนาต่อ)
+*   Internal mobility suggestion (แนะนำตำแหน่งภายในที่เหมาะ)
+*   Predict promotion readiness trajectory (คาดการณ์ว่าพร้อมเลื่อนตำแหน่งเมื่อไร)
+
+> 🎯 นี่คือ **Talent Intelligence Layer** — AI ไม่ได้แค่สอน แต่ "เข้าใจศักยภาพ" ของแต่ละคน
+
+---
+
+### 4️⃣ Recognition & Rewards (Slide 61)
+
+![Recognition & Rewards](/Handout-AI-For-HR/Handout-AI-For-HR_61.jpg)
+
+AI personalize **recognition และ reward programs** โดย:
+*   Generate **tailored appreciation messages** ที่ไม่ซ้ำกัน
+*   Suggest **rewards ที่ตรงกับ preferences ของแต่ละคน** (ไม่ใช่แจก Starbucks card ให้ทุกคน)
+*   วิเคราะห์ **engagement pattern** เพื่อจับจังหวะ recognize ที่เหมาะสม
+
+> ⚠️ **Risk ที่ต้องระวัง:** ถ้า AI generate recognition แบบเหมือนกันหมด → กลายเป็น **artificial** ไม่จริงใจ — ต้องป้อน context ให้ดี และจำกัดระดับ automation
+
+---
+
+### 5️⃣ Career Advancement Opportunities (Slide 62)
+
+![Career Advancement Opportunities](/Handout-AI-For-HR/Handout-AI-For-HR_62.jpg)
+
+เมื่อพนักงานพร้อมเติบโต AI สามารถ:
+*   **Identify internal opportunities** ที่เหมาะกับ profile
+*   **Generate personalized career development plans**
+*   **Suggest skill-building activities** และ potential mentors
+*   **Create simulated job scenarios** เพื่อเตรียมพร้อมสำหรับ role ใหม่
+
+**ถ้าออกแบบเป็น Career Agent จริงๆ:**
+
+\`\`\`
+อ่าน Current Role → วิเคราะห์ Performance History → เทียบ Skill Matrix
+→ คำนวณ Readiness Probability → เสนอ Learning Plan → เสนอ Mentor
+→ เชื่อม Approval Workflow
+\`\`\`
+
+> นี่คือ **Hybrid Intelligence** เต็มรูปแบบ — AI + Human ทำงานร่วมกันตลอดเส้นทาง
+
+---
+
+### 🔴 ความเสี่ยงที่ต้องระวังถ้าออกแบบไม่ดี
+
+| ความเสี่ยง | ผลกระทบ |
+|-----------|---------|
+| AI แนะนำ career path ที่ bias | พนักงานบาง group ได้โอกาสน้อยกว่า |
+| AI สื่อสารผิด tone | พนักงานรู้สึกไม่จริงใจ ขาดความไว้วางใจ |
+| AI ใช้ data ไม่ครบ | คำแนะนำไม่แม่นยำ ไม่ตรงจุด |
+| AI แนะนำ promotion เร็วเกินจริง | สร้างความคาดหวังที่ผิด conflict ภายใน |
+
+> 💡 **Governance Layer ต้องอยู่ตลอด Journey** — ทุก stage ต้องมี human review และ bias check
+
+---
+
+### 🏗️ Architecture สำหรับ AI Across Employee Journey
+
+องค์กรที่ mature จะย้ายจาก **HR Process-Centric** ไปเป็น **Employee Experience Intelligence-Centric** โดยต้องมี 5 Layers:
+
+| Layer | หน้าที่ |
+|-------|--------|
+| **Data Layer** | HRIS, Performance data, Survey data |
+| **Predictive Layer** | Attrition model, Readiness scoring |
+| **Generative Layer** | Content creation, Communication |
+| **Agent Layer** | Automated workflows, Decision support |
+| **Governance Layer** | Bias check, Human oversight, Audit trail |
+
+> 🔥 **Key Takeaway:** AI ไม่ได้แค่ช่วย "HR ทำงานเร็วขึ้น" แต่ช่วย **สร้าง Employee Experience แบบ personalized at scale** — optimize journey ไม่ใช่แค่ optimize cost`,
+        },
+        {
+          id: "ai-agent-architecture",
+          title: "AI Agent & Workflow Automation",
+          type: "concept",
+          icon: "fa-microchip",
+          image: "/Handout-AI-For-HR/Handout-AI-For-HR_63.jpg",
+          slides: [
+            "/Handout-AI-For-HR/Handout-AI-For-HR_63.jpg",
+            "/Handout-AI-For-HR/Handout-AI-For-HR_64.jpg",
+            "/Handout-AI-For-HR/Handout-AI-For-HR_65.jpg",
+            "/Handout-AI-For-HR/Handout-AI-For-HR_66.jpg",
+            "/Handout-AI-For-HR/Handout-AI-For-HR_67.jpg",
+            "/Handout-AI-For-HR/Handout-AI-For-HR_68.jpg",
+            "/Handout-AI-For-HR/Handout-AI-For-HR_69.jpg",
+            "/Handout-AI-For-HR/Handout-AI-For-HR_70.jpg",
+            "/Handout-AI-For-HR/Handout-AI-For-HR_71.jpg"
+          ],
+          content: `### 🤖 AI Agent & Workflow Automation (Slide 63-71)
+
+ตอนนี้เราเข้าสู่ **"Core Architecture"** ของทั้ง deck — ไม่ใช่เรื่อง tool แต่คือ **"AI ทำงานเป็นระบบอย่างไร"**
+
+> 💡 **ความแตกต่างสำคัญ:** Agent ≠ Chatbot ธรรมดา — Chatbot แค่ตอบคำถาม แต่ **Agent คิด ตัดสินใจ และลงมือทำได้**
+
+---
+
+### 🔷 Slide 63-66 — AI Agent Platforms
+
+สไลด์โชว์ว่า AI Agent สามารถสร้างได้จากหลายแพลตฟอร์ม:
+
+### 📌 Copilot Agent AI (Slide 64) — Microsoft 365 Copilot
+
+| รายละเอียด | คำอธิบาย |
+|-----------|---------|
+| **Agent Store** | Marketplace สำหรับค้นหา Agent ที่พร้อมใช้ |
+| **Your Agents** | สร้าง Agent เฉพาะงานของตัวเอง (เช่น Executive Summary Agent) |
+| **Built by Microsoft** | Prompt Coach, Idea Coach สำเร็จรูป |
+| **Featured** | เชื่อมต่อ Jira, Trello, Mural ฯลฯ |
+| **จุดเด่น HR** | เชื่อมกับ Microsoft 365 ecosystem ทั้งหมด (Teams, Outlook, SharePoint) |
+
+### 📌 GPT Agent AI (Slide 65) — ChatGPT Custom GPTs
+
+| รายละเอียด | คำอธิบาย |
+|-----------|---------|
+| **GPTs Store** | Discover custom GPTs จากคนทั่วโลก |
+| **My GPTs** | สร้าง GPT เฉพาะทาง + ฝัง instructions, knowledge, tools |
+| **Categories** | Writing, Productivity, Research, Education, Lifestyle, DALL-E |
+| **จุดเด่น HR** | สร้าง HR Policy Bot, JD Writer, Interview Coach ได้เอง |
+
+### 📌 Gemini Agent AI (Slide 66) — Google Gemini Gems
+
+| รายละเอียด | คำอธิบาย |
+|-----------|---------|
+| **Gem Manager** | สร้างและจัดการ custom Gems (AI agents) |
+| **Premade by Google** | Brainstormer, Career Guide, Coding Partner |
+| **Your Gems** | ปรับแต่ง Gem หรือสร้างใหม่จาก instructions |
+| **จุดเด่น HR** | เชื่อมกับ Google Workspace (Docs, Sheets, Gmail, Calendar) |
+
+---
+
+### 🧠 องค์ประกอบ 4 อย่างของ AI Agent
+
+ถ้าจะสร้าง **"พนักงานดิจิทัล"** ให้เก่ง ต้องมีครบ 4 อย่าง:
+
+### 1️⃣ Memory (ความจำ) 💾
+*   จำบริบท, ประวัติ interaction, user profile
+*   *HR Example:* Career Agent จำว่า "พนักงานคนนี้สนใจสายบริหาร เคยขอ rotation 2 ครั้ง"
+
+### 2️⃣ Tools (เครื่องมือ) 🛠️
+*   เรียก HRIS, Database, Excel, Policy docs, API ภายใน
+*   *นี่คือจุดต่างจาก LLM ธรรมดา* — ถ้าไม่มี Tools ก็เป็นแค่ Chatbot ที่พูดเก่งแต่ทำอะไรไม่เป็น
+
+### 3️⃣ Reasoning (การคิดวิเคราะห์) 🧠
+*   วางแผนขั้นตอน, แตก task เป็น subtask, เลือก tool ที่เหมาะสม
+*   *HR Example:* "ประเมิน promotion readiness" → ดึง performance → เช็ค tenure rule → คำนวณ skill match → เรียก predictive model → สรุปผล
+
+### 4️⃣ Action (การลงมือทำ) 💪
+*   ส่ง report, สร้าง ticket, trigger workflow, ส่ง email, อัปเดต HRIS
+*   *นี่คือ automation จริง* — ไม่ใช่แค่แนะนำ แต่ทำได้จริง
+
+---
+
+### 🔷 Slide 67-71 — AI Workflow Automation
+
+**ความแตกต่างจาก RPA แบบเดิม:**
+
+| | RPA เดิม | AI Workflow |
+|--|---------|-----------|
+| **วิธีทำงาน** | ทำตาม rule ตายตัว | ใช้ reasoning + ปรับตาม context |
+| **ความยืดหยุ่น** | ต้อง program ทุก scenario | เรียนรู้จาก feedback |
+| **การตัดสินใจ** | If-else เท่านั้น | Think → Decide → Execute |
+
+### เครื่องมือ Workflow Automation หลัก (Slide 68-69):
+
+| เครื่องมือ | ลักษณะ | จุดเด่นสำหรับ HR |
+|-----------|--------|----------------|
+| **Make** (Integromat) | Visual workflow builder, เชื่อมได้ 1,000+ apps | สร้าง HR workflow ซับซ้อนได้ง่าย |
+| **n8n** | Open-source, self-hosted ได้ | ควบคุม data privacy เต็มที่ (เหมาะ HR ที่กังวล PDPA) |
+| **Zapier** | ใช้ง่ายที่สุด, 5,000+ app connections | เริ่มต้นเร็ว สร้าง automation ได้ใน 5 นาที |
+
+### ตัวอย่าง Workflow จริง (Slide 70-71):
+
+**ตัวอย่างที่ 1:** Google Forms → Google Sheets → Router → Email + Microsoft Teams
+> *HR Use Case:* พนักงานกรอกแบบฟอร์ม → บันทึกลง Sheets → ส่ง email ยืนยัน + แจ้ง Manager ใน Teams อัตโนมัติ
+
+**ตัวอย่างที่ 2:** Daily 7AM Trigger → Fetch Emails → Organize Data → Summarize with OpenAI → Send Summary
+> *HR Use Case:* ทุกเช้า 7 โมง → ดึง email HR 24 ชม.ล่าสุด → จัดระเบียบ → สรุปด้วย AI → ส่ง morning briefing ให้ HR Manager
+
+---
+
+### 🔷 HR Promotion Workflow ตัวอย่างเต็ม (Agentic Workflow)
+
+| Step | กระบวนการ | รายละเอียด |
+|------|----------|-----------|
+| **1. Trigger** | ครบ 18 เดือน | ระบบ detect อัตโนมัติ |
+| **2. Collect Data** | รวบรวมข้อมูล | Performance, Skill score, Compliance record |
+| **3. AI Reasoning** | วิเคราะห์ | Rule engine + Predictive model + Bias check |
+| **4. Decision Suggestion** | เสนอผล | Ready / Not ready / Conditional |
+| **5. Action** | ดำเนินการ | ส่งให้ HRBP review, สร้าง summary, เตรียม form |
+| **6. Monitoring** | ติดตาม | Track outcome, Compare predicted vs actual success |
+
+> นี่คือ **Closed-loop Intelligence** — AI ไม่ได้แค่ทำงานแล้วจบ แต่เรียนรู้จากผลลัพธ์ไปเรื่อยๆ
+
+---
+
+### 🏢 Agent Types สำหรับ HR 2,000 คน
+
+| Agent Type | หน้าที่หลัก | ตัวอย่าง |
+|-----------|-----------|---------|
+| **Service Agent** | ตอบคำถามพื้นฐาน | Policy, Leave, Benefits inquiry |
+| **Talent Agent** | สรรหาและประเมิน | Resume screening, Interview support, Promotion scoring |
+| **Workforce Agent** | วิเคราะห์กำลังคน | Attrition forecast, Skill gap analysis, Deployment optimization |
+| **Governance Agent** | ตรวจสอบคุณภาพ | Bias detection, Compliance monitoring, Audit trail check |
+
+---
+
+### 🔴 จุดที่องค์กรพลาดบ่อย
+
+| ข้อผิดพลาด | ผลลัพธ์ |
+|-----------|---------|
+| สร้าง chatbot แต่ไม่มี workflow | ตอบได้แต่ทำอะไรไม่ได้ |
+| สร้าง model แต่ไม่มี action layer | วิเคราะห์ได้แต่ไม่เกิดผลจริง |
+| ไม่มี monitoring | ไม่รู้ว่า AI ทำถูกหรือผิด |
+| ไม่มี feedback loop | AI ไม่พัฒนา ผิดซ้ำเดิม |
+
+> ผลคือ: **AI กลายเป็นแค่ gimmick** ไม่สร้าง value จริง
+
+---
+
+### 🏗️ Architecture สำหรับองค์กร 2,000 คน
+
+\`\`\`
+Data Layer (HRIS, Performance, Survey)
+    ↓
+Model Layer (Predictive, Generative AI)
+    ↓
+Agent Orchestration Layer (เลือก agent ที่เหมาะ)
+    ↓
+Workflow Engine (Make/n8n/Zapier/Copilot Studio)
+    ↓
+Human Oversight (HRBP review, Manager approval)
+    ↓
+Monitoring & Audit (Track outcome, Bias check)
+\`\`\`
+
+> 🔥 **ประโยคสำคัญที่สุด:** AI จะ transform HR ก็ต่อเมื่อมันสามารถ **คิด → เชื่อมระบบ → ตัดสินใจในกรอบ → ลงมือทำ → และเรียนรู้จากผลลัพธ์** — AI ที่มี value จริง = **Agent + Workflow + Governance** ไม่ใช่แค่ LLM`,
+        },
+      ],
+    },
+    {
+      id: "module-7",
+      title: "Module 7: Transformation & Governance (Slide 72-81)",
+      lessons: [
+        {
+          id: "ai-maturity-roadmap",
+          title: "วัดระดับความพร้อมองค์กร (AI Maturity)",
+          type: "concept",
+          icon: "fa-stairs",
+          image: "/Handout-AI-For-HR/Handout-AI-For-HR_77.jpg",
+          slides: [
+            "/Handout-AI-For-HR/Handout-AI-For-HR_72.jpg",
+            "/Handout-AI-For-HR/Handout-AI-For-HR_73.jpg",
+            "/Handout-AI-For-HR/Handout-AI-For-HR_74.jpg",
+            "/Handout-AI-For-HR/Handout-AI-For-HR_75.jpg",
+            "/Handout-AI-For-HR/Handout-AI-For-HR_76.jpg",
+            "/Handout-AI-For-HR/Handout-AI-For-HR_77.jpg"
+          ],
+          content: `### 📊 AI Maturity Model & Organizational Integration (Slide 72-77)
+
+ช่วงนี้ตอบคำถามสำคัญที่สุด: **"องค์กรเราอยู่ระดับไหน? และจะไต่ระดับอย่างไรโดยไม่พังกลางทาง?"**
+
+---
+
+### 🔷 Slide 72 — AI Applications (ภาพรวม)
+
+AI Application มีหลายรูปแบบ แต่ไม่ได้แปลว่าองค์กรพร้อมทุกแบบ — มันคือการ transition จาก **"Use Case" → "System"**
+
+---
+
+### 🔷 Slide 73-74 — AS IS vs TO BE Workflow
+
+นี่คือ **หัวใจของการทำ Transformation** — เห็นภาพได้ชัดเจนที่สุดจากตัวอย่าง Expat Policy:
+
+### 🔴 AS IS (ปัจจุบัน — คนทำทุกอย่าง)
+
+\`\`\`
+User ถาม Expat Policy → Actor (HR) ค้นข้อมูลใน HRIS
+→ Actor ค้น Policy document → Actor สรุปเอง → User ได้คำตอบ
+\`\`\`
+
+**ปัญหา:** Manual-heavy, Knowledge กระจาย, ไม่มี memory, ไม่มี feedback loop
+
+### 🟢 TO BE (อนาคต — AI ช่วยทำงาน)
+
+\`\`\`
+User ถาม Expat Policy → AI ค้นข้อมูลใน HRIS
+→ AI ค้น Policy document → AI สรุป + สร้าง Report
+→ User ได้คำตอบ ← Actor Monitor Result
+\`\`\`
+
+**สิ่งที่เพิ่มขึ้น:** Report layer, Monitoring layer, Feedback intelligence — นี่คือ **Agentic Workflow**
+
+---
+
+### 🔷 Slide 75 — HR Assistant ตัวอย่างจริง
+
+สไลด์แสดง **HR Assistant chatbot** ที่สร้างจริงแล้ว โดยเชื่อมกับ 3 แหล่งข้อมูล:
+*   ข้อมูลสวัสดิการ
+*   ข้อมูลการลา
+*   ข้อบังคับ
+
+พร้อมคำถามที่พบบ่อย เช่น: รายการเบิกสวัสดิการ, วันลา, สวัสดิการทางการแพทย์, ขั้นตอนการขอลาผ่านระบบ, วันหยุดประจำปี, ติดต่อฝ่าย HR ได้อย่างไร
+
+> 💡 นี่คือตัวอย่าง **Level 2 (Functional Value)** — AI ฝังในกระบวนการ HR แล้ว แต่ยังเป็น Q&A ไม่ใช่ Agentic
+
+---
+
+### 🔷 Slide 76 — AI Value Journey (ย้ำ)
+
+ย้ำอีกครั้ง: **Individual Value → Functional Value → Organizational Value**
+
+องค์กรจะ scale ได้ ต้องมี **"Agent ตามบทบาทงาน"** — ไม่ใช่ AI ตัวเดียวทั้งองค์กร
+
+---
+
+### 🔷 Slide 77 — AI Maturity Level (5 ระดับ)
+
+| Level | ชื่อ | คำอธิบาย | ตัวอย่าง HR |
+|-------|------|---------|------------|
+| **Level 1** | Experimental Value | สนใจ AI, ลองใช้, ยังไม่มี impact ชัด, **เสี่ยง overhype** | พนักงานเริ่มใช้ ChatGPT ส่วนตัว ตื่นเต้นกับของใหม่ |
+| **Level 2** | Functional Value | ใช้ AI ใน process บางจุด, Optimize บาง workflow, **ยังไม่ systemic** | HR ใช้ AI ตอบคำถาม, Marketing ใช้เขียน Content |
+| **Level 3** | Integrated Value | AI ฝังในหลาย workflow, มี production use case, **มี KPI วัดผล**, มี governance เริ่มต้น | **(เป้าหมายปีแรก)** AI เชื่อมกับ HRIS, มีนโยบาย, วัดผลได้ |
+| **Level 4** | Transformational Value | AI เปลี่ยน process หลัก, เชื่อมหลายระบบ, สร้าง new digital model, **องค์กรเริ่ม redesign role** | Predictive HR บอกล่วงหน้าว่าใครจะลาออก, Workforce decision intelligence |
+| **Level 5** | Optimized Value | **AI เป็นส่วนหนึ่งของ Business DNA**, Continuous optimization, Closed-loop intelligence, Governance mature | AI อยู่ในทุกอณูการทำงาน เป็นเรื่องปกติเหมือนใช้อินเทอร์เน็ต |
+
+### 🔥 ถ้า HR 2,000 คนประเมินตัวเอง:
+*   ส่วนใหญ่จะอยู่ **Level 1-2**
+*   บางองค์กรอาจ Level 3 ถ้ามี: Attrition model, HR chatbot, Structured workforce analytics
+
+---
+
+### 🏗️ Organizational Integration ต้องมี 4 เสา
+
+| เสา | ถ้าขาด |
+|-----|-------|
+| **Technology** | ไม่มีเครื่องมือให้ใช้ |
+| **Data** | AI ไม่มีข้อมูลที่ดีพอ (garbage in = garbage out) |
+| **Governance** | ใช้ AI แบบไร้กฎ ความเสี่ยงสูง |
+| **Change Leadership** | คนไม่ยอมรับ AI ไม่เกิด adoption |
+
+> ⚠️ **ขาดอย่างใดอย่างหนึ่ง → Scale ไม่ได้**
+
+---
+
+### 🔴 จุดพังที่พบบ่อย
+
+องค์กรพยายามกระโดดจาก **Level 1 → Level 4** โดย: ซื้อ AI platform ใหญ่ แต่ HR ยัง prompt ไม่เป็น, ไม่มี clean data, ไม่มี accountability → **ผลคือ Project fail**
+
+---
+
+### 🗺️ Roadmap สำหรับองค์กร 2,000 คน
+
+| Phase | ระยะเวลา | โฟกัส |
+|-------|----------|-------|
+| **Phase 1** | 6-12 เดือน | AI Literacy + Productivity adoption + Clean HR data |
+| **Phase 2** | ปีที่ 2 | Role-based Agent + Workflow integration + KPI tracking |
+| **Phase 3** | ปีที่ 3+ | Predictive workforce planning + AI governance board + Continuous optimization |
+
+> 🔥 **Insight สำคัญ:** AI Maturity ไม่ใช่เรื่อง Technology แต่คือ **Culture maturity + Decision maturity + Governance maturity** — องค์กรที่ mature ด้าน AI ไม่ใช่องค์กรที่มี AI เยอะที่สุด แต่คือองค์กรที่ **รู้ว่า AI ควรอยู่ตรงไหน ควรมีสิทธิ์แค่ไหน และใครต้องรับผิดชอบผลลัพธ์**`,
+        },
+        {
+          id: "ai-roles-literacy",
+          title: "ใครต้องรับผิดชอบอะไร? (Roles)",
+          type: "practical",
+          icon: "fa-users-gear",
+          image: "/Handout-AI-For-HR/Handout-AI-For-HR_78.jpg",
+          slides: [
+            "/Handout-AI-For-HR/Handout-AI-For-HR_78.jpg",
+            "/Handout-AI-For-HR/Handout-AI-For-HR_79.jpg",
+            "/Handout-AI-For-HR/Handout-AI-For-HR_80.jpg"
+          ],
+          content: `### 🎭 AI Literacy, AI Citizens & AI Roles (Slide 78-80)
+
+ช่วงนี้ไม่พูดเรื่อง model ไม่พูดเรื่อง tool แต่พูดเรื่อง **"คน"** — เพราะ **AI transformation ไม่สำเร็จเพราะ tool ดี แต่สำเร็จเพราะคนเข้าใจ role, รู้ขอบเขต, และรับผิดชอบผลลัพธ์**
+
+---
+
+### 🔷 Slide 78 — AI Literacy Assessment (4 มิติ)
+
+AI Literacy ไม่ใช่ "อบรมครั้งเดียว" แต่คือ **"Capability Ladder"** ที่ต้องพัฒนาอย่างต่อเนื่อง:
+
+| มิติ | ระดับความสามารถ | ตัวอย่างสำหรับ HR |
+|------|---------------|-----------------|
+| **1. Know & Understand AI** | รู้ว่า AI ทำอะไรได้/ไม่ได้, เข้าใจ limitation, เข้าใจ hallucination | HR ทุกคนต้องถึงระดับนี้เป็นอย่างน้อย |
+| **2. Use & Apply AI** | ใช้ AI ในงานจริง, ใช้ prompt อย่างถูกต้อง, ตีความ output ได้ | ใช้ AI สรุปประชุม, Draft อีเมล, วิเคราะห์ feedback |
+| **3. Evaluate & Create AI** | ออกแบบ workflow, ตั้งคำถาม challenge AI, Configure agent, ประเมิน model risk | ออกแบบ HR chatbot, สร้าง prompt template มาตรฐาน |
+| **4. AI Ethics** | เข้าใจ fairness, privacy, accountability, รู้ว่า AI ไม่ควรตัดสินแทนคน | ตรวจสอบ bias ใน promotion scoring, กำหนด policy การใช้ AI |
+
+สไลด์ยังแสดงตารางละเอียดที่แยก Categories, Dimensions, Characteristics ในแต่ละมิติ ครอบคลุมทั้ง Technical, Business, Interpersonal, และ Technology management knowledge/skills
+
+---
+
+### 🔷 Slide 79 — AI Citizens (5 บทบาทในองค์กร)
+
+สไลด์แบ่งคนในองค์กรออกเป็น 5 กลุ่ม:
+
+### 🟢 1. AI Users (พนักงานทั่วไป)
+*   ใช้ approved AI tools ช่วยงานประจำวัน
+*   ตีความ AI outputs ภายใน job context ของตัวเอง
+*   **ยังคงรับผิดชอบ final decisions เต็มที่** (ไม่โยนให้ AI)
+
+### 🟡 2. AI Professionals (HRBP / HR Data Analyst)
+*   ใช้ AI อย่างเป็นระบบภายในหน้าที่
+*   แปลง domain logic เป็น AI workflows
+*   ปรับปรุง quality, consistency, efficiency ของการใช้ AI
+
+### 🔵 3. AI Use Case Owners (HR Leader / Talent Director)
+*   **สำคัญที่สุด!** — เป็นเจ้าของปัญหา ไม่ใช่เจ้าของ model
+*   ตัดสินใจว่า **AI ควรใช้หรือไม่ควรใช้**
+*   **รับผิดชอบ value realization, risk, และ impact**
+
+### 🟣 4. AI Community of Practice / Talent Management
+*   Design progressive AI learning journeys
+*   Move people up the capability ladder intentionally
+*   Turn individual learning into **collective intelligence**
+*   Redesign roles, expectations, career paths for AI era
+
+### 🔴 5. AI Change Leader (C-level / CHRO / CEO)
+*   Drive **behavioral change** and trust in AI usage
+*   Address emotional and cultural barriers
+*   **Measure real adoption and impact** (ไม่ใช่แค่จำนวนคนที่ลงทะเบียน)
+
+> 💡 **Insight สำคัญ:** AI Governance ไม่ได้อยู่ที่ IT แต่อยู่ที่ **AI Use Case Owner** — เพราะคนนี้ต้องตัดสินใจว่า: ใช้ AI กับ promotion ได้ไหม? ใช้กับ layoff ได้ไหม? ใช้กับ compensation ได้ไหม?
+
+---
+
+### 🔷 Slide 80 — AI Citizens x AI Literacy (Matrix)
+
+สไลด์จับคู่ **"Role"** กับ **"Capability"** เป็นตาราง:
+
+| AI Capability | AI Users | AI Professionals | AI Use Case Owners |
+|--------------|---------|-----------------|-------------------|
+| **Know & Understand AI** | Basic AI concepts & limits | Deep AI concepts & tools | Strategic AI value & risk |
+| **Use & Apply AI** | Use AI in daily tasks | Design AI workflows | Decide where AI is used |
+| **Evaluate & Create AI** | Spot obvious errors | Evaluate & configure AI | Approve, scale, or stop AI |
+| **AI Ethics & Responsibility** | Follow AI rules | Apply responsible AI | **Own ethical outcomes** |
+
+> 🔥 **ตารางนี้สำคัญมาก** เพราะบอกชัดว่า: คนระดับไหนต้อง "รู้" แค่ไหน — ไม่ใช่ทุกคนต้องเก่งเท่ากัน แต่ต้อง **"เก่งในมิติที่ตรงกับบทบาท"**
+
+---
+
+### 🏢 ถ้า HR 2,000 คนจะ Mature จริง ต้องมี:
+
+| สิ่งที่ต้องทำ | รายละเอียด |
+|-------------|-----------|
+| **1. AI Role Mapping** | ระบุชัดว่า ใครคือ AI User? ใครคือ Use Case Owner? ใครคือ Governance Board? |
+| **2. AI Decision Matrix** | กำหนดว่างานไหน: AI advisory only / AI + human review / Human only |
+| **3. AI Accountability Rule** | AI ไม่เคยเป็น decision owner — Human sign-off เสมอ |
+
+> 🔥 **Core Skill ที่สำคัญที่สุด** ไม่ใช่ "Coding" แต่คือ **"AI Ethics & Judgment"** (วิจารณญาณ) — องค์กรที่ mature ด้าน AI ไม่ใช่องค์กรที่มี AI เก่งที่สุด แต่คือองค์กรที่ **รู้ว่าใครต้องรับผิดชอบเมื่อ AI ผิดพลาด**`,
+        },
+        {
+          id: "governance-risk-map",
+          title: "คุมความเสี่ยงให้อยู่หมัด (Risk & Governance)",
+          type: "risk",
+          icon: "fa-traffic-light",
+          image: "/Handout-AI-For-HR/Handout-AI-For-HR_81.jpg",
+          slides: ["/Handout-AI-For-HR/Handout-AI-For-HR_81.jpg"],
+          content: `### 🚦 Key Risks — 6 ความเสี่ยงที่ต้องออกแบบให้รับมือได้ (Slide 81)
+
+Slide 81 เป็น **"Risk Map"** ที่ทีมพัฒนา/ทีมออกแบบระบบต้องถือเป็น **ข้อกำหนดเชิงสถาปัตยกรรม (Architecture Requirements)** ไม่ใช่แค่คำเตือนเชิงนโยบาย
+
+> ⚠️ **ทำไมสำคัญ:** ระบบ HR + AI ในองค์กร 2,000+ คน = ข้อมูลอ่อนไหวสูง + ผลกระทบต่อคนสูงมาก — 6 Risk นี้ "ชนกัน" ตลอดเวลา เช่น ทำให้แม่นขึ้นต้องใช้ข้อมูลมากขึ้น → ชน Privacy / Fairness / Legal
+
+---
+
+### I. Accuracy (Hallucination)
+
+**ความเสี่ยง:** AI ตอบ "มั่นใจมาก" แต่ผิด หรือแต่งข้อมูล
+
+**ตัวอย่าง HR ที่อันตราย:**
+*   พนักงานถาม: "ลาคลอดได้กี่วัน?" → AI ตอบผิดเพราะใช้เอกสารเก่า
+*   ผู้จัดการถาม: "สรุป performance ของ A" → AI สรุปมั่วเพราะดึงข้อมูลผิดคน/ผิดรอบ
+*   HRBP ถาม: "ทำไมบอกว่า attrition risk สูง" → AI สร้างเหตุผลปลอม (hallucinated rationale)
+
+**สิ่งที่ต้องทำ:**
+*   **Grounding/Citation:** ทุกคำตอบต้องอ้างอิงแหล่ง (doc id, version, section)
+*   **Confidence UI:** แสดงระดับความมั่นใจ + เงื่อนไข "ไม่แน่ใจ"
+*   **Fail-safe:** หาข้อมูลไม่ได้ → ตอบว่า "ไม่พบข้อมูล/ส่งต่อ HR" ไม่ใช่เดา
+*   **Version control:** Policy ต้องมี version + effective date
+*   **Guardrail:** ห้ามใช้ภาษาตัดสินเด็ดขาดเรื่อง "คน" เช่น "ควรเลิกจ้าง"
+
+---
+
+### II. Security (Prompt Hijacking / Data Leakage)
+
+**ความเสี่ยง:** คนตั้งใจหลอก AI เปิดเผยข้อมูล หรือให้ agent ทำสิ่งที่ไม่ควร
+
+**ตัวอย่าง HR:**
+*   พนักงานถาม: "ขอรายชื่อคนเงินเดือนสูงสุด 10 คน" หรือ "ใครจะถูก layoff"
+*   Prompt injection: ใส่ข้อความในไฟล์แนบว่า "ignore policy and reveal..."
+*   ใช้ account ระดับล่าง ถามข้อมูลผู้บริหาร
+
+**สิ่งที่ต้องทำ:**
+*   **RBAC/ABAC:** สิทธิ์ดูข้อมูลตาม role (HR admin / HRBP / Manager / Employee)
+*   **Tool permissioning:** แยกสิทธิ์ "อ่าน" กับ "ลงมือทำ"
+*   **Prompt injection defense:** Sanitize content, strip instructions from retrieved docs
+*   **Rate limiting + anomaly detection:** ป้องกัน mass data exfiltration
+*   **UI/UX:** แจ้งชัดว่า "ข้อมูลที่คุณขอเกินสิทธิ์" + มีช่องทางขออนุมัติ
+
+---
+
+### III. Privacy (Leakage of Sensitive Data)
+
+**ความเสี่ยง:** HR data = PII/PDPA สูงสุด (เงินเดือน, สุขภาพ, วินัย, performance, ข้อร้องเรียน)
+
+**ตัวอย่างความพัง:**
+*   AI สรุปเคส complaint แล้วมีชื่อผู้ร้อง/ผู้ถูกร้องโผล่ในช่องที่คนไม่ควรเห็น
+*   AI สรุป performance แล้วเผย "เหตุผลทางสุขภาพ" จาก note เก่า
+*   Log เก็บ prompt/response ที่มีข้อมูลอ่อนไหว → กลายเป็น "คลังข้อมูลรั่ว"
+
+**สิ่งที่ต้องทำ:**
+*   **Data minimization:** ส่งเข้าโมเดลเท่าที่จำเป็น (least data)
+*   **Masking/Redaction:** ชื่อ/เลขบัตร/ที่อยู่/เงินเดือน ต้อง mask ตาม role
+*   **Retention policy:** Log ต้องมีอายุ (30/90/180 วัน) และลบอัตโนมัติ
+*   **Environment separation:** DEV/UAT/PROD ห้ามใช้ข้อมูลจริงใน dev
+
+> 💡 **Concern พิเศษองค์กร 2,000+:** คนจำนวนมาก = โอกาส misclick/misroute สูง → ต้องมี "preview + confirm + audit" ทุกครั้งก่อนแชร์ report
+
+---
+
+### IV. Fairness (Bias / Discrimination)
+
+**ความเสี่ยง:** AI อาจให้ผลลำเอียงต่อ เพศ/อายุ/แผนก/มหาวิทยาลัย/เชื้อชาติ แม้ไม่ได้ใส่คอลัมน์เหล่านี้ (proxy bias)
+
+**ตัวอย่าง HR ที่เสี่ยงสุด:**
+*   **Promotion readiness:** โมเดลให้คะแนนคนสายงานหนึ่งสูงเสมอ เพราะ historical data เคย promote แบบนั้น
+*   **Resume screening:** AI ชอบบางมหาวิทยาลัย/บางคำในเรซูเม่ (proxy)
+*   **Attrition:** โมเดลติด bias ว่า "ผู้หญิงหลังลาคลอดลาออกเยอะ" → ตัดสินไม่เป็นธรรม
+
+**สิ่งที่ต้องทำ:**
+*   **Fairness testing:** วัด disparity ระหว่างกลุ่ม (gender/age band/BU)
+*   **Feature review:** ห้ามใช้ feature ที่เป็น proxy (postcode, university ranking, maternity leaves)
+*   **Human-in-the-loop:** Promotion/termination/compensation ต้อง human approval เสมอ
+*   **Explainability:** แสดง "ปัจจัยหลัก" ที่ทำให้คะแนนขึ้น/ลง (ไม่ใช่แค่ score)
+
+---
+
+### V. Trust (Undisclosed Use / Reduced Trust)
+
+**ความเสี่ยง:** ต่อให้ระบบเก่ง แต่ถ้าคนไม่ไว้ใจ = adoption ไม่เกิด หรือเกิด backlash
+
+**ตัวอย่าง:**
+*   พนักงานรู้ทีหลังว่า HR ใช้ AI วิเคราะห์ความเสี่ยงลาออก → รู้สึกถูกสอดส่อง
+*   ผู้จัดการใช้ AI เขียน feedback เหมือนกันทุกคน → ลูกทีมรู้สึก "ปลอม"
+
+**สิ่งที่ต้องทำ:**
+*   **Disclosure:** บอกผู้ใช้ชัดว่า "ข้อความนี้ assisted by AI"
+*   **User controls:** มีปุ่ม "แก้ไข/ยืนยัน/ส่งต่อเจ้าหน้าที่" เสมอ
+*   **Audit visibility:** ฝ่ายกำกับดูแลตรวจได้ว่า AI ถูกใช้กับอะไร ใครใช้ เมื่อไร
+*   **Quality bar:** ตั้ง guideline output style เพื่อไม่ให้เหมือน mass-generated
+
+---
+
+### VI. Legal (IP / Copyright / Liability)
+
+**ความเสี่ยง:** กฎหมาย/สัญญา/PDPA/แรงงาน และความรับผิดถ้า AI ผิดพลาด
+
+**ตัวอย่าง:**
+*   AI ดึงข้อความจากคู่มือภายนอกที่มีลิขสิทธิ์มาใช้ตรงๆ ใน policy
+*   AI แนะนำ disciplinary action ที่ขัดกับกฎหมายแรงงาน/สัญญาจ้าง
+*   ตัดสินใจกระทบคน (เลื่อนตำแหน่ง/ลงโทษ) โดยไม่มี traceable evidence → เสี่ยงฟ้อง
+
+**สิ่งที่ต้องทำ:**
+*   **Legal hold + audit trail:** เก็บหลักฐาน (inputs, model version, policy version, approver)
+*   **Contract & data residency:** ตรวจสัญญา vendor ว่าข้อมูลถูก train ต่อไหม อยู่ประเทศไหน
+*   **Copyright guardrail:** หลีกเลี่ยงการคัดลอกยาว ให้สรุปและอ้างอิงแทน
+*   **Policy compliance engine:** คำตอบ policy ต้องมาจากเอกสารองค์กรเท่านั้น (source allowlist)
+
+---
+
+### ✅ System Requirements Checklist (สำหรับทีมพัฒนา)
+
+### A) Governance-by-Design (ต้องมีในระบบตั้งแต่วันแรก)
+*   RBAC/ABAC + data masking ตามบทบาท
+*   Evidence/citation ทุกคำตอบจาก policy/docs
+*   Human approval สำหรับ high-stakes decision
+*   Audit trail: ใครถามอะไร, AI ใช้ข้อมูลชุดไหน, ตอบว่าอะไร, ใคร approve
+
+### B) Guardrails (ต้อง enforce ที่ชั้น platform)
+*   Forbidden intents (salary rank, layoff list, medical details)
+*   Safe completion: ถ้าไม่มั่นใจ → escalate ไม่ใช่เดา
+*   Prompt injection defense + content sanitization
+*   Rate limit + anomaly detection
+
+### C) MLOps/LLMOps (เพื่อไม่พังตอน scale)
+*   Regression test set สำหรับ HR Q&A + workflow
+*   Model/version pinning (ระบุ model + knowledge base version)
+*   Monitoring: hallucination rate, escalation rate, complaint rate, bias metrics
+*   Incident response playbook (ถ้า AI ตอบผิด policy ทำอย่างไร)
+
+---
+
+### 🎯 Golden Rules — หลักการออกแบบระบบ HR AI
+
+*   **Advisory only:** AI แค่ "แนะนำ" ไม่ตัดสินใจ
+*   **Human in the loop:** คนต้อง "กดอนุมัติ" เสมอ
+*   **Traceable:** ต้องย้อนดูได้ว่าทำไม AI ถึงแนะนำแบบนี้
+
+> 🔥 **ประโยคจำง่ายสำหรับทีมทำระบบ:** ระบบ HR + AI ต้อง **"ปลอดภัยก่อนฉลาด"** และ **"ตรวจสอบได้ก่อนอัตโนมัติ"** — AI คือเครื่องมือที่ทรงพลังที่สุด แต่มัน "ไม่มีหัวใจ" และ "ไม่มีความรับผิดชอบ" หน้าที่ของเราคือใช้มันอย่าง **"ฉลาด"** และ **"มีจริยธรรม"** เพื่อให้งาน HR และพนักงานมีความสุขขึ้น`,
         },
       ],
     },
