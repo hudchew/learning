@@ -3646,14 +3646,7 @@ Slide 81 เป็น **"Risk Map"** ที่ทีมพัฒนา/ทีม
           type: "summary",
           icon: "fa-flag-checkered",
           image: "/Handout-AI-For-HR/Handout-AI-For-HR_81.jpg",
-          slides: [
-            "/Handout-AI-For-HR/Handout-AI-For-HR_21.jpg",
-            "/Handout-AI-For-HR/Handout-AI-For-HR_28.jpg",
-            "/Handout-AI-For-HR/Handout-AI-For-HR_43.jpg",
-            "/Handout-AI-For-HR/Handout-AI-For-HR_56.jpg",
-            "/Handout-AI-For-HR/Handout-AI-For-HR_72.jpg",
-            "/Handout-AI-For-HR/Handout-AI-For-HR_81.jpg"
-          ],
+          slides: [],
           content: `### สรุปปิดท้าย: ภาพรวมทั้งหมดของ Slide 21–81
 
 บทสรุปนี้ไม่ได้แยกตาม slide แต่เป็นการ **เชื่อมร้อย** ทุกอย่างที่เรียนมาเข้าด้วยกัน เพื่อให้เห็น **ภาพเดียว** ที่ชัดเจน และรู้ว่า **อะไรคือสิ่งที่ต้อง Concern จริงๆ** เมื่อจะนำ AI มาใช้ในงาน HR
