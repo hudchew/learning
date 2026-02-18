@@ -1793,6 +1793,8 @@ Agentic AI คือ AI ที่:
 
 ### 🥗 Case 1: Nutritionist AI → Workforce Optimization Engine (Slide 22)
 
+![Nutritionist AI](/Handout-AI-For-HR/Handout-AI-For-HR_22.jpg)
+
 **เดิมคืออะไร:** ระบบ AI นักโภชนาการที่วางแผนเมนูอาหารให้ **400 โรงอาหาร** โดยพิจารณา:
 *   ความชอบของกลุ่มเป้าหมาย, ความต้องการพลังงาน, สุขภาพ, วัตถุดิบที่มี, งบประมาณ
 
@@ -1825,6 +1827,8 @@ Agentic AI คือ AI ที่:
 
 ### 🏥 Case 2: Dr. Samit Chon → Employee Career Companion Agent (Slide 23)
 
+![Employee Career Companion Agent](/Handout-AI-For-HR/Handout-AI-For-HR_23.jpg)
+
 **เดิมคืออะไร:** Conversational AI ของ **โรงพยาบาลสมิติเวช ชลบุรี** (ใช้จริงตั้งแต่ ธ.ค. 2023) ทำหน้าที่:
 *   **Package Recommendation** — แนะนำแพ็คเกจสุขภาพเฉพาะบุคคล
 *   **Insightful Information** — ให้ข้อมูลเพื่อตัดสินใจอย่างมั่นใจ
@@ -1855,6 +1859,8 @@ Agent ทำ:
 ---
 
 ### 🏘️ Case 3: Nong Sai-Jai → HR Service Agent Platform (Slide 24)
+
+![HR Service Agent Platform](/Handout-AI-For-HR/Handout-AI-For-HR_24.jpg)
 
 **เดิมคืออะไร:** Conversational AI ของ **บริษัท พฤกษา** (ใช้จริงตั้งแต่ เม.ย. 2023) สำหรับ sales, marketing, customer service ในอสังหาริมทรัพย์:
 *   **Recommendation engine** — แนะนำโครงการที่เหมาะ
@@ -1963,10 +1969,14 @@ Slide 25-27 คือรากฐานของทั้ง 2 เรื่อ�
 
 สไลด์แสดงตัวอย่างจริงของการแปลงลายมือเขียนเป็นข้อความดิจิทัล **2 กรณี:**
 
+![OCR Handwriting Recognition](/Handout-AI-For-HR/Handout-AI-For-HR_25.jpg)
+
 **กรณีที่ 1: ลายมือแบบไม่มีหัว (Slide 25)**
 *   **ต้นฉบับ (PDF):** เอกสารเขียนด้วยลายมือที่ไม่มีหัวข้อชัดเจน
 *   **ผลลัพธ์ (TXT):** AI อ่านลายมือได้แม้จะมีรอยลบ, ตัวหนังสือไม่ชัด, ภาษาปนกัน (ไทย+อังกฤษ)
 *   **ข้อจำกัด:** อาจมีคำที่อ่านผิดบ้าง (เช่น ลายมือที่เขียนเร็วหรือตัวหนังสือเล็กมาก)
+
+![OCR Handwriting Recognition](/Handout-AI-For-HR/Handout-AI-For-HR_25.jpg)
 
 **กรณีที่ 2: ลายมือแบบมีหัว (Slide 26)**
 *   **ต้นฉบับ (PDF):** เอกสารที่มีหัวข้อ/โครงสร้างชัดเจน (เช่น "ส่วนที่ 2: รายละเอียดเกี่ยวกับสิ่งที่คุณชอบ")
@@ -2002,6 +2012,8 @@ Document Intelligence ทำให้เกิด:
 ---
 
 ### 🎭 2. Persona Intelligence: ใส่ "ตัวตน" ให้ AI (Slide 27 — PersonaX)
+
+![PersonaX](/Handout-AI-For-HR/Handout-AI-For-HR_27.jpg)
 
 สไลด์ 27 แนะนำ **"PersonaX"** — เป็นตัวอย่างของ **AI ที่มี persona / โปรไฟล์** ให้ประสบการณ์การคุย "เหมือนมีผู้ช่วยเฉพาะคน"
 
@@ -2745,13 +2757,13 @@ Guardrails ช่วยให้ AI:
           title: "เกราะป้องกันความเสี่ยง (Guardrails)",
           type: "risk",
           icon: "fa-shield-virus",
-          image: "/Handout-AI-For-HR/Handout-AI-For-HR_51.jpg",
+          image: "/Handout-AI-For-HR/Handout-AI-For-HR_51.png",
           slides: [
-            "/Handout-AI-For-HR/Handout-AI-For-HR_51.jpg",
-            "/Handout-AI-For-HR/Handout-AI-For-HR_52.jpg",
-            "/Handout-AI-For-HR/Handout-AI-For-HR_53.jpg",
-            "/Handout-AI-For-HR/Handout-AI-For-HR_54.jpg",
-            "/Handout-AI-For-HR/Handout-AI-For-HR_55.jpg"
+            "/Handout-AI-For-HR/Handout-AI-For-HR_51.png",
+            "/Handout-AI-For-HR/Handout-AI-For-HR_52.png",
+            "/Handout-AI-For-HR/Handout-AI-For-HR_53.png",
+            "/Handout-AI-For-HR/Handout-AI-For-HR_54.png",
+            "/Handout-AI-For-HR/Handout-AI-For-HR_55.png"
           ],
           content: `### 🛡️ AI Critical Thinking Framework สำหรับ HR (Slide 51-55)
 
@@ -2785,6 +2797,8 @@ AI ให้คำตอบที่ลำเอียง เพราะ **data
 
 ### 1️⃣ "Where's the evidence?" — หลักฐานอยู่ไหน? (Slide 51)
 
+![Where's the evidence?](/Handout-AI-For-HR/Handout-AI-For-HR_51.png)
+
 **ใช้เมื่อ:** AI ให้ insight หรือ conclusion ที่ดูมั่นใจ
 
 **สถานการณ์จริง HR:**
@@ -2801,6 +2815,8 @@ AI ให้คำตอบที่ลำเอียง เพราะ **data
 
 ### 2️⃣ "What did you miss?" — คุณพลาดอะไรไป? (Slide 52)
 
+![What did you miss?](/Handout-AI-For-HR/Handout-AI-For-HR_52.png)
+
 **ใช้เมื่อ:** AI วิเคราะห์แล้วดูครบเกินไป ราบรื่นเกินไป
 
 **สถานการณ์จริง HR:**
@@ -2815,6 +2831,8 @@ AI ให้คำตอบที่ลำเอียง เพราะ **data
 ---
 
 ### 3️⃣ "Are you contradicting yourself? How confident are you?" — คำตอบขัดแย้งไหม? มั่นใจกี่ %? (Slide 53)
+
+![Are you contradicting yourself? How confident are you?](/Handout-AI-For-HR/Handout-AI-For-HR_53.png)
 
 **ใช้เมื่อ:** มีข้อมูลหลายด้านที่อาจขัดกัน
 
@@ -2831,6 +2849,8 @@ AI ให้คำตอบที่ลำเอียง เพราะ **data
 
 ### 4️⃣ "Would the answer change if I rephrased the question?" — ถ้าถามอีกแบบ คำตอบจะเปลี่ยนไหม? (Slide 54)
 
+![Would the answer change if I rephrased the question?](/Handout-AI-For-HR/Handout-AI-For-HR_54.png)
+
 **ใช้ตรวจ:** Framing Bias / Keyword Bias
 
 **สถานการณ์จริง HR:**
@@ -2845,6 +2865,8 @@ AI ให้คำตอบที่ลำเอียง เพราะ **data
 ---
 
 ### 5️⃣ "What if I feed you a false claim?" — ถ้าฉันป้อนข้อมูลเท็จ คุณจะรู้ไหม? (Slide 55)
+
+![What if I feed you a false claim?](/Handout-AI-For-HR/Handout-AI-For-HR_55.png)
 
 **ใช้ทดสอบ:** ความสามารถในการ detect misinformation
 
@@ -3276,6 +3298,8 @@ AI Application มีหลายรูปแบบ แต่ไม่ได้�
 
 ### 🔴 AS IS (ปัจจุบัน — คนทำทุกอย่าง)
 
+![AS IS vs TO BE Workflow](/Handout-AI-For-HR/Handout-AI-For-HR_73.jpg)
+
 \`\`\`
 User ถาม Expat Policy → Actor (HR) ค้นข้อมูลใน HRIS
 → Actor ค้น Policy document → Actor สรุปเอง → User ได้คำตอบ
@@ -3284,6 +3308,8 @@ User ถาม Expat Policy → Actor (HR) ค้นข้อมูลใน HRI
 **ปัญหา:** Manual-heavy, Knowledge กระจาย, ไม่มี memory, ไม่มี feedback loop
 
 ### 🟢 TO BE (อนาคต — AI ช่วยทำงาน)
+
+![TO BE vs AS IS Workflow](/Handout-AI-For-HR/Handout-AI-For-HR_74.jpg)
 
 \`\`\`
 User ถาม Expat Policy → AI ค้นข้อมูลใน HRIS
@@ -3296,6 +3322,8 @@ User ถาม Expat Policy → AI ค้นข้อมูลใน HRIS
 ---
 
 ### 🔷 Slide 75 — HR Assistant ตัวอย่างจริง
+
+![HR Assistant chatbot](/Handout-AI-For-HR/Handout-AI-For-HR_75.jpg)
 
 สไลด์แสดง **HR Assistant chatbot** ที่สร้างจริงแล้ว โดยเชื่อมกับ 3 แหล่งข้อมูล:
 *   ข้อมูลสวัสดิการ
@@ -3310,6 +3338,8 @@ User ถาม Expat Policy → AI ค้นข้อมูลใน HRIS
 
 ### 🔷 Slide 76 — AI Value Journey (ย้ำ)
 
+![AI Value Journey](/Handout-AI-For-HR/Handout-AI-For-HR_76.jpg)
+
 ย้ำอีกครั้ง: **Individual Value → Functional Value → Organizational Value**
 
 องค์กรจะ scale ได้ ต้องมี **"Agent ตามบทบาทงาน"** — ไม่ใช่ AI ตัวเดียวทั้งองค์กร
@@ -3317,6 +3347,8 @@ User ถาม Expat Policy → AI ค้นข้อมูลใน HRIS
 ---
 
 ### 🔷 Slide 77 — AI Maturity Level (5 ระดับ)
+
+![AI Maturity Level](/Handout-AI-For-HR/Handout-AI-For-HR_77.jpg)
 
 | Level | ชื่อ | คำอธิบาย | ตัวอย่าง HR |
 |-------|------|---------|------------|
@@ -3380,6 +3412,8 @@ User ถาม Expat Policy → AI ค้นข้อมูลใน HRIS
 
 ### 🔷 Slide 78 — AI Literacy Assessment (4 มิติ)
 
+![AI Literacy Assessment](/Handout-AI-For-HR/Handout-AI-For-HR_78.jpg)
+
 AI Literacy ไม่ใช่ "อบรมครั้งเดียว" แต่คือ **"Capability Ladder"** ที่ต้องพัฒนาอย่างต่อเนื่อง:
 
 | มิติ | ระดับความสามารถ | ตัวอย่างสำหรับ HR |
@@ -3394,6 +3428,8 @@ AI Literacy ไม่ใช่ "อบรมครั้งเดียว" แ�
 ---
 
 ### 🔷 Slide 79 — AI Citizens (5 บทบาทในองค์กร)
+
+![AI Citizens](/Handout-AI-For-HR/Handout-AI-For-HR_79.jpg)
 
 สไลด์แบ่งคนในองค์กรออกเป็น 5 กลุ่ม:
 
@@ -3428,6 +3464,8 @@ AI Literacy ไม่ใช่ "อบรมครั้งเดียว" แ�
 ---
 
 ### 🔷 Slide 80 — AI Citizens x AI Literacy (Matrix)
+
+![AI Citizens x AI Literacy](/Handout-AI-For-HR/Handout-AI-For-HR_80.jpg)
 
 สไลด์จับคู่ **"Role"** กับ **"Capability"** เป็นตาราง:
 
